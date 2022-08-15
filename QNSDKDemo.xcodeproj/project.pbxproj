@@ -1,0 +1,504 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2457614B28A5FF71004A45AE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2457614A28A5FF71004A45AE /* AppDelegate.m */; };
+		2457614E28A5FF71004A45AE /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2457614D28A5FF71004A45AE /* SceneDelegate.m */; };
+		2457615128A5FF71004A45AE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2457615028A5FF71004A45AE /* ViewController.m */; };
+		2457615628A5FF72004A45AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2457615528A5FF72004A45AE /* Assets.xcassets */; };
+		2457615928A5FF72004A45AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2457615728A5FF72004A45AE /* LaunchScreen.storyboard */; };
+		2457615C28A5FF72004A45AE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2457615B28A5FF72004A45AE /* main.m */; };
+		2457616328A5FF81004A45AE /* test123456789.qn in Resources */ = {isa = PBXBuildFile; fileRef = 2457616228A5FF81004A45AE /* test123456789.qn */; };
+		2457618428A5FF87004A45AE /* QNUnitTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 2457616528A5FF87004A45AE /* QNUnitTool.m */; };
+		2457618528A5FF87004A45AE /* UnitChooseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2457616828A5FF87004A45AE /* UnitChooseViewController.m */; };
+		2457618628A5FF87004A45AE /* ScaleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2457616A28A5FF87004A45AE /* ScaleViewController.m */; };
+		2457618728A5FF87004A45AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2457616B28A5FF87004A45AE /* Main.storyboard */; };
+		2457618828A5FF87004A45AE /* SettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2457616F28A5FF87004A45AE /* SettingTableViewController.m */; };
+		2457618A28A5FF87004A45AE /* libQNPlugin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2457618028A5FF87004A45AE /* libQNPlugin.a */; };
+		2457619528A6256F004A45AE /* libQNHeightWeightScalePlugin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2457618F28A6256F004A45AE /* libQNHeightWeightScalePlugin.a */; };
+		7E5ACB3C28A9DAE500FC74DC /* QNPlugin.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 7E5ACB3A28A9DAE500FC74DC /* QNPlugin.podspec */; };
+		7E5ACB3D28A9DAE500FC74DC /* QNHeightWeightScalePlugin.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 7E5ACB3B28A9DAE500FC74DC /* QNHeightWeightScalePlugin.podspec */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2457614628A5FF71004A45AE /* QNSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QNSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2457614928A5FF71004A45AE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2457614A28A5FF71004A45AE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2457614C28A5FF71004A45AE /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		2457614D28A5FF71004A45AE /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		2457614F28A5FF71004A45AE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		2457615028A5FF71004A45AE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2457615528A5FF72004A45AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2457615828A5FF72004A45AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2457615A28A5FF72004A45AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2457615B28A5FF72004A45AE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2457616228A5FF81004A45AE /* test123456789.qn */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test123456789.qn; sourceTree = "<group>"; };
+		2457616528A5FF87004A45AE /* QNUnitTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QNUnitTool.m; sourceTree = "<group>"; };
+		2457616628A5FF87004A45AE /* QNUnitTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QNUnitTool.h; sourceTree = "<group>"; };
+		2457616828A5FF87004A45AE /* UnitChooseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnitChooseViewController.m; sourceTree = "<group>"; };
+		2457616928A5FF87004A45AE /* SettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingTableViewController.h; sourceTree = "<group>"; };
+		2457616A28A5FF87004A45AE /* ScaleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScaleViewController.m; sourceTree = "<group>"; };
+		2457616C28A5FF87004A45AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2457616D28A5FF87004A45AE /* UnitChooseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnitChooseViewController.h; sourceTree = "<group>"; };
+		2457616E28A5FF87004A45AE /* ScaleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScaleViewController.h; sourceTree = "<group>"; };
+		2457616F28A5FF87004A45AE /* SettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingTableViewController.m; sourceTree = "<group>"; };
+		2457617B28A5FF87004A45AE /* QNScanListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QNScanListener.h; sourceTree = "<group>"; };
+		2457617C28A5FF87004A45AE /* QNPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QNPlugin.h; sourceTree = "<group>"; };
+		2457617D28A5FF87004A45AE /* QNLogListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QNLogListener.h; sourceTree = "<group>"; };
+		2457617E28A5FF87004A45AE /* QNAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QNAction.h; sourceTree = "<group>"; };
+		2457617F28A5FF87004A45AE /* QNSysBleStatusListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QNSysBleStatusListener.h; sourceTree = "<group>"; };
+		2457618028A5FF87004A45AE /* libQNPlugin.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libQNPlugin.a; sourceTree = "<group>"; };
+		2457618128A5FF87004A45AE /* QNAuthDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QNAuthDevice.h; sourceTree = "<group>"; };
+		2457618228A5FF87004A45AE /* QNDiscoverPeripheralListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QNDiscoverPeripheralListener.h; sourceTree = "<group>"; };
+		2457618328A5FF87004A45AE /* QNBasePlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QNBasePlugin.h; sourceTree = "<group>"; };
+		2457618D28A6256F004A45AE /* QNHeightWeightScaleStatusListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QNHeightWeightScaleStatusListener.h; sourceTree = "<group>"; };
+		2457618E28A6256F004A45AE /* QNHeightWeightScaleDeviceListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QNHeightWeightScaleDeviceListener.h; sourceTree = "<group>"; };
+		2457618F28A6256F004A45AE /* libQNHeightWeightScalePlugin.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libQNHeightWeightScalePlugin.a; sourceTree = "<group>"; };
+		2457619028A6256F004A45AE /* QNHeightWeightScaleDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QNHeightWeightScaleDevice.h; sourceTree = "<group>"; };
+		2457619128A6256F004A45AE /* QNHeightWeightScalePlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QNHeightWeightScalePlugin.h; sourceTree = "<group>"; };
+		2457619228A6256F004A45AE /* QNHeightWeightScaleDataListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QNHeightWeightScaleDataListener.h; sourceTree = "<group>"; };
+		2457619328A6256F004A45AE /* QNHeightWeightScaleData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QNHeightWeightScaleData.h; sourceTree = "<group>"; };
+		2457619428A6256F004A45AE /* QNHeightWeightScaleOperate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QNHeightWeightScaleOperate.h; sourceTree = "<group>"; };
+		7E5ACB3A28A9DAE500FC74DC /* QNPlugin.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = QNPlugin.podspec; sourceTree = "<group>"; };
+		7E5ACB3B28A9DAE500FC74DC /* QNHeightWeightScalePlugin.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = QNHeightWeightScalePlugin.podspec; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2457614328A5FF71004A45AE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2457618A28A5FF87004A45AE /* libQNPlugin.a in Frameworks */,
+				2457619528A6256F004A45AE /* libQNHeightWeightScalePlugin.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2457613D28A5FF71004A45AE = {
+			isa = PBXGroup;
+			children = (
+				2457614828A5FF71004A45AE /* QNSDKDemo */,
+				2457614728A5FF71004A45AE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2457614728A5FF71004A45AE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2457614628A5FF71004A45AE /* QNSDKDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2457614828A5FF71004A45AE /* QNSDKDemo */ = {
+			isa = PBXGroup;
+			children = (
+				7E5ACB3B28A9DAE500FC74DC /* QNHeightWeightScalePlugin.podspec */,
+				7E5ACB3A28A9DAE500FC74DC /* QNPlugin.podspec */,
+				2457618B28A5FF95004A45AE /* Other */,
+				2457617028A5FF87004A45AE /* SDK */,
+				2457616428A5FF87004A45AE /* Tool */,
+				2457616728A5FF87004A45AE /* VC */,
+			);
+			path = QNSDKDemo;
+			sourceTree = "<group>";
+		};
+		2457616428A5FF87004A45AE /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				2457616628A5FF87004A45AE /* QNUnitTool.h */,
+				2457616528A5FF87004A45AE /* QNUnitTool.m */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		2457616728A5FF87004A45AE /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				2457616B28A5FF87004A45AE /* Main.storyboard */,
+				2457616E28A5FF87004A45AE /* ScaleViewController.h */,
+				2457616A28A5FF87004A45AE /* ScaleViewController.m */,
+				2457616928A5FF87004A45AE /* SettingTableViewController.h */,
+				2457616F28A5FF87004A45AE /* SettingTableViewController.m */,
+				2457616D28A5FF87004A45AE /* UnitChooseViewController.h */,
+				2457616828A5FF87004A45AE /* UnitChooseViewController.m */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		2457617028A5FF87004A45AE /* SDK */ = {
+			isa = PBXGroup;
+			children = (
+				2457618C28A6256F004A45AE /* QNHeightWeightScalePlugin */,
+				2457617A28A5FF87004A45AE /* QNPlugin */,
+			);
+			path = SDK;
+			sourceTree = "<group>";
+		};
+		2457617A28A5FF87004A45AE /* QNPlugin */ = {
+			isa = PBXGroup;
+			children = (
+				2457617B28A5FF87004A45AE /* QNScanListener.h */,
+				2457617C28A5FF87004A45AE /* QNPlugin.h */,
+				2457617D28A5FF87004A45AE /* QNLogListener.h */,
+				2457617E28A5FF87004A45AE /* QNAction.h */,
+				2457617F28A5FF87004A45AE /* QNSysBleStatusListener.h */,
+				2457618028A5FF87004A45AE /* libQNPlugin.a */,
+				2457618128A5FF87004A45AE /* QNAuthDevice.h */,
+				2457618228A5FF87004A45AE /* QNDiscoverPeripheralListener.h */,
+				2457618328A5FF87004A45AE /* QNBasePlugin.h */,
+			);
+			path = QNPlugin;
+			sourceTree = "<group>";
+		};
+		2457618B28A5FF95004A45AE /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				2457616228A5FF81004A45AE /* test123456789.qn */,
+				2457614928A5FF71004A45AE /* AppDelegate.h */,
+				2457614A28A5FF71004A45AE /* AppDelegate.m */,
+				2457614C28A5FF71004A45AE /* SceneDelegate.h */,
+				2457614D28A5FF71004A45AE /* SceneDelegate.m */,
+				2457614F28A5FF71004A45AE /* ViewController.h */,
+				2457615028A5FF71004A45AE /* ViewController.m */,
+				2457615528A5FF72004A45AE /* Assets.xcassets */,
+				2457615728A5FF72004A45AE /* LaunchScreen.storyboard */,
+				2457615A28A5FF72004A45AE /* Info.plist */,
+				2457615B28A5FF72004A45AE /* main.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		2457618C28A6256F004A45AE /* QNHeightWeightScalePlugin */ = {
+			isa = PBXGroup;
+			children = (
+				2457618F28A6256F004A45AE /* libQNHeightWeightScalePlugin.a */,
+				2457619328A6256F004A45AE /* QNHeightWeightScaleData.h */,
+				2457619228A6256F004A45AE /* QNHeightWeightScaleDataListener.h */,
+				2457619028A6256F004A45AE /* QNHeightWeightScaleDevice.h */,
+				2457618E28A6256F004A45AE /* QNHeightWeightScaleDeviceListener.h */,
+				2457619428A6256F004A45AE /* QNHeightWeightScaleOperate.h */,
+				2457619128A6256F004A45AE /* QNHeightWeightScalePlugin.h */,
+				2457618D28A6256F004A45AE /* QNHeightWeightScaleStatusListener.h */,
+			);
+			path = QNHeightWeightScalePlugin;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2457614528A5FF71004A45AE /* QNSDKDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2457615F28A5FF72004A45AE /* Build configuration list for PBXNativeTarget "QNSDKDemo" */;
+			buildPhases = (
+				2457614228A5FF71004A45AE /* Sources */,
+				2457614328A5FF71004A45AE /* Frameworks */,
+				2457614428A5FF71004A45AE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QNSDKDemo;
+			productName = QNSDKDemo;
+			productReference = 2457614628A5FF71004A45AE /* QNSDKDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2457613E28A5FF71004A45AE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					2457614528A5FF71004A45AE = {
+						CreatedOnToolsVersion = 13.2;
+					};
+				};
+			};
+			buildConfigurationList = 2457614128A5FF71004A45AE /* Build configuration list for PBXProject "QNSDKDemo" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2457613D28A5FF71004A45AE;
+			productRefGroup = 2457614728A5FF71004A45AE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2457614528A5FF71004A45AE /* QNSDKDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2457614428A5FF71004A45AE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E5ACB3D28A9DAE500FC74DC /* QNHeightWeightScalePlugin.podspec in Resources */,
+				2457615928A5FF72004A45AE /* LaunchScreen.storyboard in Resources */,
+				2457618728A5FF87004A45AE /* Main.storyboard in Resources */,
+				2457615628A5FF72004A45AE /* Assets.xcassets in Resources */,
+				2457616328A5FF81004A45AE /* test123456789.qn in Resources */,
+				7E5ACB3C28A9DAE500FC74DC /* QNPlugin.podspec in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2457614228A5FF71004A45AE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2457618428A5FF87004A45AE /* QNUnitTool.m in Sources */,
+				2457615128A5FF71004A45AE /* ViewController.m in Sources */,
+				2457614B28A5FF71004A45AE /* AppDelegate.m in Sources */,
+				2457618528A5FF87004A45AE /* UnitChooseViewController.m in Sources */,
+				2457618828A5FF87004A45AE /* SettingTableViewController.m in Sources */,
+				2457615C28A5FF72004A45AE /* main.m in Sources */,
+				2457614E28A5FF71004A45AE /* SceneDelegate.m in Sources */,
+				2457618628A5FF87004A45AE /* ScaleViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2457615728A5FF72004A45AE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2457615828A5FF72004A45AE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		2457616B28A5FF87004A45AE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2457616C28A5FF87004A45AE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2457615D28A5FF72004A45AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2457615E28A5FF72004A45AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2457616028A5FF72004A45AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4NX335G8BX;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = QNSDKDemo/Other/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/QNSDKDemo/SDK/QNHeightWeightScalePlugin",
+					"$(PROJECT_DIR)/QNSDKDemo/SDK/QNPlugin",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yolanda.QNSDKDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2457616128A5FF72004A45AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4NX335G8BX;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = QNSDKDemo/Other/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/QNSDKDemo/SDK/QNHeightWeightScalePlugin",
+					"$(PROJECT_DIR)/QNSDKDemo/SDK/QNPlugin",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yolanda.QNSDKDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2457614128A5FF71004A45AE /* Build configuration list for PBXProject "QNSDKDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2457615D28A5FF72004A45AE /* Debug */,
+				2457615E28A5FF72004A45AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2457615F28A5FF72004A45AE /* Build configuration list for PBXNativeTarget "QNSDKDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2457616028A5FF72004A45AE /* Debug */,
+				2457616128A5FF72004A45AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2457613E28A5FF71004A45AE /* Project object */;
+}
