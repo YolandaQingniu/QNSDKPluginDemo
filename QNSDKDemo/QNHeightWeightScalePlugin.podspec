@@ -19,9 +19,9 @@ s.author           = { 'service@qnniu.com' => 'service@qnniu.com' }
 s.source           = { :git => 'https://github.com/YolandaQingniu/QNSDKPluginDemo.git', :tag => s.version.to_s}
 s.ios.deployment_target = '8.0'
 
-s.source_files = 'QNSDKDemo/SDK/QNHeightWeightScalePlugin/*.{h,m}'
-s.vendored_libraries = 'QNSDKDemo/SDK/QNHeightWeightScalePlugin/libQNHeightWeightScalePlugin.a'
-s.public_header_files= 'QNSDKDemo/SDK/QNHeightWeightScalePlugin/*.h'
+s.source_files = 'QNHeightWeightScalePlugin/*.{h,m}'
+s.vendored_libraries = 'QNHeightWeightScalePlugin/libQNHeightWeightScalePlugin.a'
+s.public_header_files= 'QNHeightWeightScalePlugin/*.h'
 s.static_framework = true
 s.frameworks = 'CoreBluetooth'
 s.xcconfig = {'BITCODE_GENERATION_MODE' => 'bitcode'}

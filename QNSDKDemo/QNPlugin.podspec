@@ -19,9 +19,9 @@ s.author           = { 'service@qnniu.com' => 'service@qnniu.com' }
 s.source           = { :git => 'https://github.com/YolandaQingniu/QNSDKPluginDemo.git', :tag => s.version.to_s}
 s.ios.deployment_target = '8.0'
 
-s.source_files = 'QNSDKDemo/SDK/QNPlugin/*.{h,m}'
-s.vendored_libraries = 'QNSDKDemo/SDK/QNPlugin/libQNPlugin.a'
-s.public_header_files= 'QNSDKDemo/SDK/QNPlugin/*.h'
+s.source_files = 'QNPlugin/*.{h,m}'
+s.vendored_libraries = 'QNPlugin/libQNPlugin.a'
+s.public_header_files= 'QNPlugin/*.h'
 s.static_framework = true
 s.frameworks = 'CoreBluetooth'
 s.xcconfig = {'BITCODE_GENERATION_MODE' => 'bitcode'}

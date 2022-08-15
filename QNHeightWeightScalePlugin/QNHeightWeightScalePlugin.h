@@ -6,7 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "QNPlugin.h"
+#import <QNPlugin/QNPlugin.h>
 #import "QNHeightWeightScaleDeviceListener.h"
 #import "QNHeightWeightScaleStatusListener.h"
 #import "QNHeightWeightScaleDataListener.h"
