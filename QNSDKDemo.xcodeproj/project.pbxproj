@@ -21,8 +21,6 @@
 		2457618828A5FF87004A45AE /* SettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2457616F28A5FF87004A45AE /* SettingTableViewController.m */; };
 		7E383D0E28A9F59E001961F6 /* QNHeightWeightScalePlugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E5ACB6828A9E94600FC74DC /* QNHeightWeightScalePlugin.framework */; platformFilter = ios; };
 		7E383D1328A9F5A2001961F6 /* QNPlugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E5ACB5628A9E93300FC74DC /* QNPlugin.framework */; platformFilter = ios; };
-		7E5ACB3C28A9DAE500FC74DC /* QNPlugin.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 7E5ACB3A28A9DAE500FC74DC /* QNPlugin.podspec */; };
-		7E5ACB3D28A9DAE500FC74DC /* QNHeightWeightScalePlugin.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 7E5ACB3B28A9DAE500FC74DC /* QNHeightWeightScalePlugin.podspec */; };
 		7E5ACB7E28A9E9A800FC74DC /* QNHeightWeightScaleStatusListener.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E5ACB7628A9E9A800FC74DC /* QNHeightWeightScaleStatusListener.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7E5ACB7F28A9E9A800FC74DC /* QNHeightWeightScaleDeviceListener.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E5ACB7728A9E9A800FC74DC /* QNHeightWeightScaleDeviceListener.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7E5ACB8028A9E9A800FC74DC /* libQNHeightWeightScalePlugin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E5ACB7828A9E9A800FC74DC /* libQNHeightWeightScalePlugin.a */; };
@@ -40,6 +38,9 @@
 		7E5ACB9528A9EA6200FC74DC /* QNScanListener.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E5ACB8C28A9EA6200FC74DC /* QNScanListener.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7E5ACB9628A9EA6200FC74DC /* QNBasePlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E5ACB8D28A9EA6200FC74DC /* QNBasePlugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7E5ACB9728A9EA6200FC74DC /* QNPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E5ACB8E28A9EA6200FC74DC /* QNPlugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7EE57A6C28AA165900E12582 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 7EE57A6B28AA165900E12582 /* README.md */; };
+		7EE57A6F28AA1BAC00E12582 /* QNHeightWeightScalePlugin.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 7EE57A6D28AA1BAB00E12582 /* QNHeightWeightScalePlugin.podspec */; };
+		7EE57A7028AA1BAC00E12582 /* QNPlugin.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 7EE57A6E28AA1BAC00E12582 /* QNPlugin.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,8 +82,6 @@
 		2457616D28A5FF87004A45AE /* UnitChooseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnitChooseViewController.h; sourceTree = "<group>"; };
 		2457616E28A5FF87004A45AE /* ScaleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScaleViewController.h; sourceTree = "<group>"; };
 		2457616F28A5FF87004A45AE /* SettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingTableViewController.m; sourceTree = "<group>"; };
-		7E5ACB3A28A9DAE500FC74DC /* QNPlugin.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = QNPlugin.podspec; sourceTree = "<group>"; };
-		7E5ACB3B28A9DAE500FC74DC /* QNHeightWeightScalePlugin.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = QNHeightWeightScalePlugin.podspec; sourceTree = "<group>"; };
 		7E5ACB5628A9E93300FC74DC /* QNPlugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QNPlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E5ACB6828A9E94600FC74DC /* QNHeightWeightScalePlugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QNHeightWeightScalePlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E5ACB7628A9E9A800FC74DC /* QNHeightWeightScaleStatusListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QNHeightWeightScaleStatusListener.h; sourceTree = "<group>"; };
@@ -102,6 +101,9 @@
 		7E5ACB8C28A9EA6200FC74DC /* QNScanListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QNScanListener.h; sourceTree = "<group>"; };
 		7E5ACB8D28A9EA6200FC74DC /* QNBasePlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QNBasePlugin.h; sourceTree = "<group>"; };
 		7E5ACB8E28A9EA6200FC74DC /* QNPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QNPlugin.h; sourceTree = "<group>"; };
+		7EE57A6B28AA165900E12582 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		7EE57A6D28AA1BAB00E12582 /* QNHeightWeightScalePlugin.podspec */ = {isa = PBXFileReference; lastKnownFileType = file; path = QNHeightWeightScalePlugin.podspec; sourceTree = SOURCE_ROOT; };
+		7EE57A6E28AA1BAC00E12582 /* QNPlugin.podspec */ = {isa = PBXFileReference; lastKnownFileType = file; path = QNPlugin.podspec; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,8 +159,9 @@
 		2457614828A5FF71004A45AE /* QNSDKDemo */ = {
 			isa = PBXGroup;
 			children = (
-				7E5ACB3B28A9DAE500FC74DC /* QNHeightWeightScalePlugin.podspec */,
-				7E5ACB3A28A9DAE500FC74DC /* QNPlugin.podspec */,
+				7EE57A6D28AA1BAB00E12582 /* QNHeightWeightScalePlugin.podspec */,
+				7EE57A6E28AA1BAC00E12582 /* QNPlugin.podspec */,
+				7EE57A6B28AA165900E12582 /* README.md */,
 				2457618B28A5FF95004A45AE /* Other */,
 				2457616428A5FF87004A45AE /* Tool */,
 				2457616728A5FF87004A45AE /* VC */,
@@ -380,12 +383,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E5ACB3D28A9DAE500FC74DC /* QNHeightWeightScalePlugin.podspec in Resources */,
+				7EE57A6F28AA1BAC00E12582 /* QNHeightWeightScalePlugin.podspec in Resources */,
+				7EE57A7028AA1BAC00E12582 /* QNPlugin.podspec in Resources */,
 				2457615928A5FF72004A45AE /* LaunchScreen.storyboard in Resources */,
 				2457618728A5FF87004A45AE /* Main.storyboard in Resources */,
+				7EE57A6C28AA165900E12582 /* README.md in Resources */,
 				2457615628A5FF72004A45AE /* Assets.xcassets in Resources */,
 				2457616328A5FF81004A45AE /* test123456789.qn in Resources */,
-				7E5ACB3C28A9DAE500FC74DC /* QNPlugin.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
