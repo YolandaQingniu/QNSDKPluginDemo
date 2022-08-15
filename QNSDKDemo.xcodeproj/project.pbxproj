@@ -19,6 +19,7 @@
 		2457618628A5FF87004A45AE /* ScaleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2457616A28A5FF87004A45AE /* ScaleViewController.m */; };
 		2457618728A5FF87004A45AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2457616B28A5FF87004A45AE /* Main.storyboard */; };
 		2457618828A5FF87004A45AE /* SettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2457616F28A5FF87004A45AE /* SettingTableViewController.m */; };
+		30F9A862C871DE19CE565551 /* Pods_QNHeightWeightScalePlugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3C3CABEB61BE4DE11EA1E67 /* Pods_QNHeightWeightScalePlugin.framework */; };
 		7E383D0E28A9F59E001961F6 /* QNHeightWeightScalePlugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E5ACB6828A9E94600FC74DC /* QNHeightWeightScalePlugin.framework */; platformFilter = ios; };
 		7E383D1328A9F5A2001961F6 /* QNPlugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E5ACB5628A9E93300FC74DC /* QNPlugin.framework */; platformFilter = ios; };
 		7E5ACB7E28A9E9A800FC74DC /* QNHeightWeightScaleStatusListener.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E5ACB7628A9E9A800FC74DC /* QNHeightWeightScaleStatusListener.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -33,7 +34,6 @@
 		7E5ACB9028A9EA6200FC74DC /* QNDiscoverPeripheralListener.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E5ACB8728A9EA6200FC74DC /* QNDiscoverPeripheralListener.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7E5ACB9128A9EA6200FC74DC /* QNSysBleStatusListener.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E5ACB8828A9EA6200FC74DC /* QNSysBleStatusListener.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7E5ACB9228A9EA6200FC74DC /* QNAuthDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E5ACB8928A9EA6200FC74DC /* QNAuthDevice.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7E5ACB9328A9EA6200FC74DC /* libQNPlugin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E5ACB8A28A9EA6200FC74DC /* libQNPlugin.a */; };
 		7E5ACB9428A9EA6200FC74DC /* QNAction.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E5ACB8B28A9EA6200FC74DC /* QNAction.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7E5ACB9528A9EA6200FC74DC /* QNScanListener.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E5ACB8C28A9EA6200FC74DC /* QNScanListener.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7E5ACB9628A9EA6200FC74DC /* QNBasePlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E5ACB8D28A9EA6200FC74DC /* QNBasePlugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -41,6 +41,8 @@
 		7EE57A6C28AA165900E12582 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 7EE57A6B28AA165900E12582 /* README.md */; };
 		7EE57A6F28AA1BAC00E12582 /* QNHeightWeightScalePlugin.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 7EE57A6D28AA1BAB00E12582 /* QNHeightWeightScalePlugin.podspec */; };
 		7EE57A7028AA1BAC00E12582 /* QNPlugin.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 7EE57A6E28AA1BAC00E12582 /* QNPlugin.podspec */; };
+		7EE57A7128AA4B5600E12582 /* libQNPlugin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E5ACB8A28A9EA6200FC74DC /* libQNPlugin.a */; };
+		C0AB069C29C82FB1FCAA4A5F /* Pods_QNSDKDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66A9EAB63E2F1D8CC335B57E /* Pods_QNSDKDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		115B3DEB0A8A673147BD346A /* Pods-QNSDKDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QNSDKDemo.release.xcconfig"; path = "Target Support Files/Pods-QNSDKDemo/Pods-QNSDKDemo.release.xcconfig"; sourceTree = "<group>"; };
+		1211A2D9DCDD534A69E41D64 /* Pods_QNPlugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QNPlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		215179317EE296B06F578CF2 /* Pods-QNHeightWeightScalePlugin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QNHeightWeightScalePlugin.release.xcconfig"; path = "Target Support Files/Pods-QNHeightWeightScalePlugin/Pods-QNHeightWeightScalePlugin.release.xcconfig"; sourceTree = "<group>"; };
 		2457614628A5FF71004A45AE /* QNSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QNSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2457614928A5FF71004A45AE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2457614A28A5FF71004A45AE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -82,6 +87,8 @@
 		2457616D28A5FF87004A45AE /* UnitChooseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnitChooseViewController.h; sourceTree = "<group>"; };
 		2457616E28A5FF87004A45AE /* ScaleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScaleViewController.h; sourceTree = "<group>"; };
 		2457616F28A5FF87004A45AE /* SettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingTableViewController.m; sourceTree = "<group>"; };
+		4B3ACC6A762113BF6813E010 /* Pods-QNHeightWeightScalePlugin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QNHeightWeightScalePlugin.debug.xcconfig"; path = "Target Support Files/Pods-QNHeightWeightScalePlugin/Pods-QNHeightWeightScalePlugin.debug.xcconfig"; sourceTree = "<group>"; };
+		66A9EAB63E2F1D8CC335B57E /* Pods_QNSDKDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QNSDKDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E5ACB5628A9E93300FC74DC /* QNPlugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QNPlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E5ACB6828A9E94600FC74DC /* QNHeightWeightScalePlugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QNHeightWeightScalePlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E5ACB7628A9E9A800FC74DC /* QNHeightWeightScaleStatusListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QNHeightWeightScaleStatusListener.h; sourceTree = "<group>"; };
@@ -102,8 +109,10 @@
 		7E5ACB8D28A9EA6200FC74DC /* QNBasePlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QNBasePlugin.h; sourceTree = "<group>"; };
 		7E5ACB8E28A9EA6200FC74DC /* QNPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QNPlugin.h; sourceTree = "<group>"; };
 		7EE57A6B28AA165900E12582 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
-		7EE57A6D28AA1BAB00E12582 /* QNHeightWeightScalePlugin.podspec */ = {isa = PBXFileReference; lastKnownFileType = file; path = QNHeightWeightScalePlugin.podspec; sourceTree = SOURCE_ROOT; };
-		7EE57A6E28AA1BAC00E12582 /* QNPlugin.podspec */ = {isa = PBXFileReference; lastKnownFileType = file; path = QNPlugin.podspec; sourceTree = SOURCE_ROOT; };
+		7EE57A6D28AA1BAB00E12582 /* QNHeightWeightScalePlugin.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = QNHeightWeightScalePlugin.podspec; sourceTree = SOURCE_ROOT; };
+		7EE57A6E28AA1BAC00E12582 /* QNPlugin.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = QNPlugin.podspec; sourceTree = SOURCE_ROOT; };
+		B3C3CABEB61BE4DE11EA1E67 /* Pods_QNHeightWeightScalePlugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QNHeightWeightScalePlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC741D71DD26E42580E621C5 /* Pods-QNSDKDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QNSDKDemo.debug.xcconfig"; path = "Target Support Files/Pods-QNSDKDemo/Pods-QNSDKDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +122,7 @@
 			files = (
 				7E383D1328A9F5A2001961F6 /* QNPlugin.framework in Frameworks */,
 				7E383D0E28A9F59E001961F6 /* QNHeightWeightScalePlugin.framework in Frameworks */,
+				C0AB069C29C82FB1FCAA4A5F /* Pods_QNSDKDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,7 +130,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E5ACB9328A9EA6200FC74DC /* libQNPlugin.a in Frameworks */,
+				7EE57A7128AA4B5600E12582 /* libQNPlugin.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E5ACB8028A9E9A800FC74DC /* libQNHeightWeightScalePlugin.a in Frameworks */,
+				30F9A862C871DE19CE565551 /* Pods_QNHeightWeightScalePlugin.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +154,7 @@
 				7E5ACB7528A9E9A800FC74DC /* QNHeightWeightScalePlugin */,
 				2457614728A5FF71004A45AE /* Products */,
 				7E383D0D28A9F59E001961F6 /* Frameworks */,
+				66A4983551263DAA87FB702D /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -210,9 +222,23 @@
 			path = Other;
 			sourceTree = "<group>";
 		};
+		66A4983551263DAA87FB702D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4B3ACC6A762113BF6813E010 /* Pods-QNHeightWeightScalePlugin.debug.xcconfig */,
+				215179317EE296B06F578CF2 /* Pods-QNHeightWeightScalePlugin.release.xcconfig */,
+				DC741D71DD26E42580E621C5 /* Pods-QNSDKDemo.debug.xcconfig */,
+				115B3DEB0A8A673147BD346A /* Pods-QNSDKDemo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		7E383D0D28A9F59E001961F6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B3C3CABEB61BE4DE11EA1E67 /* Pods_QNHeightWeightScalePlugin.framework */,
+				1211A2D9DCDD534A69E41D64 /* Pods_QNPlugin.framework */,
+				66A9EAB63E2F1D8CC335B57E /* Pods_QNSDKDemo.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -287,6 +313,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2457615F28A5FF72004A45AE /* Build configuration list for PBXNativeTarget "QNSDKDemo" */;
 			buildPhases = (
+				EB168D56E12E2F753A62DC9F /* [CP] Check Pods Manifest.lock */,
 				2457614228A5FF71004A45AE /* Sources */,
 				2457614328A5FF71004A45AE /* Frameworks */,
 				2457614428A5FF71004A45AE /* Resources */,
@@ -324,6 +351,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7E5ACB7228A9E94600FC74DC /* Build configuration list for PBXNativeTarget "QNHeightWeightScalePlugin" */;
 			buildPhases = (
+				88150C84F396E078C784BA39 /* [CP] Check Pods Manifest.lock */,
 				7E5ACB6328A9E94600FC74DC /* Headers */,
 				7E5ACB6428A9E94600FC74DC /* Sources */,
 				7E5ACB6528A9E94600FC74DC /* Frameworks */,
@@ -408,6 +436,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		88150C84F396E078C784BA39 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QNHeightWeightScalePlugin-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EB168D56E12E2F753A62DC9F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QNSDKDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2457614228A5FF71004A45AE /* Sources */ = {
@@ -590,6 +665,7 @@
 		};
 		2457616028A5FF72004A45AE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC741D71DD26E42580E621C5 /* Pods-QNSDKDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -627,6 +703,7 @@
 		};
 		2457616128A5FF72004A45AE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 115B3DEB0A8A673147BD346A /* Pods-QNSDKDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -741,6 +818,7 @@
 		};
 		7E5ACB7328A9E94600FC74DC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B3ACC6A762113BF6813E010 /* Pods-QNHeightWeightScalePlugin.debug.xcconfig */;
 			buildSettings = {
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
 				CODE_SIGN_STYLE = Automatic;
@@ -783,6 +861,7 @@
 		};
 		7E5ACB7428A9E94600FC74DC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 215179317EE296B06F578CF2 /* Pods-QNHeightWeightScalePlugin.release.xcconfig */;
 			buildSettings = {
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
 				CODE_SIGN_STYLE = Automatic;

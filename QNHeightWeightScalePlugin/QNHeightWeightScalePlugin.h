@@ -6,20 +6,19 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "QNPlugin.h"
 #import "QNHeightWeightScaleDeviceListener.h"
 #import "QNHeightWeightScaleStatusListener.h"
 #import "QNHeightWeightScaleDataListener.h"
 #import "QNHeightWeightScaleDevice.h"
 #import "QNHeightWeightScaleOperate.h"
-
+@class QNPlugin;
 
 @interface QNHeightWeightScalePlugin : NSObject
 
 /// Initialize the height weight scale component
 /// @param plugin QNPlugin
 /// @param callback QNResultCallback
-+ (void)setScalePlugin:(QNPlugin *)plugin callback:(QNResultCallback)callback;
++ (void)setScalePlugin:(QNPlugin *)plugin callback:(void(^) (int code))callback;
 
 /// Set device listener
 /// @param deviceListener QNHeightWeightScaleDeviceListener
@@ -37,7 +36,7 @@
 /// @param device QNHeightWeightScaleDevice
 /// @param operate QNHeightWeightScaleOperate
 /// @param callback QNResultCallback
-+ (void)connectHeightWeightScaleDevice:(QNHeightWeightScaleDevice *)device operate:(QNHeightWeightScaleOperate *)operate  callback:(QNResultCallback)callback;
++ (void)connectHeightWeightScaleDevice:(QNHeightWeightScaleDevice *)device operate:(QNHeightWeightScaleOperate *)operate  callback:(void(^) (int code))callback;
 
 /// Cancel connect device
 /// @param device QNHeightWeightScaleDevice

@@ -1,0 +1,1 @@
+../../../QNPlugin/QNPlugin/QNPlugin.h

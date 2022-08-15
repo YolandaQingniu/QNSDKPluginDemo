@@ -1,0 +1,1 @@
+../../../QNPlugin/QNPlugin/QNAuthDevice.h

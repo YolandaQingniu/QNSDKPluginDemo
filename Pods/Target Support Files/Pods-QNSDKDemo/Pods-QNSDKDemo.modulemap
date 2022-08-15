@@ -1,0 +1,6 @@
+framework module Pods_QNSDKDemo {
+  umbrella header "Pods-QNSDKDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}
