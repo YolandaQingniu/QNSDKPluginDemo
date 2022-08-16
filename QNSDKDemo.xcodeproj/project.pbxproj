@@ -31,7 +31,6 @@
 		7E5ACB8428A9E9A800FC74DC /* QNHeightWeightScaleData.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E5ACB7C28A9E9A800FC74DC /* QNHeightWeightScaleData.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7E5ACB8528A9E9A800FC74DC /* QNHeightWeightScaleOperate.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E5ACB7D28A9E9A800FC74DC /* QNHeightWeightScaleOperate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7E5ACB8F28A9EA6200FC74DC /* QNLogListener.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E5ACB8628A9EA6200FC74DC /* QNLogListener.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7E5ACB9028A9EA6200FC74DC /* QNDiscoverPeripheralListener.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E5ACB8728A9EA6200FC74DC /* QNDiscoverPeripheralListener.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7E5ACB9128A9EA6200FC74DC /* QNSysBleStatusListener.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E5ACB8828A9EA6200FC74DC /* QNSysBleStatusListener.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7E5ACB9228A9EA6200FC74DC /* QNAuthDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E5ACB8928A9EA6200FC74DC /* QNAuthDevice.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7E5ACB9428A9EA6200FC74DC /* QNAction.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E5ACB8B28A9EA6200FC74DC /* QNAction.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -100,7 +99,6 @@
 		7E5ACB7C28A9E9A800FC74DC /* QNHeightWeightScaleData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QNHeightWeightScaleData.h; sourceTree = "<group>"; };
 		7E5ACB7D28A9E9A800FC74DC /* QNHeightWeightScaleOperate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QNHeightWeightScaleOperate.h; sourceTree = "<group>"; };
 		7E5ACB8628A9EA6200FC74DC /* QNLogListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QNLogListener.h; sourceTree = "<group>"; };
-		7E5ACB8728A9EA6200FC74DC /* QNDiscoverPeripheralListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QNDiscoverPeripheralListener.h; sourceTree = "<group>"; };
 		7E5ACB8828A9EA6200FC74DC /* QNSysBleStatusListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QNSysBleStatusListener.h; sourceTree = "<group>"; };
 		7E5ACB8928A9EA6200FC74DC /* QNAuthDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QNAuthDevice.h; sourceTree = "<group>"; };
 		7E5ACB8A28A9EA6200FC74DC /* libQNPlugin.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libQNPlugin.a; sourceTree = "<group>"; };
@@ -250,7 +248,6 @@
 				7E5ACB8B28A9EA6200FC74DC /* QNAction.h */,
 				7E5ACB8928A9EA6200FC74DC /* QNAuthDevice.h */,
 				7E5ACB8D28A9EA6200FC74DC /* QNBasePlugin.h */,
-				7E5ACB8728A9EA6200FC74DC /* QNDiscoverPeripheralListener.h */,
 				7E5ACB8628A9EA6200FC74DC /* QNLogListener.h */,
 				7E5ACB8E28A9EA6200FC74DC /* QNPlugin.h */,
 				7E5ACB8C28A9EA6200FC74DC /* QNScanListener.h */,
@@ -281,7 +278,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E5ACB9028A9EA6200FC74DC /* QNDiscoverPeripheralListener.h in Headers */,
 				7E5ACB9228A9EA6200FC74DC /* QNAuthDevice.h in Headers */,
 				7E5ACB9628A9EA6200FC74DC /* QNBasePlugin.h in Headers */,
 				7E5ACB9428A9EA6200FC74DC /* QNAction.h in Headers */,

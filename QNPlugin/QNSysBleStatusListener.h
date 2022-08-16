@@ -11,6 +11,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol QNSysBleStatusListener <NSObject>
 
+/// System Bluetooth Status
+/// @param code 0：Unknown；1：Resetting；2：Unsupported；3：Unauthorized；4：PoweredOff；5：PoweredOn
+- (void)onSysBleStatus:(int)code;
 @end
 
 NS_ASSUME_NONNULL_END

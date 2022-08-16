@@ -6,7 +6,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "QNDiscoverPeripheralListener.h"
 @class QNBleManager;
 
 NS_ASSUME_NONNULL_BEGIN
@@ -15,8 +14,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(nonatomic, strong) QNBleManager *bleManager;
 
-/// Discover device broadcast
-@property(nonatomic, weak) id<QNDiscoverPeripheralListener> discoverPeripheralListener;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -35,7 +35,7 @@
 @end
 
 
-@interface ScaleViewController ()<UITableViewDelegate, UITableViewDataSource, QNHeightWeightScaleDataListener, QNHeightWeightScaleDeviceListener, QNHeightWeightScaleStatusListener>
+@interface ScaleViewController ()<UITableViewDelegate, UITableViewDataSource, QNHeightWeightScaleDataListener, QNHeightWeightScaleDeviceListener, QNHeightWeightScaleStatusListener,QNLogListener,QNSysBleStatusListener,QNScanListener>
 
 @property (nonatomic, strong) QNPlugin *plugin;
 
@@ -63,20 +63,6 @@
     [self showMeasureResult:@"--" unit:@""];
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    
-    [self loadBleStatusLabel];
-}
-
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    
-    [self.plugin startScanCallback:^(int code) {
-        
-    }];
-}
-
 - (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
     
@@ -100,6 +86,9 @@
     [self.plugin initSdk:@"test123456789" filePath:file callback:^(int code) {
         
     }];
+    self.plugin.scanListener = self;
+    self.plugin.logListener = self;
+    self.plugin.sysBleStatusListener = self;
     
     // init specified device plugin
     [QNHeightWeightScalePlugin setScalePlugin:self.plugin callback:^(int code) {
@@ -113,21 +102,34 @@
     
 }
 
-- (void)loadBleStatusLabel {
-    
-    int bleStatus = [self.plugin getBluetoothEnable];
-    
-    NSString *bleStatusStr = @"Bluetooth Power on";
-    
-    switch (bleStatus) {
+#pragma mark - QNPluginDelegare
+- (void)onLog:(nonnull NSString *)log {
+    [self qingniuScaleLog:log];
+}
+
+- (void)onSysBleStatus:(int)code {
+    NSString *bleStatusStr = @"Bluetooth Unknown";
+    switch (code) {
         case 1: bleStatusStr = @"Bluetooth Resetting";break;
         case 2: bleStatusStr = @"Bluetooth Unsupported";break;
         case 3: bleStatusStr = @"Bluetooth Unauthorized";break;
         case 4: bleStatusStr = @"Bluetooth Power Off";break;
-        default: bleStatusStr = @"Bluetooth Power on";break;
+        case 5: {
+            bleStatusStr = @"Bluetooth Power on";
+            [self.plugin startScanCallback:^(int code) {
+            }];
+        }break;
+        default: bleStatusStr = @"Bluetooth Unknown";break;
     }
-    
     self.statusLbl.text = bleStatusStr;
+}
+
+- (void)onScanResult:(int)code {
+    
+}
+
+- (void)onStopScan {
+    
 }
 
 #pragma mark - notification
@@ -235,6 +237,7 @@
     [self qingniuScaleLog:[NSString stringWithFormat:@"device disConnected___%@___%@", device.bleName, device.mac]];
 }
 
+
 #pragma mark - HeightWeightScale DataListener
 - (void)onHeightWeightScaleRealTimeWeight:(NSString *)weight device:(QNHeightWeightScaleDevice *)device {
     self.statusLbl.text = QNBLEStatusStr_Measuring;
@@ -329,5 +332,4 @@
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
-
 @end
