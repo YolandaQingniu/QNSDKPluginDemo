@@ -17,6 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSString *weight;
 /// Height
 @property (nonatomic, strong) NSString *height;
+/// BMI
+@property (nonatomic, strong) NSString *bmi;
 
 @end
 

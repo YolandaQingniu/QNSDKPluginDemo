@@ -62,6 +62,11 @@
     [self initBlePlugin];
     [self showMeasureResult:@"--" unit:@""];
 }
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    int code = [[QNPlugin sharedPlugin] getBluetoothEnable];
+    [self onSysBleStatus:code];
+}
 
 - (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
@@ -187,14 +192,9 @@
 
 #pragma mark - HeightWeightScale DeviceListener
 - (void)onDiscoverHeightWeightScaleDevice:(QNHeightWeightScaleDevice *)device {
-    
     if (self.isConnect == YES) return;
-    
     self.statusLbl.text = QNBLEStatusStr_Scaning;
-    
-    
     self.statusLbl.text = QNBLEStatusStr_Connecting;
-    
     QNHeightWeightScaleOperate *operate = [[QNHeightWeightScaleOperate alloc] init];
     operate.weightUnit = self.weightUnit;
     operate.heightUnit = self.heightUnit;
@@ -314,8 +314,9 @@
     
     QNMeasureReport *weight = [QNMeasureReport reportWithTitle:@"Weight" value:weightStr];
     QNMeasureReport *height = [QNMeasureReport reportWithTitle:@"Height" value:heightStr];
+    QNMeasureReport *bmi = [QNMeasureReport reportWithTitle:@"BMI" value:scaleData.bmi];
 
-    [self.reportDatas addObjectsFromArray:@[weight, height]];
+    [self.reportDatas addObjectsFromArray:@[weight, height, bmi]];
     
     [self.tableView reloadData];
 }
