@@ -10,6 +10,7 @@
 #import "QNUnitTool.h"
 #import "UnitChooseViewController.h"
 
+#define QNAppId @"test123456789"
 #define QNScaleLogCode @"QingniuScaleLog="
 
 #define QNBLEStatusStr_Scaning @"Scanning"
@@ -44,6 +45,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *statusLbl;
 @property (weak, nonatomic) IBOutlet UILabel *macLbl;
 @property (weak, nonatomic) IBOutlet UILabel *weightLbl;
+@property (weak, nonatomic) IBOutlet UILabel *appIdLbl;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *tableViewBottomHeight;
 
@@ -57,7 +59,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.appIdLbl.text = [NSString stringWithFormat:@"AppId: %@",QNAppId];
     [self initBleUnit];
     [self initBlePlugin];
     [self showMeasureResult:@"--" unit:@""];
@@ -87,8 +89,8 @@
 - (void)initBlePlugin {
     // init centeral plugin
     self.plugin = [QNPlugin sharedPlugin];
-    NSString *file = [[NSBundle mainBundle] pathForResource:@"test123456789" ofType:@"qn"];
-    [self.plugin initSdk:@"test123456789" filePath:file callback:^(int code) {
+    NSString *file = [[NSBundle mainBundle] pathForResource:QNAppId ofType:@"qn"];
+    [self.plugin initSdk:QNAppId filePath:file callback:^(int code) {
         
     }];
     self.plugin.scanListener = self;
@@ -283,13 +285,12 @@
 
 - (NSString *)adjustWeightValue:(NSString *)weight {
     // the default weight unit of QNSDK is kg.
-    
     if (self.weightUnit == QNWeightUnitJin) {
-        weight = [NSString stringWithFormat:@"%.1f", [weight floatValue] * 2];
+        return [QNHeightWeightScalePlugin getWeightJin:weight];
     } else if (self.weightUnit == QNWeightUnitSt) {
-        weight = [NSString stringWithFormat:@"%.1f", [QNUnitTool stFromKg:[weight floatValue]]];
+        return [QNHeightWeightScalePlugin getWeightSt:weight];
     } else if (self.weightUnit == QNWeightUnitLb) {
-        weight = [NSString stringWithFormat:@"%.1f", [QNUnitTool lbFromKg:[weight floatValue]]];
+        return [QNHeightWeightScalePlugin getWeightLb:weight];
     }
     return weight;
 }
@@ -298,7 +299,8 @@
     // the default height unit of QNSDK is cm.
     
     if (self.heightUnit == QNHeightUnitFt) {
-        height = [QNUnitTool ftFromCm:[height floatValue]];
+        NSArray *ary = [QNHeightWeightScalePlugin getHeightFtIn:height];
+        return [NSString stringWithFormat:@"%@'%@''", ary[0], ary[1]];
     }
     return height;
 }

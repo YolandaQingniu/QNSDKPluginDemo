@@ -42,4 +42,24 @@
 /// @param device QNHeightWeightScaleDevice
 + (void)cancelConnectHeightWeightScaleDevice:(QNHeightWeightScaleDevice *)device;
 
+/// Weight kg to Lb
+/// @param weight NSString
++ (NSString *)getWeightLb:(NSString *)weight;
+
+/// Weight kg to Jin
+/// @param weight NSString
++ (NSString *)getWeightJin:(NSString *)weight;
+
+/// Weight kg to StLb
+/// @param weight NSString
++ (NSArray *)getWeightStLb:(NSString *)weight;
+
+/// Weight kg to St
+/// @param weight NSString
++ (NSString *)getWeightSt:(NSString *)weight;
+
+/// Height cm to FtIn
+/// @param height NSString
++ (NSArray *)getHeightFtIn:(NSString *)height;
+
 @end

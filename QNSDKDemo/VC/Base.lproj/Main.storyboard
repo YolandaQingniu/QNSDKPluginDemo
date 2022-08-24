@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YCa-Nw-cEp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YCa-Nw-cEp">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -220,8 +220,14 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mac：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Rz-k9-spU">
-                                        <rect key="frame" x="20" y="50" width="45" height="18"/>
+                                        <rect key="frame" x="20" y="50" width="45" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AppId:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JeK-ox-3iX" userLabel="AppId Lbl">
+                                        <rect key="frame" x="344" y="50" width="50" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -232,8 +238,11 @@
                                     <constraint firstItem="OIL-EL-WUW" firstAttribute="top" secondItem="E9Z-dd-ffp" secondAttribute="top" id="Fxe-FQ-1ju"/>
                                     <constraint firstItem="3Rz-k9-spU" firstAttribute="top" secondItem="OIL-EL-WUW" secondAttribute="bottom" constant="10" id="JS3-6n-0TI"/>
                                     <constraint firstItem="3Rz-k9-spU" firstAttribute="leading" secondItem="E9Z-dd-ffp" secondAttribute="leading" constant="20" id="JUK-fB-ceT"/>
+                                    <constraint firstItem="JeK-ox-3iX" firstAttribute="top" secondItem="3Rz-k9-spU" secondAttribute="top" id="Mhl-0U-5I1"/>
                                     <constraint firstAttribute="height" constant="80" id="R9M-uz-r2C"/>
                                     <constraint firstAttribute="trailing" secondItem="OIL-EL-WUW" secondAttribute="trailing" id="SUv-uC-fPc"/>
+                                    <constraint firstItem="JeK-ox-3iX" firstAttribute="bottom" secondItem="3Rz-k9-spU" secondAttribute="bottom" id="ck8-fE-80i"/>
+                                    <constraint firstAttribute="trailing" secondItem="JeK-ox-3iX" secondAttribute="trailing" constant="20" id="uLi-pt-Dlt"/>
                                     <constraint firstItem="OIL-EL-WUW" firstAttribute="leading" secondItem="E9Z-dd-ffp" secondAttribute="leading" id="w7b-fQ-TbO"/>
                                 </constraints>
                             </view>
@@ -282,6 +291,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="appIdLbl" destination="JeK-ox-3iX" id="CBu-b4-ods"/>
                         <outlet property="macLbl" destination="3Rz-k9-spU" id="Ub6-UL-4Dc"/>
                         <outlet property="statusLbl" destination="OIL-EL-WUW" id="hTg-4t-6JS"/>
                         <outlet property="tableView" destination="gRF-Hq-vLG" id="qYq-Qy-Sv9"/>
@@ -427,7 +437,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="odJ-Sl-3kG">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="apC-sc-b5z"/>
                                 </constraints>
@@ -436,7 +446,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vje-h5-2Rc">
-                                <rect key="frame" x="0.0" y="90" width="414" height="50"/>
+                                <rect key="frame" x="0.0" y="134" width="414" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SSID：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lz7-Nb-XkC">
                                         <rect key="frame" x="25" y="14.5" width="55" height="21"/>
@@ -464,7 +474,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7YA-H1-p61">
-                                <rect key="frame" x="0.0" y="140" width="414" height="50"/>
+                                <rect key="frame" x="0.0" y="184" width="414" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PWD：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D6L-sA-X0i">
                                         <rect key="frame" x="25" y="14.5" width="56" height="21"/>
@@ -492,7 +502,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5w9-Ib-WyM">
-                                <rect key="frame" x="62" y="230" width="290" height="45"/>
+                                <rect key="frame" x="62" y="274" width="290" height="45"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="TyG-SP-5Wk"/>
@@ -502,13 +512,13 @@
                                 <buttonConfiguration key="configuration" style="filled" title="start pair network"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="progress：20%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Kg-rf-v9f">
-                                <rect key="frame" x="147" y="375" width="120" height="21"/>
+                                <rect key="frame" x="147" y="419" width="120" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="sJ2-3J-qGa">
-                                <rect key="frame" x="103.5" y="426" width="207" height="4"/>
+                                <rect key="frame" x="103.5" y="470" width="207" height="4"/>
                                 <color key="tintColor" systemColor="systemBlueColor"/>
                             </progressView>
                         </subviews>
