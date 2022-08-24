@@ -6,7 +6,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <QNHeightWeightScalePlugin/QNHeightWeightScalePlugin.h>
+#import <QNHeightWeightScalePluginLibrary/QNHeightWeightScalePluginLibrary.h>
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ScaleViewController : UIViewController

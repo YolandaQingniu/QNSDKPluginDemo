@@ -6,7 +6,7 @@
 //
 
 #import "ScaleViewController.h"
-#import "QNPlugin.h"
+#import <QNPluginLibrary/QNPluginLibrary.h>
 #import "QNUnitTool.h"
 #import "UnitChooseViewController.h"
 
