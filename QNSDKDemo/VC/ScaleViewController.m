@@ -60,10 +60,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.appIdLbl.text = [NSString stringWithFormat:@"AppId: %@",QNAppId];
-    [self initBleUnit];
+    
     [self initBlePlugin];
     [self showMeasureResult:@"--" unit:@""];
 }
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self initBleUnit];
+}
+
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     int code = [[QNPlugin sharedPlugin] getBluetoothEnable];
@@ -75,15 +81,14 @@
     
     self.isConnect = NO;
     [self.plugin stopScan];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadUnit:) name:@"UnitChoose" object:nil];
     if (self.connectedDevice != nil) {
         [QNHeightWeightScalePlugin cancelConnectHeightWeightScaleDevice:self.connectedDevice];
     }
 }
 
 - (void)initBleUnit {
-    self.weightUnit = QNWeightUnitKg;
-    self.heightUnit = QNHeightUnitCm;
+    self.weightUnit = (QNWeightUnit)[[NSUserDefaults standardUserDefaults] integerForKey:@"WeightUnit"];
+    self.heightUnit = (QNHeightUnit)[[NSUserDefaults standardUserDefaults] integerForKey:@"HeightUnit"];
 }
 
 - (void)initBlePlugin {
@@ -137,20 +142,6 @@
 
 - (void)onStopScan {
     
-}
-
-#pragma mark - notification
-- (void)reloadUnit:(NSNotification *)noti {
-    NSDictionary *data = [noti userInfo];
-    
-    NSInteger type = [data[@"type"] integerValue];
-    NSInteger value = [data[@"value"] integerValue];
-    
-    if (type == 0) {
-        self.weightUnit = (QNWeightUnit)value;
-    } else {
-        self.heightUnit = (QNHeightUnit)value;
-    }    
 }
 
 #pragma mark - show measure result

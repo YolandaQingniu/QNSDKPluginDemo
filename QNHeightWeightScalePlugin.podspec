@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
 s.name             = 'QNHeightWeightScalePlugin'
-s.version          = '0.1.1'
+s.version          = '1.0.0'
 s.summary          = '轻牛旗下身高一体机设备通讯类'
 
 s.description      = '支持轻牛旗下身高一体机设备'
@@ -19,7 +19,7 @@ s.author           = { 'service@qnniu.com' => 'service@qnniu.com' }
 s.source           = { :git => 'https://github.com/YolandaQingniu/QNSDKPluginDemo.git', :tag => s.version.to_s}
 s.ios.deployment_target = '9.0'
 
-s.vendored_frameworks = 'QNHeightWeightScalePluginLibrary.xcframework.a'
+s.vendored_frameworks = 'QNHeightWeightScalePluginLibrary.xcframework'
 s.static_framework = true
 s.frameworks = 'CoreBluetooth'
 end

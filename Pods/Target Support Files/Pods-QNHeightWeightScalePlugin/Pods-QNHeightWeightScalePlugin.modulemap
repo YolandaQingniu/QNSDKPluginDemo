@@ -1,6 +1,0 @@
-framework module Pods_QNHeightWeightScalePlugin {
-  umbrella header "Pods-QNHeightWeightScalePlugin-umbrella.h"
-
-  export *
-  module * { export * }
-}

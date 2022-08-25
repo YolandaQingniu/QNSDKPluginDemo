@@ -1,16 +1,20 @@
 PODS:
-  - QNPlugin (0.1.0)
+  - QNHeightWeightScalePlugin (0.1.1)
+  - QNPlugin (0.1.1)
 
 DEPENDENCIES:
-  - QNPlugin
+  - QNHeightWeightScalePlugin (= 0.1.1)
+  - QNPlugin (= 0.1.1)
 
 SPEC REPOS:
-  trunk:
+  https://github.com/CocoaPods/Specs.git:
+    - QNHeightWeightScalePlugin
     - QNPlugin
 
 SPEC CHECKSUMS:
-  QNPlugin: 8a44d4cc2ac18f2c6a87612f253a367f102e6a4d
+  QNHeightWeightScalePlugin: f88e6bb933cbf9f1b1c09c57782aac605c42fae7
+  QNPlugin: 4b2672903319450d5b1b30ab6de9e3096763afff
 
-PODFILE CHECKSUM: 47b52eeb0e24655e1034a26f6464a94249dc4428
+PODFILE CHECKSUM: b265e979e0dcff57a29f36c96cb9a68ccd53fdbe
 
 COCOAPODS: 1.10.1

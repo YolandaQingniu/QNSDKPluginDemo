@@ -1,1 +1,0 @@
-../../../QNPlugin/QNPlugin/QNSysBleStatusListener.h

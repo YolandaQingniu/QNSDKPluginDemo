@@ -33,8 +33,6 @@ echo ""
 fi
 }
 
-update_podspecs QNPluginLibrary QNHeightWeightScalePluginLibrary
+update_podspecs QNPlugin QNHeightWeightScalePlugin
 
 fi
-
-

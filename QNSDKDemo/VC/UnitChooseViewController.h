@@ -10,14 +10,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef NS_ENUM(NSInteger, QNUnitType) {
-    QNUnitTypeWeight, // weight
-    QNUnitTypeHeight, // height
-};
-
 @interface UnitChooseViewController : UITableViewController
 
-@property (nonatomic, assign) QNUnitType unitType;
 
 @end
 

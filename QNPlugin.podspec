@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
 s.name             = 'QNPlugin'
-s.version          = '0.1.0'
+s.version          = '1.0.0'
 s.summary          = '轻牛旗下设备通讯基础类'
 
 s.description      = '支持轻牛旗下SDK授权信息校验'
@@ -19,15 +19,8 @@ s.author           = { 'service@qnniu.com' => 'service@qnniu.com' }
 s.source           = { :git => 'https://github.com/YolandaQingniu/QNSDKPluginDemo.git', :tag => s.version.to_s}
 s.ios.deployment_target = '9.0'
 
-s.source_files = 'QNPlugin/*.{h,m}'
-s.vendored_libraries = 'QNPlugin/libQNPlugin.a'
-s.public_header_files= 'QNPlugin/*.h'
+s.vendored_frameworks = 'QNPluginLibrary.xcframework'
 s.static_framework = true
 s.frameworks = 'CoreBluetooth'
-s.xcconfig = {'BITCODE_GENERATION_MODE' => 'bitcode'}
-s.pod_target_xcconfig = {
-    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
-}
-s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
 
 end

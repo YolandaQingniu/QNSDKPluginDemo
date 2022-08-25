@@ -16,9 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    self.datas = [NSMutableArray arrayWithArray:@[@"Set Weight Unit", @"Set Height Unit"]];
-    
+    self.datas = [NSMutableArray arrayWithArray:@[@"Set Unit"]];
     [self.tableView reloadData];
 }
 
@@ -38,19 +36,10 @@
 
 #pragma mark - click
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    UnitChooseViewController *dstVC = segue.destinationViewController;
-    
-    NSString *title = (NSString *)sender;
-    
-    NSInteger idx = [self.datas indexOfObject:title];
-    
-    if (idx >= self.datas.count || idx < 0) return;
 
-    if (idx == 0) {
-        dstVC.unitType = QNUnitTypeWeight;
-    } else {
-        dstVC.unitType = QNUnitTypeHeight;
-    }
+    NSString *title = (NSString *)sender;
+    NSInteger idx = [self.datas indexOfObject:title];
+    if (idx >= self.datas.count || idx < 0) return;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
