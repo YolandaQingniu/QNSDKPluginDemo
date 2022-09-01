@@ -18,7 +18,7 @@
 		</data>
 		<key>Headers/QNHeightWeightScaleDeviceListener.h</key>
 		<data>
-		TnYGGVJd4fbJctZo9P4FQ360uCQ=
+		vrG0O77x51sLrpv+OaaqNd2GRqg=
 		</data>
 		<key>Headers/QNHeightWeightScaleOperate.h</key>
 		<data>
@@ -26,19 +26,15 @@
 		</data>
 		<key>Headers/QNHeightWeightScalePlugin.h</key>
 		<data>
-		0tHyXPvxYM2hsC3Hv6+hL3wBvqU=
+		gkuMsMaX02yf9DY/T1lUvyiQepw=
 		</data>
 		<key>Headers/QNHeightWeightScalePluginLibrary.h</key>
 		<data>
-		FH844CH5t/E2xnaysq74LDVxTjc=
-		</data>
-		<key>Headers/QNHeightWeightScaleStatusListener.h</key>
-		<data>
-		mFywGfEfGY9OOEZasYJoS1SzM5Y=
+		7QDRUh8osjlerYOmN5cAbX5gYLs=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		T6Ih8LMrbzTPvMcCSI8leIbILqQ=
+		ZEkphsOrcDrqBxlZO7Ek+l2BjVA=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -84,11 +80,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			TnYGGVJd4fbJctZo9P4FQ360uCQ=
+			vrG0O77x51sLrpv+OaaqNd2GRqg=
 			</data>
 			<key>hash2</key>
 			<data>
-			eJXQKtOZfwygOM8OZ/y1RVOyf2jGT2qIPmz1YTJibQI=
+			yv+PQUmWofqjkPzMCLBCLXhpk9DUrhq2Qz32CMIK8+8=
 			</data>
 		</dict>
 		<key>Headers/QNHeightWeightScaleOperate.h</key>
@@ -106,33 +102,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			0tHyXPvxYM2hsC3Hv6+hL3wBvqU=
+			gkuMsMaX02yf9DY/T1lUvyiQepw=
 			</data>
 			<key>hash2</key>
 			<data>
-			mKHcwwEhouyn8BzPUjlRA5+Kv9FiDYHtR0sTQC2u6yw=
+			9AS7UJJcjaEGdAxcn2hoDeRh5LBC2O9nED6YWBmXxNY=
 			</data>
 		</dict>
 		<key>Headers/QNHeightWeightScalePluginLibrary.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			FH844CH5t/E2xnaysq74LDVxTjc=
+			7QDRUh8osjlerYOmN5cAbX5gYLs=
 			</data>
 			<key>hash2</key>
 			<data>
-			+dx6IgzhHnBa46PaJF0PHm+tlNJoRhu6B7NUIk26QRA=
-			</data>
-		</dict>
-		<key>Headers/QNHeightWeightScaleStatusListener.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			mFywGfEfGY9OOEZasYJoS1SzM5Y=
-			</data>
-			<key>hash2</key>
-			<data>
-			ZxabZHXKAg112OvDGTRzOpvfs+c/+7UJhvah7cmSGMU=
+			4/0tJ6aEYY+u+JbAE+6MWwicflVa4YUqzElwGH1K/dg=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

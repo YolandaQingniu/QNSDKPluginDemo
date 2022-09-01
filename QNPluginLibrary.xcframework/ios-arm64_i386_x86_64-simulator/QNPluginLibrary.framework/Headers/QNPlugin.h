@@ -4,6 +4,7 @@
 //
 //  Created by sumeng on 2022/6/6.
 //  QingNiuSDK
+//  V1.0.1
 
 #import "QNBasePlugin.h"
 #import "QNLogListener.h"
@@ -29,9 +30,9 @@ typedef void(^QNResultCallback) (int code);
 
 - (QNAuthDevice * _Nullable)getAuthDevice:(NSString *)modelId;
 
-- (int)getBluetoothEnable;
+- (int)getSysBleStatus;
 
-- (void)startScanCallback:(QNResultCallback)callback;
+- (int)startScan;
 
 - (void)stopScan;
 

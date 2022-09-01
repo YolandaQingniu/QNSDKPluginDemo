@@ -3,11 +3,10 @@
 //  QNHeightWeightScalePlugin
 //
 //  Created by sumeng on 2022/8/9.
-//
+//  V1.0.1
 
 #import <Foundation/Foundation.h>
 #import "QNHeightWeightScaleDeviceListener.h"
-#import "QNHeightWeightScaleStatusListener.h"
 #import "QNHeightWeightScaleDataListener.h"
 #import "QNHeightWeightScaleDevice.h"
 #import "QNHeightWeightScaleOperate.h"
@@ -17,16 +16,11 @@
 
 /// Initialize the height weight scale component
 /// @param plugin QNPlugin
-/// @param callback QNResultCallback
-+ (void)setScalePlugin:(QNPlugin *)plugin callback:(void(^) (int code))callback;
++ (int)setScalePlugin:(QNPlugin *)plugin;
 
 /// Set device listener
 /// @param deviceListener QNHeightWeightScaleDeviceListener
 + (void)setDeviceListener:(id<QNHeightWeightScaleDeviceListener>)deviceListener;
-
-/// Set status listener
-/// @param statusListener QNHeightWeightScaleStatusListener
-+ (void)setStatusListener:(id<QNHeightWeightScaleStatusListener>)statusListener;
 
 /// Set data listener
 /// @param dataListener QNHeightWeightScaleDataListener
@@ -35,8 +29,7 @@
 /// Connect device
 /// @param device QNHeightWeightScaleDevice
 /// @param operate QNHeightWeightScaleOperate
-/// @param callback QNResultCallback
-+ (void)connectHeightWeightScaleDevice:(QNHeightWeightScaleDevice *)device operate:(QNHeightWeightScaleOperate *)operate  callback:(void(^) (int code))callback;
++ (int)connectHeightWeightScaleDevice:(QNHeightWeightScaleDevice *)device operate:(QNHeightWeightScaleOperate *)operate;
 
 /// Cancel connect device
 /// @param device QNHeightWeightScaleDevice

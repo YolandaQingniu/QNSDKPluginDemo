@@ -11,7 +11,6 @@
 #import "UnitChooseViewController.h"
 
 #define QNAppId @"test123456789"
-#define QNScaleLogCode @"QingniuScaleLog="
 
 #define QNBLEStatusStr_Scaning @"Scanning"
 #define QNBLEStatusStr_Connecting @"Connecting"
@@ -36,7 +35,7 @@
 @end
 
 
-@interface ScaleViewController ()<UITableViewDelegate, UITableViewDataSource, QNHeightWeightScaleDataListener, QNHeightWeightScaleDeviceListener, QNHeightWeightScaleStatusListener,QNLogListener,QNSysBleStatusListener,QNScanListener>
+@interface ScaleViewController ()<UITableViewDelegate, UITableViewDataSource, QNHeightWeightScaleDataListener, QNHeightWeightScaleDeviceListener,QNLogListener,QNSysBleStatusListener,QNScanListener>
 
 @property (nonatomic, strong) QNPlugin *plugin;
 
@@ -72,7 +71,7 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    int code = [[QNPlugin sharedPlugin] getBluetoothEnable];
+    int code = [[QNPlugin sharedPlugin] getSysBleStatus];
     [self onSysBleStatus:code];
 }
 
@@ -103,15 +102,12 @@
     self.plugin.sysBleStatusListener = self;
     
     // init specified device plugin
-    [QNHeightWeightScalePlugin setScalePlugin:self.plugin callback:^(int code) {
-        
-    }];
+    int code = [QNHeightWeightScalePlugin setScalePlugin:self.plugin];
+    NSLog(@"init specified device plugin code = %d",code);
     
     // set device delegate
     [QNHeightWeightScalePlugin setDataListener:self];
     [QNHeightWeightScalePlugin setDeviceListener:self];
-    [QNHeightWeightScalePlugin setStatusListener:self];
-    
 }
 
 #pragma mark - QNPluginDelegare
@@ -128,8 +124,8 @@
         case 4: bleStatusStr = @"Bluetooth Power Off";break;
         case 5: {
             bleStatusStr = @"Bluetooth Power on";
-            [self.plugin startScanCallback:^(int code) {
-            }];
+            int tempCode = [self.plugin startScan];
+            NSLog(@"start Scan code = %d",tempCode);
         }break;
         default: bleStatusStr = @"Bluetooth Unknown";break;
     }
@@ -160,7 +156,7 @@
 
 #pragma mark - Log msg
 - (void)qingniuScaleLog:(NSString *)message {
-    NSLog(@"%@", [NSString stringWithFormat:@"%@", [QNScaleLogCode stringByAppendingString:message]]);
+    NSLog(@"%@", message);
 }
 
 #pragma mark - tableView
@@ -191,19 +187,19 @@
     QNHeightWeightScaleOperate *operate = [[QNHeightWeightScaleOperate alloc] init];
     operate.weightUnit = self.weightUnit;
     operate.heightUnit = self.heightUnit;
+    int code = [QNHeightWeightScalePlugin connectHeightWeightScaleDevice:device operate:operate];
+    NSLog(@"connect device code = %d",code);
     
-    [QNHeightWeightScalePlugin connectHeightWeightScaleDevice:device operate:operate callback:^(int code) {
-        [self showMeasureResult:@"--" unit:@""];
-        [self.reportDatas removeAllObjects];
-        [self.tableView reloadData];
-    }];
+    [self showMeasureResult:@"--" unit:@""];
+    [self.reportDatas removeAllObjects];
+    [self.tableView reloadData];
+  
 }
 
 - (void)onSetHeightWeightScaleUnitResult:(int)code device:(QNHeightWeightScaleDevice *)device {
     
 }
 
-#pragma mark - HeightWeightScale StatusListener
 - (void)onHeightWeightScaleConnectedSuccess:(QNHeightWeightScaleDevice *)device {
     self.isConnect = YES;
     self.connectedDevice = device;
@@ -219,7 +215,7 @@
     [self qingniuScaleLog:[NSString stringWithFormat:@"device connect fail%@___%@", device.bleName, device.mac]];
 }
 
-- (void)onHeightWeightScaleReadyInteractResult:(int)code device:(QNHeightWeightScaleDevice *)device {
+- (void)onHeightWeightScaleReadyInteractResult:(QNHeightWeightScaleDevice *)device {
     [self qingniuScaleLog:[NSString stringWithFormat:@"device ready interact%@___%@", device.bleName, device.mac]];
 }
 
@@ -320,10 +316,5 @@
         _reportDatas = [NSMutableArray array];
     }
     return _reportDatas;
-}
-
-#pragma mark - dealloc
-- (void)dealloc {
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 @end

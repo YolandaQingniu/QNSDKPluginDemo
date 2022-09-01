@@ -21,6 +21,22 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param device QNHeightWeightScaleDevice
 - (void)onSetHeightWeightScaleUnitResult:(int)code device:(QNHeightWeightScaleDevice *)device;
 
+/// Connected success
+/// @param device QNHeightWeightScaleDevice
+- (void)onHeightWeightScaleConnectedSuccess:(QNHeightWeightScaleDevice *)device;
+
+/// Connect fail
+/// @param code code
+/// @param device QNHeightWeightScaleDevice
+- (void)onHeightWeightScaleConnectFail:(int)code device:(QNHeightWeightScaleDevice *)device;
+
+/// Device ready interact
+/// @param device QNHeightWeightScaleDevice
+- (void)onHeightWeightScaleReadyInteractResult:(QNHeightWeightScaleDevice *)device;
+
+/// Disconnected
+/// @param device QNHeightWeightScaleDevice
+- (void)onHeightWeightScaleDisconnected:(QNHeightWeightScaleDevice *)device;
 @end
 
 NS_ASSUME_NONNULL_END
