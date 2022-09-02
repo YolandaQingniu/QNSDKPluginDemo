@@ -30,7 +30,7 @@ typedef void(^QNResultCallback) (int code);
 
 - (QNAuthDevice * _Nullable)getAuthDevice:(NSString *)modelId;
 
-- (int)getSysBleStatus;
+- (QNSysBleStatus)getSysBleStatus;
 
 - (int)startScan;
 

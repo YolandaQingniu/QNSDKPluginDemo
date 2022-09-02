@@ -9,11 +9,20 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef NS_ENUM(int, QNSysBleStatus) {
+    QNSysBleStatusUnknown = 0,      //Unknown
+    QNSysBleStatusResetting,        //Resetting
+    QNSysBleStatusUnsupported,      //Unsupported
+    QNSysBleStatusUnauthorized,     //Unauthorized
+    QNSysBleStatusPoweredOff,       //Unauthorized
+    QNSysBleStatusPoweredOn,        //PoweredOn
+};
+
 @protocol QNSysBleStatusListener <NSObject>
 
 /// System Bluetooth Status
-/// @param code 0：Unknown；1：Resetting；2：Unsupported；3：Unauthorized；4：PoweredOff；5：PoweredOn
-- (void)onSysBleStatus:(int)code;
+/// @param code QNSysBleStatus
+- (void)onSysBleStatus:(QNSysBleStatus)code;
 @end
 
 NS_ASSUME_NONNULL_END

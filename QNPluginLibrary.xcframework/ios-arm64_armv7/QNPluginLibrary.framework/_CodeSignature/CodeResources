@@ -22,7 +22,7 @@
 		</data>
 		<key>Headers/QNPlugin.h</key>
 		<data>
-		RQ/kFSBlOeEVtUl2us1pTrTmBLQ=
+		tp9pT6nRhH/ok8/uZlsJFMDiGig=
 		</data>
 		<key>Headers/QNPluginLibrary.h</key>
 		<data>
@@ -34,7 +34,7 @@
 		</data>
 		<key>Headers/QNSysBleStatusListener.h</key>
 		<data>
-		MCrh13uHPY8qC616zsQPgnyiHdE=
+		UGXoU39M4p2qJlviTCfkQq9pxNQ=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -95,11 +95,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			RQ/kFSBlOeEVtUl2us1pTrTmBLQ=
+			tp9pT6nRhH/ok8/uZlsJFMDiGig=
 			</data>
 			<key>hash2</key>
 			<data>
-			LS2bv5KJkeAdIks6LClUbZuiYo5yem2rXiHVMq/Yxu8=
+			4/mwfTZsipc7AUenNRgKKYMRexnXwZccNGq7CdTkLGs=
 			</data>
 		</dict>
 		<key>Headers/QNPluginLibrary.h</key>
@@ -128,11 +128,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			MCrh13uHPY8qC616zsQPgnyiHdE=
+			UGXoU39M4p2qJlviTCfkQq9pxNQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			RAh2n5MBX3+p26RQ4NqergJh2Cnhzi91gLal4aJje8w=
+			y47AHhMFhQBkhVKf0LJ13+y0VFAP2tvRZdwzeFmQaAE=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
