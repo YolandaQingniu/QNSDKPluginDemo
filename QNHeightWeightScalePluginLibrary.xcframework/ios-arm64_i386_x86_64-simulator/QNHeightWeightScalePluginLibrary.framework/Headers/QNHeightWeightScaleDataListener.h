@@ -28,10 +28,14 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param device QNHeightWeightScaleDevice
 - (void)onHeightWeightScaleReceiveMeasureResult:(QNHeightWeightScaleData *)scaleData device:(QNHeightWeightScaleDevice *)device;
 
-/// Measure Failed
+/// Measure failed
 /// @param device QNHeightWeightScaleDevice
 - (void)onHeightWeightScaleReceiveMeasureFailed:(QNHeightWeightScaleDevice *)device;
 
+/// Storage data
+/// @param list Storage data list
+/// @param device QNHeightWeightScaleDevice
+- (void)onHeightWeightScaleReceiveStorageData:(NSArray<QNHeightWeightScaleData *> *)list device:(QNHeightWeightScaleDevice *)device;
 @end
 
 NS_ASSUME_NONNULL_END

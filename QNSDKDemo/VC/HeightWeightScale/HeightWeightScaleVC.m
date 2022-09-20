@@ -1,17 +1,16 @@
 //
-//  ScaleViewController.m
+//  HeightWeightScaleVC.m
 //  SDKDemo
 //
 //  Created by qingniu on 2022/6/14.
 //
 
-#import "ScaleViewController.h"
+#import "HeightWeightScaleVC.h"
+#import "QNDBManager.h"
 #import <QNPluginLibrary/QNPluginLibrary.h>
-#import "QNUnitTool.h"
-#import "UnitChooseViewController.h"
+
 
 #define QNAppId @"test123456789"
-
 #define QNBLEStatusStr_Scaning @"Scanning"
 #define QNBLEStatusStr_Connecting @"Connecting"
 #define QNBLEStatusStr_Connected @"Connected"
@@ -35,7 +34,7 @@
 @end
 
 
-@interface ScaleViewController ()<UITableViewDelegate, UITableViewDataSource, QNHeightWeightScaleDataListener, QNHeightWeightScaleDeviceListener,QNLogListener,QNSysBleStatusListener,QNScanListener>
+@interface HeightWeightScaleVC ()<UITableViewDelegate, UITableViewDataSource, QNHeightWeightScaleDataListener, QNHeightWeightScaleDeviceListener,QNLogListener,QNSysBleStatusListener,QNScanListener>
 
 @property (nonatomic, strong) QNPlugin *plugin;
 
@@ -54,7 +53,7 @@
 
 @end
 
-@implementation ScaleViewController
+@implementation HeightWeightScaleVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -71,7 +70,7 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    int code = [[QNPlugin sharedPlugin] getSysBleStatus];
+    QNSysBleStatus code = [[QNPlugin sharedPlugin] getSysBleStatus];
     [self onSysBleStatus:code];
 }
 
@@ -115,7 +114,7 @@
     [self qingniuScaleLog:log];
 }
 
-- (void)onSysBleStatus:(int)code {
+- (void)onSysBleStatus:(QNSysBleStatus)code {
     NSString *bleStatusStr = @"Bluetooth Unknown";
     switch (code) {
         case 1: bleStatusStr = @"Bluetooth Resetting";break;
@@ -156,7 +155,7 @@
 
 #pragma mark - Log msg
 - (void)qingniuScaleLog:(NSString *)message {
-    NSLog(@"%@", message);
+ 
 }
 
 #pragma mark - tableView
@@ -215,8 +214,17 @@
     [self qingniuScaleLog:[NSString stringWithFormat:@"device connect fail%@___%@", device.bleName, device.mac]];
 }
 
-- (void)onHeightWeightScaleReadyInteractResult:(QNHeightWeightScaleDevice *)device {
+- (void)onHeightWeightScaleReadyInteractResult:(int)code device:(QNHeightWeightScaleDevice *)device {
+    if (code != 0) return;
     [self qingniuScaleLog:[NSString stringWithFormat:@"device ready interact%@___%@", device.bleName, device.mac]];
+    QNUserInfo *curUser = [[QNDBManager sharedQNDBManager] curUser];
+    if (curUser == nil) return;
+    QNHeightWeightUser *user = [[QNHeightWeightUser alloc] init];
+    user.userId = curUser.userId;
+    user.gender = curUser.gender;
+    user.age = curUser.age;
+    int userCode = [QNHeightWeightScalePlugin setMeasureUser:user device:device];
+    [self qingniuScaleLog:[NSString stringWithFormat:@"set measure user code : %d", userCode]];
 }
 
 - (void)onHeightWeightScaleDisconnected:(QNHeightWeightScaleDevice *)device {
@@ -246,6 +254,16 @@
     
     [self loadMeasureReportData:scaleData];
 }
+
+- (void)onHeightWeightScaleReceiveMeasureFailed:(nonnull QNHeightWeightScaleDevice *)device {
+    
+}
+
+
+- (void)onHeightWeightScaleReceiveStorageData:(nonnull NSArray<QNHeightWeightScaleData *> *)list device:(nonnull QNHeightWeightScaleDevice *)device {
+    
+}
+
 
 #pragma mark - unit
 
@@ -297,17 +315,49 @@
 - (void)loadMeasureReportData:(QNHeightWeightScaleData *)scaleData {
     
     [self.reportDatas removeAllObjects];
-    
-    NSString *weightStr = [NSString stringWithFormat:@"%@%@", [self adjustWeightValue:scaleData.weight], [self curWeightUnit]];
+    [self addWeightDataIndexDisplay:@"Weight" value:scaleData.weight];
     NSString *heightStr = [NSString stringWithFormat:@"%@%@", [self adjustHeightValue:scaleData.height], [self curHeightUnit]];
-    
-    QNMeasureReport *weight = [QNMeasureReport reportWithTitle:@"Weight" value:weightStr];
-    QNMeasureReport *height = [QNMeasureReport reportWithTitle:@"Height" value:heightStr];
-    QNMeasureReport *bmi = [QNMeasureReport reportWithTitle:@"BMI" value:scaleData.bmi];
-
-    [self.reportDatas addObjectsFromArray:@[weight, height, bmi]];
+    [self addDataIndexDisplay:@"Height" value:heightStr];
+    [self addDataIndexDisplay:@"BMI" value:scaleData.BMI];
+    [self addDataIndexDisplay:@"Body fat rate" value:scaleData.bodyFatRate];
+    [self addDataIndexDisplay:@"Subcutaneous fat rate" value:scaleData.subcutaneousFatRate];
+    [self addDataIndexDisplay:@"Visceral fat level" value:scaleData.visceralFatLevel];
+    [self addDataIndexDisplay:@"Body water rate" value:scaleData.bodyWaterRate];
+    [self addDataIndexDisplay:@"Skeletal muscle rate" value:scaleData.skeletalMuscleRate];
+    [self addWeightDataIndexDisplay:@"Bone mass" value:scaleData.boneMass];
+    [self addDataIndexDisplay:@"BMR" value:scaleData.BMR];
+    [self addDataIndexDisplay:@"Body type" value:scaleData.bodyType];
+    [self addDataIndexDisplay:@"Protein rate" value:scaleData.proteinRate];
+    [self addWeightDataIndexDisplay:@"Lean body mass" value:scaleData.leanBodyMass];
+    [self addWeightDataIndexDisplay:@"Muscle mass" value:scaleData.muscleMass];
+    [self addDataIndexDisplay:@"Body age" value:scaleData.bodyAge];
+    [self addDataIndexDisplay:@"Health score" value:scaleData.healthScore];
+    [self addDataIndexDisplay:@"Fatty liver risk level" value:scaleData.fattyLiverRiskLevel];
+    [self addWeightDataIndexDisplay:@"Body fat mass" value:scaleData.bodyFatMass];
+    [self addDataIndexDisplay:@"Obesity" value:scaleData.obesity];
+    [self addWeightDataIndexDisplay:@"Body Water mass" value:scaleData.bodyWaterMass];
+    [self addWeightDataIndexDisplay:@"Protein mass" value:scaleData.proteinMass];
+    [self addDataIndexDisplay:@"Mineral level" value:scaleData.mineralLevel];
+    [self addWeightDataIndexDisplay:@"Dream weight str" value:scaleData.dreamWeight];
+    [self addWeightDataIndexDisplay:@"Stand weight" value:scaleData.standWeight];
+    [self addWeightDataIndexDisplay:@"Weight control" value:scaleData.weightControl];
+    [self addWeightDataIndexDisplay:@"Body fat control" value:scaleData.bodyFatControl];
+    [self addWeightDataIndexDisplay:@"Muscle mass control" value:scaleData.muscleMassControl];
+    [self addDataIndexDisplay:@"Muscle rate" value:scaleData.muscleRate];
     
     [self.tableView reloadData];
+}
+
+- (void)addWeightDataIndexDisplay:(NSString *)title value:(NSString *)value {
+    if (value == nil || value.length <= 0) return;
+    NSString *valueStr = [NSString stringWithFormat:@"%@%@", [self adjustWeightValue:value], [self curWeightUnit]];
+    [self addDataIndexDisplay:title value:valueStr];
+}
+
+- (void)addDataIndexDisplay:(NSString *)title value:(NSString *)value {
+    if (value == nil || value.length <= 0) return;
+    QNMeasureReport *report = [QNMeasureReport reportWithTitle:title value:value];
+    [self.reportDatas addObject:report];
 }
 
 #pragma mark - lazy load
@@ -317,4 +367,5 @@
     }
     return _reportDatas;
 }
+
 @end

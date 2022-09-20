@@ -6,11 +6,11 @@
 	<dict>
 		<key>Headers/QNHeightWeightScaleData.h</key>
 		<data>
-		Ut8IDIPUE/1A62g7n5946ExtGMw=
+		9FqwsfGOMoGNgj170uhueC7q4Zw=
 		</data>
 		<key>Headers/QNHeightWeightScaleDataListener.h</key>
 		<data>
-		zHQ9VucG68pfimAYAqSpYCwlMZU=
+		q7LQwFe9OSuKk68G1SAgGZjj4+I=
 		</data>
 		<key>Headers/QNHeightWeightScaleDevice.h</key>
 		<data>
@@ -18,7 +18,7 @@
 		</data>
 		<key>Headers/QNHeightWeightScaleDeviceListener.h</key>
 		<data>
-		vrG0O77x51sLrpv+OaaqNd2GRqg=
+		hMHTeYBhuRBA/DxfDop12rZvKyQ=
 		</data>
 		<key>Headers/QNHeightWeightScaleOperate.h</key>
 		<data>
@@ -26,15 +26,19 @@
 		</data>
 		<key>Headers/QNHeightWeightScalePlugin.h</key>
 		<data>
-		gkuMsMaX02yf9DY/T1lUvyiQepw=
+		HCvDe7n5gRQUUKGDvJIsxFHNCMg=
 		</data>
 		<key>Headers/QNHeightWeightScalePluginLibrary.h</key>
 		<data>
-		7QDRUh8osjlerYOmN5cAbX5gYLs=
+		i19p3JjUnU94kSVeePF7WYz0Iys=
+		</data>
+		<key>Headers/QNHeightWeightUser.h</key>
+		<data>
+		M16AYlIorVRhM+R2g9NyE+iW9Gs=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		ZEkphsOrcDrqBxlZO7Ek+l2BjVA=
+		bJnFh9YELpM1MMnNnPjkDcP5lBs=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -47,22 +51,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Ut8IDIPUE/1A62g7n5946ExtGMw=
+			9FqwsfGOMoGNgj170uhueC7q4Zw=
 			</data>
 			<key>hash2</key>
 			<data>
-			leo/BQrS70JxzUipTjpfcYkRB84bxh1WZza140ncsSI=
+			Wu+UP6mWjz5zF3D6+kN+s8XM87Tjk5BPpjxp8HDnULo=
 			</data>
 		</dict>
 		<key>Headers/QNHeightWeightScaleDataListener.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			zHQ9VucG68pfimAYAqSpYCwlMZU=
+			q7LQwFe9OSuKk68G1SAgGZjj4+I=
 			</data>
 			<key>hash2</key>
 			<data>
-			9o9SPCvDdrB48uKATXVmUtTBHNrl9JFFUzlzCCvDjnI=
+			n+1RkMlRQht3UAeoV6X/RVOL/k50DN2vwd8QnDaYlGs=
 			</data>
 		</dict>
 		<key>Headers/QNHeightWeightScaleDevice.h</key>
@@ -80,11 +84,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			vrG0O77x51sLrpv+OaaqNd2GRqg=
+			hMHTeYBhuRBA/DxfDop12rZvKyQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			yv+PQUmWofqjkPzMCLBCLXhpk9DUrhq2Qz32CMIK8+8=
+			xctFuXWY5lobt+r7piNa2OZ01SgFo1u9hjbPqmKmc4s=
 			</data>
 		</dict>
 		<key>Headers/QNHeightWeightScaleOperate.h</key>
@@ -102,22 +106,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			gkuMsMaX02yf9DY/T1lUvyiQepw=
+			HCvDe7n5gRQUUKGDvJIsxFHNCMg=
 			</data>
 			<key>hash2</key>
 			<data>
-			9AS7UJJcjaEGdAxcn2hoDeRh5LBC2O9nED6YWBmXxNY=
+			kzrFPcHJU7noecEqaaA1UKqg7L+KJ7gx6EXKRBNjt/k=
 			</data>
 		</dict>
 		<key>Headers/QNHeightWeightScalePluginLibrary.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			7QDRUh8osjlerYOmN5cAbX5gYLs=
+			i19p3JjUnU94kSVeePF7WYz0Iys=
 			</data>
 			<key>hash2</key>
 			<data>
-			4/0tJ6aEYY+u+JbAE+6MWwicflVa4YUqzElwGH1K/dg=
+			DxBsJ1oSfdpXNFjblBgofZ7oEexwTiSQijyMDiKAzP8=
+			</data>
+		</dict>
+		<key>Headers/QNHeightWeightUser.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			M16AYlIorVRhM+R2g9NyE+iW9Gs=
+			</data>
+			<key>hash2</key>
+			<data>
+			Lr/U69OoCu4s0Le72bQQ1ybA+4KjROxFWFU/d8a93TY=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

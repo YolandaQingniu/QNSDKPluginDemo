@@ -4,7 +4,7 @@
 //
 //  Created by sumeng on 2022/6/6.
 //  QingNiuSDK
-//  V1.0.1
+//  V1.1.0
 
 #import "QNBasePlugin.h"
 #import "QNLogListener.h"

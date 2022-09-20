@@ -1,0 +1,6 @@
+framework module QNAlgorithmPluginLibrary {
+  umbrella header "QNAlgorithmPluginLibrary.h"
+
+  export *
+  module * { export * }
+}

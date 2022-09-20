@@ -3,7 +3,7 @@
 //  QNHeightWeightScalePlugin
 //
 //  Created by sumeng on 2022/8/9.
-//  V1.0.1
+//  V1.1.0
 
 #import <Foundation/Foundation.h>
 #import "QNHeightWeightScaleDeviceListener.h"
@@ -34,6 +34,17 @@
 /// Cancel connect device
 /// @param device QNHeightWeightScaleDevice
 + (void)cancelConnectHeightWeightScaleDevice:(QNHeightWeightScaleDevice *)device;
+
+/// Set device unit
+/// @param weightUnit QNWeightUnit
+/// @param heightUnit QNHeightUnit
+/// @param device QNHeightWeightScaleDevice
++ (int)setHeightWeightScaleDeviceUnit:(QNWeightUnit)weightUnit heightUnit:(QNHeightUnit)heightUnit device:(QNHeightWeightScaleDevice *)device;
+
+/// set measure user info
+/// @param user QNHeightWeightUser
+/// @param device QNHeightWeightScaleDevice
++ (int)setMeasureUser:(QNHeightWeightUser *)user device:(QNHeightWeightScaleDevice *)device;
 
 /// Weight kg to Lb
 /// @param weight NSString

@@ -1,13 +1,13 @@
 //
-//  UnitChooseViewController.m
+//  UnitChooseVC.m
 //  SDKDemo
 //
 //  Created by qingniu on 2022/6/14.
 //
 
-#import "UnitChooseViewController.h"
+#import "UnitChooseVC.h"
 
-@interface UnitChooseViewController ()
+@interface UnitChooseVC ()
 
 @property (nonatomic, strong) NSArray *unitDatas;
 @property (nonatomic, assign) NSInteger curWeightUnitIdx;
@@ -15,7 +15,7 @@
 
 @end
 
-@implementation UnitChooseViewController
+@implementation UnitChooseVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];

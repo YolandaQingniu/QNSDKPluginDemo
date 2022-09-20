@@ -1,5 +1,5 @@
 //
-//  ScaleViewController.h
+//  HeightWeightScaleVC.h
 //  SDKDemo
 //
 //  Created by qingniu on 2022/6/14.
@@ -9,7 +9,7 @@
 #import <QNHeightWeightScalePluginLibrary/QNHeightWeightScalePluginLibrary.h>
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ScaleViewController : UIViewController
+@interface HeightWeightScaleVC : UIViewController
 
 @property (nonatomic, assign) QNHeightUnit heightUnit;
 

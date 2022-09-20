@@ -6,6 +6,7 @@ target 'QNSDKDemo' do
   use_frameworks!
   pod 'QNPlugin', '0.1.1'
   pod 'QNHeightWeightScalePlugin', '0.1.1'
+  pod 'WCDB'
   # Pods for QNSDKDemo
 
 end

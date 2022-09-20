@@ -31,8 +31,9 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)onHeightWeightScaleConnectFail:(int)code device:(QNHeightWeightScaleDevice *)device;
 
 /// Device ready interact
+/// @param code code
 /// @param device QNHeightWeightScaleDevice
-- (void)onHeightWeightScaleReadyInteractResult:(QNHeightWeightScaleDevice *)device;
+- (void)onHeightWeightScaleReadyInteractResult:(int)code device:(QNHeightWeightScaleDevice *)device;
 
 /// Disconnected
 /// @param device QNHeightWeightScaleDevice

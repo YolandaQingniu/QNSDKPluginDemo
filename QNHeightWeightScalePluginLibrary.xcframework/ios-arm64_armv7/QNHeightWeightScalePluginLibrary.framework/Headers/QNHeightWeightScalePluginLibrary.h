@@ -14,6 +14,7 @@ FOUNDATION_EXPORT double QNHeightWeightScalePluginLibraryVersionNumber;
 FOUNDATION_EXPORT const unsigned char QNHeightWeightScalePluginLibraryVersionString[];
 
 #import "QNHeightWeightScalePlugin.h"
+#import "QNHeightWeightUser.h"
 #import "QNHeightWeightScaleData.h"
 #import "QNHeightWeightScaleDevice.h"
 #import "QNHeightWeightScaleOperate.h"
