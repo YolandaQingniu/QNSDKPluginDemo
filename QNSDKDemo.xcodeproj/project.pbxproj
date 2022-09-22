@@ -17,6 +17,11 @@
 		2457618728A5FF87004A45AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2457616B28A5FF87004A45AE /* Main.storyboard */; };
 		7E5FEDA828D877FA005E3018 /* QNHeightWeightScalePluginLibrary.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E33B5DF28B6453300A458B9 /* QNHeightWeightScalePluginLibrary.xcframework */; };
 		7E5FEDAA28D877FC005E3018 /* QNPluginLibrary.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E33B5D428B628A600A458B9 /* QNPluginLibrary.xcframework */; };
+		7EAE8F9128DC49D40095C1C7 /* QNHeightWeightScalePlugin.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 7EAE8F8C28DC49D40095C1C7 /* QNHeightWeightScalePlugin.podspec */; };
+		7EAE8F9228DC49D40095C1C7 /* QNPlugin.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 7EAE8F8D28DC49D40095C1C7 /* QNPlugin.podspec */; };
+		7EAE8F9328DC49D40095C1C7 /* QNRulerPlugin.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 7EAE8F8E28DC49D40095C1C7 /* QNRulerPlugin.podspec */; };
+		7EAE8F9428DC49D40095C1C7 /* QNAlgorithmPlugin.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 7EAE8F8F28DC49D40095C1C7 /* QNAlgorithmPlugin.podspec */; };
+		7EAE8F9528DC49D40095C1C7 /* QNDeviceSpecs.sh in Resources */ = {isa = PBXBuildFile; fileRef = 7EAE8F9028DC49D40095C1C7 /* QNDeviceSpecs.sh */; };
 		7EE0D4C328D8A6E000691846 /* QNAlgorithmPluginLibrary.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EE0D4C228D8A6E000691846 /* QNAlgorithmPluginLibrary.xcframework */; };
 		7EE0D4DC28D96A6800691846 /* HeightWeightScaleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE0D4D128D96A6800691846 /* HeightWeightScaleVC.m */; };
 		7EE0D4DD28D96A6800691846 /* UnitChooseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE0D4D528D96A6800691846 /* UnitChooseVC.m */; };
@@ -51,6 +56,11 @@
 		7E33B5D428B628A600A458B9 /* QNPluginLibrary.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = QNPluginLibrary.xcframework; sourceTree = "<group>"; };
 		7E33B5DF28B6453300A458B9 /* QNHeightWeightScalePluginLibrary.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = QNHeightWeightScalePluginLibrary.xcframework; sourceTree = "<group>"; };
 		7EAE8F8B28DC438D0095C1C7 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		7EAE8F8C28DC49D40095C1C7 /* QNHeightWeightScalePlugin.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = QNHeightWeightScalePlugin.podspec; sourceTree = "<group>"; };
+		7EAE8F8D28DC49D40095C1C7 /* QNPlugin.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = QNPlugin.podspec; sourceTree = "<group>"; };
+		7EAE8F8E28DC49D40095C1C7 /* QNRulerPlugin.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = QNRulerPlugin.podspec; sourceTree = "<group>"; };
+		7EAE8F8F28DC49D40095C1C7 /* QNAlgorithmPlugin.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = QNAlgorithmPlugin.podspec; sourceTree = "<group>"; };
+		7EAE8F9028DC49D40095C1C7 /* QNDeviceSpecs.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = QNDeviceSpecs.sh; sourceTree = "<group>"; };
 		7EE0D4C228D8A6E000691846 /* QNAlgorithmPluginLibrary.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = QNAlgorithmPluginLibrary.xcframework; sourceTree = "<group>"; };
 		7EE0D4D128D96A6800691846 /* HeightWeightScaleVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeightWeightScaleVC.m; sourceTree = "<group>"; };
 		7EE0D4D228D96A6800691846 /* HeightWeightScaleVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeightWeightScaleVC.h; sourceTree = "<group>"; };
@@ -91,6 +101,11 @@
 		2457613D28A5FF71004A45AE = {
 			isa = PBXGroup;
 			children = (
+				7EAE8F9028DC49D40095C1C7 /* QNDeviceSpecs.sh */,
+				7EAE8F8F28DC49D40095C1C7 /* QNAlgorithmPlugin.podspec */,
+				7EAE8F8C28DC49D40095C1C7 /* QNHeightWeightScalePlugin.podspec */,
+				7EAE8F8D28DC49D40095C1C7 /* QNPlugin.podspec */,
+				7EAE8F8E28DC49D40095C1C7 /* QNRulerPlugin.podspec */,
 				7EF65D8928D9B2680034447F /* QNRulerPluginLibrary.xcframework */,
 				7EE0D4C228D8A6E000691846 /* QNAlgorithmPluginLibrary.xcframework */,
 				7E33B5DF28B6453300A458B9 /* QNHeightWeightScalePluginLibrary.xcframework */,
@@ -300,7 +315,12 @@
 				2457615928A5FF72004A45AE /* LaunchScreen.storyboard in Resources */,
 				2457618728A5FF87004A45AE /* Main.storyboard in Resources */,
 				2457615628A5FF72004A45AE /* Assets.xcassets in Resources */,
+				7EAE8F9528DC49D40095C1C7 /* QNDeviceSpecs.sh in Resources */,
+				7EAE8F9328DC49D40095C1C7 /* QNRulerPlugin.podspec in Resources */,
+				7EAE8F9428DC49D40095C1C7 /* QNAlgorithmPlugin.podspec in Resources */,
 				2457616328A5FF81004A45AE /* 123456789.qn in Resources */,
+				7EAE8F9228DC49D40095C1C7 /* QNPlugin.podspec in Resources */,
+				7EAE8F9128DC49D40095C1C7 /* QNHeightWeightScalePlugin.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
