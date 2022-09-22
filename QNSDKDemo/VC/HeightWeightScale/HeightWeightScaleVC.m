@@ -8,9 +8,6 @@
 #import "HeightWeightScaleVC.h"
 #import "QNDBManager.h"
 #import <QNPluginLibrary/QNPluginLibrary.h>
-
-
-#define QNAppId @"test123456789"
 #define QNBLEStatusStr_Scaning @"Scanning"
 #define QNBLEStatusStr_Connecting @"Connecting"
 #define QNBLEStatusStr_Connected @"Connected"

@@ -14,7 +14,7 @@
 @property (nonatomic, strong) QNPlugin *plugin;
 
 @property (nonatomic, assign) BOOL isConnected;
-
+@property (nonatomic, strong) QNRulerDevice *connectDevice;
 @property (weak, nonatomic) IBOutlet UILabel *statusLbl;
 @property (weak, nonatomic) IBOutlet UILabel *valueLbl;
 @end
@@ -38,6 +38,7 @@
     
     self.isConnected = NO;
     [self.plugin stopScan];
+    [QNRulerPlugin cancelConnectDevice:self.connectDevice];
 }
 
 - (void)initLbl {
@@ -48,8 +49,8 @@
 - (void)initBlePlugin {
     // init centeral plugin
     self.plugin = [QNPlugin sharedPlugin];
-    NSString *file = [[NSBundle mainBundle] pathForResource:@"test123456789" ofType:@"qn"];
-    [self.plugin initSdk:@"test123456789" filePath:file callback:^(int code) {
+    NSString *file = [[NSBundle mainBundle] pathForResource:QNAppId ofType:@"qn"];
+    [self.plugin initSdk:QNAppId filePath:file callback:^(int code) {
         
     }];
     
@@ -65,11 +66,11 @@
 - (void)onDiscoverRulerDevice:(QNRulerDevice *)device {
     
     if (self.isConnected == YES) return;
-    
     self.statusLbl.text = @"Scanning";
     self.statusLbl.text = @"Connecting";
-    
-    [QNRulerPlugin connectDevice:device];
+    self.connectDevice = device;
+    int code = [QNRulerPlugin connectDevice:device];
+    NSLog(@"%d",code);
 }
 
 - (void)onRulerConnectedSuccess:(QNRulerDevice *)device {

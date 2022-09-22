@@ -1,0 +1,13 @@
+//
+//  PrefixHeader.pch
+//  QNSDKDemo
+//
+//  Created by sumeng on 2022/9/22.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "AppDelegate.h"
+
+#endif /* PrefixHeader_pch */

@@ -49,7 +49,16 @@ singleton_implementation(QNDBManager)
 }
 
 - (QNUserInfo *)curUser {
-    return [_database getOneObjectOfClass:QNUserInfo.class fromTable:YLUserTableName where:QNUserInfo.selected == YES];
+    
+    QNUserInfo *user = [_database getOneObjectOfClass:QNUserInfo.class fromTable:YLUserTableName where:QNUserInfo.selected == YES];
+    if (user == nil) {
+        user = [QNUserInfo defaultUser];
+        user.selected = YES;
+        user.gender = @"male";
+        user.age = 25;
+        [self insertOrReplaceUser:user];
+    }
+    return user;
 }
 
 - (NSArray<QNUserInfo *> *)getAllUserInfo {
