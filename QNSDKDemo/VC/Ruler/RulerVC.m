@@ -2,7 +2,7 @@
 //  RulerVC.m
 //  QNSDKDemo
 //
-//  Created by zhoushenbin on 2022/9/20.
+//  Created by qingniu on 2022/9/20.
 //
 
 #import "RulerVC.h"

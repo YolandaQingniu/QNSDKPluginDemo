@@ -16,6 +16,7 @@ WCDB_PROPERTY(userId)
 WCDB_PROPERTY(age)
 WCDB_PROPERTY(gender)
 WCDB_PROPERTY(selected)
+WCDB_PROPERTY(height)
 
 @end
 
