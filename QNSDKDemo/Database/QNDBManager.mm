@@ -8,8 +8,13 @@
 #import <UIKit/UIKit.h>
 #import "QNDBManager.h"
 #import "QNUserInfo+WCTTableCoding.h"
+#import "ScaleUser+WCTTableCoding.h"
+#import "BindDeviceModel+WCTTableCoding.h"
 
 #define YLUserTableName @"UserTable"
+#define YLScaleUserTableName @"ScaleUserTable"
+#define YLBindDeviceTableName @"BindDeviceTable"
+
 @interface QNDBManager () {
     WCTDatabase *_database;
 }
@@ -33,7 +38,9 @@ singleton_implementation(QNDBManager)
 }
 
 - (void)createTable {
+    [_database createTableAndIndexesOfName:YLScaleUserTableName withClass:ScaleUser.class];
     [_database createTableAndIndexesOfName:YLUserTableName withClass:QNUserInfo.class];
+    [_database createTableAndIndexesOfName:YLBindDeviceTableName withClass:BindDeviceModel.class];
 }
 
 - (BOOL)insertOrReplaceUser:(QNUserInfo *)user {
@@ -48,21 +55,38 @@ singleton_implementation(QNDBManager)
     return ret;
 }
 
-- (QNUserInfo *)curUser {
+- (BOOL)updateUserInfo:(QNUserInfo *)user {
+    if (user == nil || user.userId.length == 0) return NO;
+    [_database updateRowsInTable:YLUserTableName onProperty:QNUserInfo.selected withObject:user where:QNUserInfo.userId == user.userId];
+    return YES;
+}
+
+- (QNUserInfo *)userWithUserId:(NSString *)userId {
+    if (userId.length == 0) return nil;
     
+    QNUserInfo *user = [_database getOneObjectOfClass:QNUserInfo.class fromTable:YLUserTableName where:QNUserInfo.userId == userId];
+    return user == nil? [self defaultUser] : user;
+}
+
+- (QNUserInfo *)curUser {
     QNUserInfo *user = [_database getOneObjectOfClass:QNUserInfo.class fromTable:YLUserTableName where:QNUserInfo.selected == YES];
-    if (user == nil) {
-        user = [QNUserInfo defaultUser];
-        user.selected = YES;
-        user.gender = @"male";
-        user.age = 25;
-        [self insertOrReplaceUser:user];
-    }
-    return user;
+    return user == nil? [self defaultUser] : user;
 }
 
 - (NSArray<QNUserInfo *> *)getAllUserInfo {
-    return [_database getAllObjectsOfClass:QNUserInfo.class fromTable:YLUserTableName];
+    NSArray *userArray = [_database getAllObjectsOfClass:QNUserInfo.class fromTable:YLUserTableName];
+    return userArray.count == 0? @[[self defaultUser]] : userArray;
+}
+
+- (QNUserInfo *)defaultUser {
+    QNUserInfo *user = [[QNUserInfo alloc] init];
+    user.userId = [NSString stringWithFormat:@"%ld",(long)[NSDate date].timeIntervalSince1970];
+    user.gender = @"male";
+    user.age = 18;
+    user.height = 180;
+    user.selected = YES;
+    [self insertOrReplaceUser:user];
+    return user;
 }
 
 - (BOOL)deleteUserWithUserId:(NSString *)userId {
@@ -76,4 +100,72 @@ singleton_implementation(QNDBManager)
     }
     return ret;
 }
+
+#pragma mark - ScaleUser
+- (BOOL)insertOrReplaceScaleUser:(ScaleUser *)user {
+    BOOL ret = [_database beginTransaction];
+    ret = [_database insertOrReplaceObject:user into:YLScaleUserTableName];
+    
+    if (ret) {
+        [_database commitTransaction];
+    }else {
+        [_database rollbackTransaction];
+    }
+    return ret;
+}
+
+- (BOOL)updateScaleUserInfo:(ScaleUser *)user mac:(NSString *)mac {
+    if (user == nil || user.scaleUserId.length == 0) return NO;
+    
+    [_database updateRowsInTable:YLScaleUserTableName onProperties:ScaleUser.secretIndex withObject:user where:ScaleUser.scaleUserId == user.scaleUserId && ScaleUser.mac == mac];
+    [_database updateRowsInTable:YLScaleUserTableName onProperties:ScaleUser.secretKey withObject:user where:ScaleUser.scaleUserId == user.scaleUserId && ScaleUser.mac == mac];
+    return YES;
+}
+
+- (ScaleUser *)scaleUserWithUserId:(NSString *)userId mac:(NSString *)mac {
+    return [_database getOneObjectOfClass:ScaleUser.class fromTable:YLScaleUserTableName where:ScaleUser.scaleUserId == userId && ScaleUser.mac == mac];
+}
+
+- (BOOL)deleteScaleUserWithUserId:(NSString *)userId mac:(NSString *)mac {
+    BOOL ret = [_database beginTransaction];
+    ret = [_database deleteObjectsFromTable:YLScaleUserTableName where:ScaleUser.scaleUserId == userId && ScaleUser.mac == mac];
+    
+    if (ret) {
+        [_database commitTransaction];
+    }else {
+        [_database rollbackTransaction];
+    }
+    return ret;
+}
+
+#pragma mark -
+#pragma mark - Bind Device
+- (BOOL)insertOrReplaceBindDevice:(BindDeviceModel *)device {
+    BOOL ret = [_database beginTransaction];
+    ret = [_database insertOrReplaceObject:device into:YLBindDeviceTableName];
+    
+    if (ret) {
+        [_database commitTransaction];
+    }else {
+        [_database rollbackTransaction];
+    }
+    return ret;
+}
+
+- (NSArray<BindDeviceModel *> *)getAllBindDeviceWithUserId:(NSString *)userId {
+    return [_database getObjectsOfClass:BindDeviceModel.class fromTable:YLBindDeviceTableName where:BindDeviceModel.userId == userId];
+}
+
+- (BOOL)deleteDeviceWithUserId:(NSString *)userId mac:(NSString *)mac {
+    BOOL ret = [_database beginTransaction];
+    ret = [_database deleteObjectsFromTable:YLBindDeviceTableName where:BindDeviceModel.userId == userId && BindDeviceModel.mac == mac];
+    
+    if (ret) {
+        [_database commitTransaction];
+    }else {
+        [_database rollbackTransaction];
+    }
+    return ret;
+}
+
 @end

@@ -19,9 +19,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.curHeightUnitIdx = [[NSUserDefaults standardUserDefaults] integerForKey:@"WeightUnit"];
+    self.curWeightUnitIdx = [[NSUserDefaults standardUserDefaults] integerForKey:@"WeightUnit"];
     self.curHeightUnitIdx = [[NSUserDefaults standardUserDefaults] integerForKey:@"HeightUnit"];
-    self.unitDatas = @[@[@"KG", @"LB", @"Jin", @"ST", @"ST+LB"],@[@"Cm", @"Ft"]];
+    self.unitDatas = @[@[@"KG", @"LB", @"Jin", @"ST-LB", @"ST"],@[@"Cm", @"Ft"]];
 }
 
 - (IBAction)clickSaveUnit:(id)sender {

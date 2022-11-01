@@ -8,14 +8,6 @@
 #import "HeightWeightScaleVC.h"
 #import "QNDBManager.h"
 #import <QNPluginLibrary/QNPluginLibrary.h>
-#define QNBLEStatusStr_Scaning @"Scanning"
-#define QNBLEStatusStr_Connecting @"Connecting"
-#define QNBLEStatusStr_Connected @"Connected"
-#define QNBLEStatusStr_Measuring @"Measuring"
-#define QNBLEStatusStr_MeasureDone @"MeasureDone"
-#define QNBLEStatusStr_Disconnected @"Disconnected"
-#define QNBLEStatusStr_ConnectedFailed @"ConnecteFailed"
-
 
 @implementation QNMeasureReport
 
@@ -312,6 +304,7 @@
 - (void)loadMeasureReportData:(QNHeightWeightScaleData *)scaleData {
     
     [self.reportDatas removeAllObjects];
+    
     [self addWeightDataIndexDisplay:@"Weight" value:scaleData.weight];
     NSString *heightStr = [NSString stringWithFormat:@"%@%@", [self adjustHeightValue:scaleData.height], [self curHeightUnit]];
     [self addDataIndexDisplay:@"Height" value:heightStr];

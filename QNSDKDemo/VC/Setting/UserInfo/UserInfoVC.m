@@ -10,8 +10,6 @@
 
 @interface UserInfoCell ()
 @property (weak, nonatomic) IBOutlet UILabel *idLbl;
-@property (weak, nonatomic) IBOutlet UILabel *genderLbl;
-@property (weak, nonatomic) IBOutlet UILabel *ageLbl;
 @property (weak, nonatomic) IBOutlet UILabel *curUserTagLbl;
 @end
 
@@ -19,9 +17,7 @@
 
 - (void)setUserInfo:(QNUserInfo *)userInfo {
     _userInfo = userInfo;
-    self.idLbl.text = [NSString stringWithFormat:@"UserID：%@", userInfo.userId];
-    self.genderLbl.text = [NSString stringWithFormat:@"Gender：%@", userInfo.gender];
-    self.ageLbl.text = [NSString stringWithFormat:@"age：%d", userInfo.age];
+    self.idLbl.text = [NSString stringWithFormat:@"UserID:%@,\t Gender:%@, \nAge:%d,\t Height:%d", userInfo.userId, userInfo.gender, userInfo.age, userInfo.height];
     if (_userInfo.selected) {
         self.curUserTagLbl.hidden = NO;
     } else {
@@ -36,6 +32,7 @@
 @property (weak, nonatomic) IBOutlet UISegmentedControl *genderChoose;
 @property (weak, nonatomic) IBOutlet UITextField *ageTF;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UITextField *heightTF;
 
 @property (nonatomic, strong) NSMutableArray<QNUserInfo *> *userlist;
 @end
@@ -44,7 +41,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self reloadTableViewData];
+    [self refreshData];
 }
 
 #pragma mark -
@@ -53,19 +50,25 @@
 }
 
 - (IBAction)clickSaveUserInfo:(id)sender {
+    if (self.ageTF.text.length == 0 || self.heightTF.text.length == 0) return;
+    
     [self.view endEditing:YES];
-    if (self.ageTF.text.length == 0) return;
-    QNUserInfo *user = [QNUserInfo defaultUser];
-    user.age = [self.ageTF.text intValue];
-    user.gender = self.genderChoose.selectedSegmentIndex ? @"male" : @"female";
-    QNUserInfo *curUser = [[QNDBManager sharedQNDBManager] curUser];
-    curUser.selected = NO;
-    [[QNDBManager sharedQNDBManager] insertOrReplaceUser:curUser];
-    [[QNDBManager sharedQNDBManager] insertOrReplaceUser:user];
-    [self reloadTableViewData];
+    
+    QNUserInfo *newUser = [[QNUserInfo alloc] init];
+    newUser.userId = [NSString stringWithFormat:@"%ld",(long)[NSDate date].timeIntervalSince1970];
+    newUser.age = [self.ageTF.text intValue];
+    newUser.gender = self.genderChoose.selectedSegmentIndex ? @"male" : @"female";
+    newUser.selected = NO;
+    newUser.height = [self.heightTF.text intValue];
+    [[QNDBManager sharedQNDBManager] insertOrReplaceUser:newUser];
+    
+    [self refreshData];
+    
+    self.ageTF.text = self.heightTF.text = @"";
 }
 
-- (void)reloadTableViewData {
+- (void)refreshData {
+    [self.userlist removeAllObjects];
     self.userlist = [[QNDBManager sharedQNDBManager] getAllUserInfo].mutableCopy;
     [self.tableView reloadData];
 }
@@ -100,7 +103,7 @@
     QNUserInfo *user = self.userlist[indexPath.row];
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         if ([[QNDBManager sharedQNDBManager] deleteUserWithUserId:user.userId]) {
-            [self.tableView reloadData];
+            [self refreshData];
         }
     }
 }
@@ -110,21 +113,33 @@
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return @"删除";
+    return @"Delete User";
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [self.view endEditing:YES];
+    
     QNUserInfo *user = self.userlist[indexPath.row];
-    user.selected = YES;
-    QNUserInfo *curUser = [[QNDBManager sharedQNDBManager] curUser];
+    if (user.selected) return;
+    
+    QNUserInfo *curUser = [QNUserInfo currentUser];
     curUser.selected = NO;
-    [[QNDBManager sharedQNDBManager] insertOrReplaceUser:curUser];
-    [[QNDBManager sharedQNDBManager] insertOrReplaceUser:user];
-    [self reloadTableViewData];
+    [[QNDBManager sharedQNDBManager] updateUserInfo:curUser];
+    
+    user.selected = YES;
+    [[QNDBManager sharedQNDBManager] updateUserInfo:user];
+    
+    [self refreshData];
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     [self.view endEditing:YES];
+}
+
+- (NSMutableArray<QNUserInfo *> *)userlist {
+    if (!_userlist) {
+        _userlist = [NSMutableArray array];
+    }
+    return _userlist;
 }
 @end

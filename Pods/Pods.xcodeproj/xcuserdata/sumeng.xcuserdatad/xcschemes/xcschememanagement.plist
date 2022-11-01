@@ -32,6 +32,11 @@
 			<key>orderHint</key>
 			<integer>5</integer>
 		</dict>
+		<key>SQLiteRepairKit.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
 		<key>WCDB.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -39,10 +44,20 @@
 			<key>orderHint</key>
 			<integer>6</integer>
 		</dict>
+		<key>WCDB.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>8</integer>
+		</dict>
 		<key>WCDBOptimizedSQLCipher.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>7</integer>
+		</dict>
+		<key>WCDBOptimizedSQLCipher.xcscheme_^#shared#^_</key>
+		<dict>
 			<key>orderHint</key>
 			<integer>7</integer>
 		</dict>

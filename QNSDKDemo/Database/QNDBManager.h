@@ -7,6 +7,8 @@
 
 #import <Foundation/Foundation.h>
 #import "QNUserInfo.h"
+#import "ScaleUser.h"
+#import "BindDeviceModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -43,6 +45,10 @@ singleton_interface(QNDBManager)
 
 - (BOOL)insertOrReplaceUser:(QNUserInfo *)user;
 
+- (BOOL)updateUserInfo:(QNUserInfo *)user;
+
+- (QNUserInfo *)userWithUserId:(NSString *)userId;
+
 ///  current user
 - (QNUserInfo *)curUser;
 
@@ -51,6 +57,27 @@ singleton_interface(QNDBManager)
 
 /// delete user
 - (BOOL)deleteUserWithUserId:(NSString *)userId;
+
+#pragma mark -
+#pragma mark - ScaleUser
+
+- (BOOL)insertOrReplaceScaleUser:(ScaleUser *)user;
+
+- (BOOL)updateScaleUserInfo:(ScaleUser *)user mac:(NSString *)mac;
+
+- (nullable ScaleUser *)scaleUserWithUserId:(NSString *)userId mac:(NSString *)mac;
+
+- (BOOL)deleteScaleUserWithUserId:(NSString *)userId mac:(NSString *)mac;
+
+#pragma mark -
+#pragma mark - Bind Device
+- (BOOL)insertOrReplaceBindDevice:(BindDeviceModel *)device;
+
+- (NSArray <BindDeviceModel *>*)getAllBindDeviceWithUserId:(NSString *)userId;
+
+/// delete user
+- (BOOL)deleteDeviceWithUserId:(NSString *)userId mac:(NSString *)mac;
+
 @end
 
 NS_ASSUME_NONNULL_END
