@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
 s.name             = 'QNHeightWeightScalePlugin'
-s.version          = '1.1.0'
+s.version          = '1.2.0'
 s.summary          = '轻牛旗下身高一体机设备通讯类'
 
 s.description      = '支持轻牛旗下身高一体机设备'
