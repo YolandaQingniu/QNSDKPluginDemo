@@ -24,8 +24,12 @@
 		24C2FF1D290A637800371129 /* BindDeviceVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C2FF1C290A637800371129 /* BindDeviceVC.m */; };
 		24F693AF29029F7600124FEE /* HouseholdScaleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 24F693AE29029F7600124FEE /* HouseholdScaleVC.m */; };
 		24F693B62906314F00124FEE /* QNScalePlugin.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 24F693B52906314F00124FEE /* QNScalePlugin.podspec */; };
+		7E138C462949B69F0075431E /* BPMachineFunctionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E138C452949B69F0075431E /* BPMachineFunctionVC.m */; };
+		7E138C4A2949BCAE0075431E /* FunctionModel.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7E138C492949BCAE0075431E /* FunctionModel.mm */; };
 		7E5FEDA828D877FA005E3018 /* QNHeightWeightScalePluginLibrary.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E33B5DF28B6453300A458B9 /* QNHeightWeightScalePluginLibrary.xcframework */; };
 		7E5FEDAA28D877FC005E3018 /* QNPluginLibrary.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E33B5D428B628A600A458B9 /* QNPluginLibrary.xcframework */; };
+		7E97E8FA294871CF008CB237 /* QNBPMachinePluginLibrary.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E97E8F9294871CF008CB237 /* QNBPMachinePluginLibrary.xcframework */; };
+		7E97E8FD294872B2008CB237 /* BPMachineVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E97E8FC294872B2008CB237 /* BPMachineVC.m */; };
 		7EAE8F9128DC49D40095C1C7 /* QNHeightWeightScalePlugin.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 7EAE8F8C28DC49D40095C1C7 /* QNHeightWeightScalePlugin.podspec */; };
 		7EAE8F9228DC49D40095C1C7 /* QNPlugin.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 7EAE8F8D28DC49D40095C1C7 /* QNPlugin.podspec */; };
 		7EAE8F9328DC49D40095C1C7 /* QNRulerPlugin.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 7EAE8F8E28DC49D40095C1C7 /* QNRulerPlugin.podspec */; };
@@ -37,9 +41,9 @@
 		7EE0D4DE28D96A6800691846 /* UserInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE0D4DA28D96A6800691846 /* UserInfoVC.m */; };
 		7EE0D4E428D96B8500691846 /* QNUserInfo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7EE0D4E128D96B8500691846 /* QNUserInfo.mm */; };
 		7EE0D4EA28D96BBD00691846 /* QNDBManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7EE0D4E728D96BBD00691846 /* QNDBManager.mm */; };
+		7EE65B91295000FD00B84C55 /* QNBPMachinePlugin.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 7EE65B90295000FD00B84C55 /* QNBPMachinePlugin.podspec */; };
 		7EF65D8A28D9B2680034447F /* QNRulerPluginLibrary.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EF65D8928D9B2680034447F /* QNRulerPluginLibrary.xcframework */; };
 		7EF65D8E28D9B3590034447F /* RulerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF65D8C28D9B3590034447F /* RulerVC.m */; };
-		C0AB069C29C82FB1FCAA4A5F /* Pods_QNSDKDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66A9EAB63E2F1D8CC335B57E /* Pods_QNSDKDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,8 +83,16 @@
 		24F693B52906314F00124FEE /* QNScalePlugin.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = QNScalePlugin.podspec; sourceTree = "<group>"; };
 		4B3ACC6A762113BF6813E010 /* Pods-QNHeightWeightScalePlugin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QNHeightWeightScalePlugin.debug.xcconfig"; path = "Target Support Files/Pods-QNHeightWeightScalePlugin/Pods-QNHeightWeightScalePlugin.debug.xcconfig"; sourceTree = "<group>"; };
 		66A9EAB63E2F1D8CC335B57E /* Pods_QNSDKDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QNSDKDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E138C442949B69F0075431E /* BPMachineFunctionVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BPMachineFunctionVC.h; sourceTree = "<group>"; };
+		7E138C452949B69F0075431E /* BPMachineFunctionVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BPMachineFunctionVC.m; sourceTree = "<group>"; };
+		7E138C482949BCAE0075431E /* FunctionModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FunctionModel.h; sourceTree = "<group>"; };
+		7E138C492949BCAE0075431E /* FunctionModel.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = FunctionModel.mm; sourceTree = "<group>"; };
+		7E138C4B2949BCE00075431E /* FunctionModel+WCTTableCoding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FunctionModel+WCTTableCoding.h"; sourceTree = "<group>"; };
 		7E33B5D428B628A600A458B9 /* QNPluginLibrary.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = QNPluginLibrary.xcframework; sourceTree = "<group>"; };
 		7E33B5DF28B6453300A458B9 /* QNHeightWeightScalePluginLibrary.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = QNHeightWeightScalePluginLibrary.xcframework; sourceTree = "<group>"; };
+		7E97E8F9294871CF008CB237 /* QNBPMachinePluginLibrary.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = QNBPMachinePluginLibrary.xcframework; sourceTree = "<group>"; };
+		7E97E8FB294872B2008CB237 /* BPMachineVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BPMachineVC.h; sourceTree = "<group>"; };
+		7E97E8FC294872B2008CB237 /* BPMachineVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BPMachineVC.m; sourceTree = "<group>"; };
 		7EAE8F8B28DC438D0095C1C7 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		7EAE8F8C28DC49D40095C1C7 /* QNHeightWeightScalePlugin.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = QNHeightWeightScalePlugin.podspec; sourceTree = "<group>"; };
 		7EAE8F8D28DC49D40095C1C7 /* QNPlugin.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = QNPlugin.podspec; sourceTree = "<group>"; };
@@ -99,6 +111,7 @@
 		7EE0D4E328D96B8500691846 /* QNUserInfo+WCTTableCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "QNUserInfo+WCTTableCoding.h"; sourceTree = "<group>"; };
 		7EE0D4E728D96BBD00691846 /* QNDBManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = QNDBManager.mm; sourceTree = "<group>"; };
 		7EE0D4E828D96BBD00691846 /* QNDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QNDBManager.h; sourceTree = "<group>"; };
+		7EE65B90295000FD00B84C55 /* QNBPMachinePlugin.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = QNBPMachinePlugin.podspec; sourceTree = "<group>"; };
 		7EF65D8928D9B2680034447F /* QNRulerPluginLibrary.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = QNRulerPluginLibrary.xcframework; sourceTree = "<group>"; };
 		7EF65D8C28D9B3590034447F /* RulerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RulerVC.m; sourceTree = "<group>"; };
 		7EF65D8D28D9B3590034447F /* RulerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RulerVC.h; sourceTree = "<group>"; };
@@ -113,7 +126,7 @@
 			files = (
 				7E5FEDAA28D877FC005E3018 /* QNPluginLibrary.xcframework in Frameworks */,
 				7EE0D4C328D8A6E000691846 /* QNAlgorithmPluginLibrary.xcframework in Frameworks */,
-				C0AB069C29C82FB1FCAA4A5F /* Pods_QNSDKDemo.framework in Frameworks */,
+				7E97E8FA294871CF008CB237 /* QNBPMachinePluginLibrary.xcframework in Frameworks */,
 				7E5FEDA828D877FA005E3018 /* QNHeightWeightScalePluginLibrary.xcframework in Frameworks */,
 				243198732907E3A5008B2974 /* QNScalePluginLibrary.xcframework in Frameworks */,
 				7EF65D8A28D9B2680034447F /* QNRulerPluginLibrary.xcframework in Frameworks */,
@@ -141,11 +154,13 @@
 				7EAE8F8D28DC49D40095C1C7 /* QNPlugin.podspec */,
 				7EAE8F8E28DC49D40095C1C7 /* QNRulerPlugin.podspec */,
 				24F693B52906314F00124FEE /* QNScalePlugin.podspec */,
+				7EE65B90295000FD00B84C55 /* QNBPMachinePlugin.podspec */,
 				7EF65D8928D9B2680034447F /* QNRulerPluginLibrary.xcframework */,
 				7EE0D4C228D8A6E000691846 /* QNAlgorithmPluginLibrary.xcframework */,
 				7E33B5DF28B6453300A458B9 /* QNHeightWeightScalePluginLibrary.xcframework */,
 				243198722907E3A5008B2974 /* QNScalePluginLibrary.xcframework */,
 				7E33B5D428B628A600A458B9 /* QNPluginLibrary.xcframework */,
+				7E97E8F9294871CF008CB237 /* QNBPMachinePluginLibrary.xcframework */,
 				2457614828A5FF71004A45AE /* QNSDKDemo */,
 				2457614728A5FF71004A45AE /* Products */,
 				7E383D0D28A9F59E001961F6 /* Frameworks */,
@@ -177,8 +192,9 @@
 			isa = PBXGroup;
 			children = (
 				2457616B28A5FF87004A45AE /* Main.storyboard */,
-				24F693AC29029F5600124FEE /* HouseHoldScale */,
+				7E97E8F829487039008CB237 /* BPMachine */,
 				7EE0D4D028D96A6800691846 /* HeightWeightScale */,
+				24F693AC29029F5600124FEE /* HouseHoldScale */,
 				7EF65D8B28D9B3590034447F /* Ruler */,
 				7EE0D4D328D96A6800691846 /* Setting */,
 			);
@@ -254,6 +270,16 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		7E138C472949BC920075431E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7E138C482949BCAE0075431E /* FunctionModel.h */,
+				7E138C492949BCAE0075431E /* FunctionModel.mm */,
+				7E138C4B2949BCE00075431E /* FunctionModel+WCTTableCoding.h */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		7E383D0D28A9F59E001961F6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -262,6 +288,18 @@
 				66A9EAB63E2F1D8CC335B57E /* Pods_QNSDKDemo.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7E97E8F829487039008CB237 /* BPMachine */ = {
+			isa = PBXGroup;
+			children = (
+				7E138C472949BC920075431E /* Model */,
+				7E97E8FB294872B2008CB237 /* BPMachineVC.h */,
+				7E97E8FC294872B2008CB237 /* BPMachineVC.m */,
+				7E138C442949B69F0075431E /* BPMachineFunctionVC.h */,
+				7E138C452949B69F0075431E /* BPMachineFunctionVC.m */,
+			);
+			path = BPMachine;
 			sourceTree = "<group>";
 		};
 		7EE0D4D028D96A6800691846 /* HeightWeightScale */ = {
@@ -393,6 +431,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EE65B91295000FD00B84C55 /* QNBPMachinePlugin.podspec in Resources */,
 				2457615928A5FF72004A45AE /* LaunchScreen.storyboard in Resources */,
 				2457618728A5FF87004A45AE /* Main.storyboard in Resources */,
 				2457615628A5FF72004A45AE /* Assets.xcassets in Resources */,
@@ -460,17 +499,20 @@
 				24F693AF29029F7600124FEE /* HouseholdScaleVC.m in Sources */,
 				7EE0D4DC28D96A6800691846 /* HeightWeightScaleVC.m in Sources */,
 				2457614B28A5FF71004A45AE /* AppDelegate.m in Sources */,
+				7E138C4A2949BCAE0075431E /* FunctionModel.mm in Sources */,
 				245EA8E7290AAFB300DB9D27 /* AlertTool.m in Sources */,
 				243198762908CF94008B2974 /* ScaleUser.mm in Sources */,
 				7EF65D8E28D9B3590034447F /* RulerVC.m in Sources */,
 				245EA8E4290A916B00DB9D27 /* DeleteScaleUserVC.m in Sources */,
 				2457615C28A5FF72004A45AE /* main.m in Sources */,
+				7E138C462949B69F0075431E /* BPMachineFunctionVC.m in Sources */,
 				24C2FF1D290A637800371129 /* BindDeviceVC.m in Sources */,
 				24C2FF17290A5D0900371129 /* BindDeviceModel.mm in Sources */,
 				2457614E28A5FF71004A45AE /* SceneDelegate.m in Sources */,
 				7EE0D4EA28D96BBD00691846 /* QNDBManager.mm in Sources */,
 				7EE0D4DE28D96A6800691846 /* UserInfoVC.m in Sources */,
 				7EE0D4DD28D96A6800691846 /* UnitChooseVC.m in Sources */,
+				7E97E8FD294872B2008CB237 /* BPMachineVC.m in Sources */,
 				7EE0D4E428D96B8500691846 /* QNUserInfo.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -632,13 +674,13 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				MARKETING_VERSION = 1.2.0;
+				MARKETING_VERSION = 1.3.0;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -675,13 +717,13 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				MARKETING_VERSION = 1.2.0;
+				MARKETING_VERSION = 1.3.0;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",

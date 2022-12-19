@@ -6,9 +6,9 @@
 //
 
 #import "BindDeviceVC.h"
-#import "AlertTool.h"
 #import "WiFiPairVC.h"
 #import "DeleteScaleUserVC.h"
+#import "AlertTool.h"
 
 @interface BindDeviceCell ()
 
@@ -47,7 +47,6 @@
 }
 
 @end
-
 
 
 @interface BindDeviceVC ()<BindDeviceDelegate>

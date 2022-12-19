@@ -10,10 +10,12 @@
 #import "QNUserInfo+WCTTableCoding.h"
 #import "ScaleUser+WCTTableCoding.h"
 #import "BindDeviceModel+WCTTableCoding.h"
+#import "FunctionModel+WCTTableCoding.h"
 
 #define YLUserTableName @"UserTable"
 #define YLScaleUserTableName @"ScaleUserTable"
 #define YLBindDeviceTableName @"BindDeviceTable"
+#define YLFunctionModelTableName @"FunctionModelTable"
 
 @interface QNDBManager () {
     WCTDatabase *_database;
@@ -41,6 +43,7 @@ singleton_implementation(QNDBManager)
     [_database createTableAndIndexesOfName:YLScaleUserTableName withClass:ScaleUser.class];
     [_database createTableAndIndexesOfName:YLUserTableName withClass:QNUserInfo.class];
     [_database createTableAndIndexesOfName:YLBindDeviceTableName withClass:BindDeviceModel.class];
+    [_database createTableAndIndexesOfName:YLFunctionModelTableName withClass:FunctionModel.class];
 }
 
 - (BOOL)insertOrReplaceUser:(QNUserInfo *)user {
@@ -160,6 +163,43 @@ singleton_implementation(QNDBManager)
     BOOL ret = [_database beginTransaction];
     ret = [_database deleteObjectsFromTable:YLBindDeviceTableName where:BindDeviceModel.userId == userId && BindDeviceModel.mac == mac];
     
+    if (ret) {
+        [_database commitTransaction];
+    }else {
+        [_database rollbackTransaction];
+    }
+    return ret;
+}
+
+#pragma mark -
+#pragma mark - BPMachine function
+- (BOOL)insertOrReplaceFunctionMode:(FunctionModel *)model {
+    BOOL ret = [_database beginTransaction];
+    ret = [_database insertOrReplaceObject:model into:YLFunctionModelTableName];
+    if (ret) {
+        [_database commitTransaction];
+    }else {
+        [_database rollbackTransaction];
+    }
+    return ret;
+}
+
+- (nullable FunctionModel *)functionModelWithDataId:(NSString *)dataId {
+    FunctionModel *tempModel = [_database getOneObjectOfClass:FunctionModel.class fromTable:YLFunctionModelTableName where: FunctionModel.dataId == dataId];
+    if (tempModel == nil) {
+        tempModel = [[FunctionModel alloc] init];
+        tempModel.unitType = QNBPMachineUnitMMHG;
+        tempModel.volumeType = QNBPMachineVolumeFirstLevel;
+        tempModel.standardType = QNBPMachineStandardChina;
+        tempModel.languageType = QNBPMachineLanguageChinese;
+        tempModel.dataId = dataId;
+    }
+    return tempModel;
+}
+
+- (BOOL)deleteFunctionMode:(NSString *)dataId{
+    BOOL ret = [_database beginTransaction];
+    ret = [_database deleteObjectsFromTable:YLFunctionModelTableName where:FunctionModel.dataId == dataId];
     if (ret) {
         [_database commitTransaction];
     }else {

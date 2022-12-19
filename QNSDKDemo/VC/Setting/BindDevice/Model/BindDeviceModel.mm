@@ -14,6 +14,7 @@
 WCDB_IMPLEMENTATION(BindDeviceModel)
 
 WCDB_SYNTHESIZE(BindDeviceModel, userId)
+WCDB_SYNTHESIZE(BindDeviceModel, deviceType)
 WCDB_SYNTHESIZE(BindDeviceModel, bleName)
 WCDB_SYNTHESIZE(BindDeviceModel, modelId)
 WCDB_SYNTHESIZE(BindDeviceModel, mode)
@@ -32,6 +33,7 @@ WCDB_MULTI_PRIMARY(BindDeviceModel, "_primary", mac)
     
     BindDeviceModel *model = [[self alloc] init];
     model.userId = curUser.userId;
+    model.deviceType = QNBindDeviceTypeScale;
     model.bleName = device.bleName;
     model.modelId = device.modelId;
     model.mode = device.mode;
@@ -42,6 +44,22 @@ WCDB_MULTI_PRIMARY(BindDeviceModel, "_primary", mac)
     model.supportScaleUserFlag = [device getSupportScaleUser];
     model.scaleUserFullFlag = [device getScaleUserFull];
     
+    return model;
+}
+
++ (instancetype)bindDeviceWithBPMachineDevice:(QNBPMachineDevice *)device {
+    QNUserInfo *curUser = [[QNDBManager sharedQNDBManager] curUser];
+    BindDeviceModel *model = [[self alloc] init];
+    model.userId = curUser.userId;
+    model.deviceType = QNBindDeviceTypeBPMachine;
+    model.bleName = device.bleName;
+    model.modelId = device.modelId;
+    model.mode = @"BPMachine";
+    model.rssi = device.rssi;
+    model.mac = device.mac;
+    model.firmwareVer = device.hemVer;
+    model.supportWiFiFlag = [device getSupportWiFi];
+  
     return model;
 }
 

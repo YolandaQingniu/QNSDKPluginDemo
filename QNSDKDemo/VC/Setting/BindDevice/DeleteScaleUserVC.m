@@ -6,10 +6,8 @@
 //
 
 #import "DeleteScaleUserVC.h"
-#import "AlertTool.h"
-#import <QNPluginLibrary/QNPluginLibrary.h>
-#import "QNScalePluginLibrary/QNScalePluginLibrary.h"
 #import "HeightWeightScaleVC.h"
+#import "AlertTool.h"
 #import "QNDBManager.h"
 
 @implementation DeleteScaleUserModel

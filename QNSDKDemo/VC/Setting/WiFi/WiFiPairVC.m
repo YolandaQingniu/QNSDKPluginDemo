@@ -6,13 +6,11 @@
 //
 
 #import "WiFiPairVC.h"
-#import <QNPluginLibrary/QNPluginLibrary.h>
-#import "QNScalePluginLibrary/QNScalePluginLibrary.h"
 #import "HeightWeightScaleVC.h"
 #import "QNUserInfo.h"
 
 
-@interface WiFiPairVC ()<QNScaleWiFiListener, QNScaleStatusListener, QNLogListener, QNSysBleStatusListener, QNScanListener, QNScaleDeviceListener>
+@interface WiFiPairVC ()<QNScaleWiFiListener, QNScaleStatusListener, QNLogListener, QNSysBleStatusListener, QNScanListener, QNScaleDeviceListener, QNBPMachineDeviceListener, QNBPMachineWiFiListener>
 @property (weak, nonatomic) IBOutlet UILabel *statusLbl;
 @property (weak, nonatomic) IBOutlet UITextField *accountLbl;
 @property (weak, nonatomic) IBOutlet UITextField *pwdLbl;
@@ -22,7 +20,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *macLbl;
 
 @property (nonatomic, strong) QNPlugin *plugin;
-@property (nonatomic, strong) QNScaleDevice *connectedDevice;
+@property (nonatomic, strong) QNScaleDevice *connectedScale;
+@property (nonatomic, strong) QNBPMachineDevice *connectedBPMachine;
 @property (nonatomic, strong) NSTimer *timer;
 
 @end
@@ -41,8 +40,12 @@
     
     [self.plugin stopScan];
     
-    if (_connectedDevice) {
-        [QNScalePlugin cancelConnectDevice:_connectedDevice];
+    if (_connectedScale) {
+        [QNScalePlugin cancelConnectDevice:_connectedScale];
+    }
+    
+    if (_connectedBPMachine) {
+        [QNBPMachinePlugin cancelConnectDevice:_connectedBPMachine];
     }
 }
 
@@ -57,15 +60,32 @@
     self.plugin.logListener = self;
     self.plugin.sysBleStatusListener = self;
     
+    // init scale plugin
+    [self initScalePlugin];
+    // init bp machine plugin
+    [self initBPMachinePlugin];
+}
+
+- (void)initScalePlugin {
     // init specified device plugin
     int code = [QNScalePlugin setScalePlugin:self.plugin];
     NSLog(@"init specified device plugin code = %d",code);
-    
     // set device delegate
     [QNScalePlugin setStatusListener:self];
     [QNScalePlugin setDeviceListener:self];
     [QNScaleWiFiMp setWiFiStatusListener:self];
 }
+
+
+- (void)initBPMachinePlugin {
+    // init bp machine plugin
+    int code = [QNBPMachinePlugin setBPMachinePlugin:self.plugin];
+    NSLog(@"init bp machine plugin code = %d",code);
+    // set device delegate
+    [QNBPMachinePlugin setDeviceListener:self];
+    [QNBPMachineWiFiMp setWiFiStatusListener:self];
+}
+
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     [self.view endEditing:YES];
@@ -83,6 +103,7 @@
     self.statusLbl.text = QNBLEStatusStr_Scaning;
 }
 
+#pragma mark -
 #pragma mark - QNPluginDelegare
 - (void)onLog:(nonnull NSString *)log {
     NSLog(@"HouseholdScaleLog=%@", log);
@@ -138,12 +159,12 @@
     }
 }
 
+#pragma mark -
 #pragma mark - QNScaleDeviceListener
 - (void)onDiscoverScaleDevice:(QNScaleDevice *)device {
-    if (_connectedDevice || ![device.mac isEqualToString:_mac]) return;
-    
+    if (_connectedScale || ![device.mac isEqualToString:_mac]) return;
+    _connectedScale = device;
     self.statusLbl.text = QNBLEStatusStr_Connecting;
-    
     QNScaleOperate *operate = [[QNScaleOperate alloc] init];
     operate.unit = [self unitFromSetting];
     [QNScalePlugin connectDevice:device operate:operate];
@@ -173,7 +194,7 @@
 }
 
 - (void)onConnectFail:(int)code device:(QNScaleDevice *)device {
-    _connectedDevice = nil;
+    _connectedScale = nil;
     self.statusLbl.text = QNBLEStatusStr_ConnectedFailed;
 }
 
@@ -181,7 +202,7 @@
     if (code != 0) return;
     
     self.statusLbl.text = @"Ready To Pair Network";
-    _connectedDevice = device;
+    _connectedScale = device;
     
     [self startTimer];
         
@@ -189,11 +210,11 @@
     config.ssid = self.accountLbl.text;
     config.pwd = self.pwdLbl.text;
     config.serverUrl = @"http://wsp-lite.yolanda.hk/yolanda/wsp?code=";
-    [QNScaleWiFiMp startConnectWiFi:config device:_connectedDevice];
+    [QNScaleWiFiMp startConnectWiFi:config device:_connectedScale];
 }
 
 - (void)onDisconnected:(QNScaleDevice *)device {
-    _connectedDevice = nil;
+    _connectedScale = nil;
     self.statusLbl.text = QNBLEStatusStr_Disconnected;
 }
 
@@ -216,4 +237,56 @@
     }
 }
 
+#pragma mark -
+#pragma mark - QNBPMachineDeviceListener
+- (void)onDiscoverBPMachineDevice:(QNBPMachineDevice *)device {
+    if (_connectedBPMachine || ![device.mac isEqualToString:_mac]) return;
+    _connectedBPMachine = device;
+    self.statusLbl.text = QNBLEStatusStr_Connecting;
+    [QNBPMachinePlugin connectDevice:device];
+}
+
+- (void)onBPMachineConnectedSuccess:(QNBPMachineDevice *)device {
+    self.statusLbl.text = QNBLEStatusStr_Connected;
+}
+
+- (void)onBPMachineConnectFail:(int)code device:(QNBPMachineDevice *)device {
+    _connectedBPMachine = nil;
+    self.statusLbl.text = QNBLEStatusStr_ConnectedFailed;
+}
+
+- (void)onBPMachineReadyInteractResult:(int)code device:(QNBPMachineDevice *)device {
+    if (code != 0) return;
+    self.statusLbl.text = @"Ready To Pair Network";
+    _connectedBPMachine = device;
+    [self startTimer];
+    QNBPMachineWiFi *config = [[QNBPMachineWiFi alloc] init];
+    config.ssid = self.accountLbl.text;
+    config.pwd = self.pwdLbl.text;
+    config.serverUrl = @"http://wsp-lite.yolanda.hk/yolanda/wsp?code=";
+    [QNBPMachineWiFiMp startConnectWiFi:config device:device];
+}
+
+- (void)onBPMachineDisconnected:(QNBPMachineDevice *)device {
+    _connectedBPMachine = nil;
+    self.statusLbl.text = QNBLEStatusStr_Disconnected;
+}
+
+#pragma mark - QNBPMachineWiFiListener
+- (void)onBPMachineStartWiFiConnect:(QNBPMachineDevice *)device {
+    self.statusLbl.text = @"Start Pair Network";
+}
+- (void)onBPMachineConnectWiFiStatus:(int)code device:(QNBPMachineDevice *)device {
+    [self stopTimer];
+    
+    if (code == 0) {
+        self.progressView.progress = 1;
+        self.progressLbl.text = [NSString stringWithFormat:@"100%%"];
+        self.statusLbl.text = @"Pairing Network Success";
+    } else {
+        self.progressView.progress = 0;
+        self.progressLbl.text = [NSString stringWithFormat:@"0%%"];
+        self.statusLbl.text = @"Pairing Network Failed";
+    }
+}
 @end

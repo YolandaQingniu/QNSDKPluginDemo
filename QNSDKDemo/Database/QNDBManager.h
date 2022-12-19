@@ -9,6 +9,7 @@
 #import "QNUserInfo.h"
 #import "ScaleUser.h"
 #import "BindDeviceModel.h"
+#import "FunctionModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -77,6 +78,14 @@ singleton_interface(QNDBManager)
 
 /// delete user
 - (BOOL)deleteDeviceWithUserId:(NSString *)userId mac:(NSString *)mac;
+
+#pragma mark -
+#pragma mark - BPMachine function
+- (BOOL)insertOrReplaceFunctionMode:(FunctionModel *)model;
+
+- (nullable FunctionModel *)functionModelWithDataId:(NSString *)dataId;
+
+- (BOOL)deleteFunctionMode:(NSString *)dataId;
 
 @end
 

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
 s.name             = 'QNPlugin'
-s.version          = '1.2.0'
+s.version          = '1.3.0'
 s.summary          = '轻牛旗下设备通讯基础类'
 
 s.description      = '支持轻牛旗下SDK授权信息校验'

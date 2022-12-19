@@ -1,0 +1,6 @@
+framework module QNBPMachinePluginLibrary {
+  umbrella header "QNBPMachinePluginLibrary.h"
+
+  export *
+  module * { export * }
+}

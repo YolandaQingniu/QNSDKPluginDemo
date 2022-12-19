@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
 s.name             = 'QNRulerPlugin'
-s.version          = '1.2.0'
+s.version          = '1.3.0'
 s.summary          = '轻牛旗下蓝牙围度尺设备通讯类'
 
 s.description      = '支持轻牛旗下蓝牙围度尺设备'
