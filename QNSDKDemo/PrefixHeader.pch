@@ -9,5 +9,12 @@
 #define PrefixHeader_pch
 
 #import "AppDelegate.h"
+#import "AlertTool.h"
+#import <QNPluginLibrary/QNPluginLibrary.h>
+#import <QNRulerPluginLibrary/QNRulerPluginLibrary.h>
+#import <QNScalePluginLibrary/QNScalePluginLibrary.h>
+#import <QNAlgorithmPluginLibrary/QNAlgorithmPluginLibrary.h>
+#import <QNBPMachinePluginLibrary/QNBPMachinePluginLibrary.h>
+#import <QNHeightWeightScalePluginLibrary/QNHeightWeightScalePluginLibrary.h>
 
 #endif /* PrefixHeader_pch */

@@ -14,6 +14,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(nonatomic, strong) QNBleManager *bleManager;
 
+/// 获取秘钥
+- (NSString *)getEncryption;
+
 @end
 
 NS_ASSUME_NONNULL_END

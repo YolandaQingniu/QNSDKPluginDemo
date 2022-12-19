@@ -6,13 +6,19 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "QNScalePluginLibrary/QNScalePluginLibrary.h"
 
 NS_ASSUME_NONNULL_BEGIN
+
+typedef NS_ENUM(int, QNBindDeviceType) {
+    QNBindDeviceTypeScale = 0,
+    QNBindDeviceTypeBPMachine,
+};
 
 @interface BindDeviceModel : NSObject
 /// User ID
 @property (nonatomic, strong) NSString *userId;
+/// DeviceType
+@property (nonatomic, assign) QNBindDeviceType deviceType;
 /// Bluetooth name
 @property (nonatomic, strong) NSString *bleName;
 /// Model ID
@@ -35,6 +41,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype)bindDeviceWithQNScale:(QNScaleDevice *)device;
 
++ (instancetype)bindDeviceWithBPMachineDevice:(QNBPMachineDevice *)device;
 @end
 
 NS_ASSUME_NONNULL_END

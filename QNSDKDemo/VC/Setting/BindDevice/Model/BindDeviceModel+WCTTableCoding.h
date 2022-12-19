@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface BindDeviceModel (WCTTableCoding)<WCTTableCoding>
 
 WCDB_PROPERTY(userId)
+WCDB_PROPERTY(deviceType)
 WCDB_PROPERTY(bleName)
 WCDB_PROPERTY(modelId)
 WCDB_PROPERTY(mode)
