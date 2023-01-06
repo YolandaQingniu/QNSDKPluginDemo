@@ -16,5 +16,6 @@
 #import <QNAlgorithmPluginLibrary/QNAlgorithmPluginLibrary.h>
 #import <QNBPMachinePluginLibrary/QNBPMachinePluginLibrary.h>
 #import <QNHeightWeightScalePluginLibrary/QNHeightWeightScalePluginLibrary.h>
+#import <QNKitchenScalePluginLibrary/QNKitchenScalePluginLibrary.h>
 
 #endif /* PrefixHeader_pch */

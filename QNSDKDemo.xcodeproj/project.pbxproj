@@ -22,6 +22,9 @@
 		245EA8E7290AAFB300DB9D27 /* AlertTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 245EA8E6290AAFB300DB9D27 /* AlertTool.m */; };
 		24C2FF17290A5D0900371129 /* BindDeviceModel.mm in Sources */ = {isa = PBXBuildFile; fileRef = 24C2FF16290A5D0900371129 /* BindDeviceModel.mm */; };
 		24C2FF1D290A637800371129 /* BindDeviceVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C2FF1C290A637800371129 /* BindDeviceVC.m */; };
+		24CE0FE32968154B0008DCD1 /* KitchenVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 24CE0FE22968154B0008DCD1 /* KitchenVC.m */; };
+		24CE0FE52968232A0008DCD1 /* QNKitchenScalePluginLibrary.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24CE0FE42968232A0008DCD1 /* QNKitchenScalePluginLibrary.xcframework */; };
+		24CE0FE729682A120008DCD1 /* QNKitchenScalePlugin.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 24CE0FE629682A120008DCD1 /* QNKitchenScalePlugin.podspec */; };
 		24F693AF29029F7600124FEE /* HouseholdScaleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 24F693AE29029F7600124FEE /* HouseholdScaleVC.m */; };
 		24F693B62906314F00124FEE /* QNScalePlugin.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 24F693B52906314F00124FEE /* QNScalePlugin.podspec */; };
 		7E138C462949B69F0075431E /* BPMachineFunctionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E138C452949B69F0075431E /* BPMachineFunctionVC.m */; };
@@ -44,6 +47,7 @@
 		7EE65B91295000FD00B84C55 /* QNBPMachinePlugin.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 7EE65B90295000FD00B84C55 /* QNBPMachinePlugin.podspec */; };
 		7EF65D8A28D9B2680034447F /* QNRulerPluginLibrary.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EF65D8928D9B2680034447F /* QNRulerPluginLibrary.xcframework */; };
 		7EF65D8E28D9B3590034447F /* RulerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF65D8C28D9B3590034447F /* RulerVC.m */; };
+		89B5B1E5DA9586CCF6A2AA5A /* Pods_QNSDKDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66A9EAB63E2F1D8CC335B57E /* Pods_QNSDKDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +82,10 @@
 		24C2FF18290A5E0000371129 /* BindDeviceModel+WCTTableCoding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BindDeviceModel+WCTTableCoding.h"; sourceTree = "<group>"; };
 		24C2FF1B290A637800371129 /* BindDeviceVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BindDeviceVC.h; sourceTree = "<group>"; };
 		24C2FF1C290A637800371129 /* BindDeviceVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BindDeviceVC.m; sourceTree = "<group>"; };
+		24CE0FE12968154B0008DCD1 /* KitchenVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KitchenVC.h; sourceTree = "<group>"; };
+		24CE0FE22968154B0008DCD1 /* KitchenVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KitchenVC.m; sourceTree = "<group>"; };
+		24CE0FE42968232A0008DCD1 /* QNKitchenScalePluginLibrary.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = QNKitchenScalePluginLibrary.xcframework; sourceTree = "<group>"; };
+		24CE0FE629682A120008DCD1 /* QNKitchenScalePlugin.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = QNKitchenScalePlugin.podspec; sourceTree = "<group>"; };
 		24F693AD29029F7600124FEE /* HouseholdScaleVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HouseholdScaleVC.h; sourceTree = "<group>"; };
 		24F693AE29029F7600124FEE /* HouseholdScaleVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HouseholdScaleVC.m; sourceTree = "<group>"; };
 		24F693B52906314F00124FEE /* QNScalePlugin.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = QNScalePlugin.podspec; sourceTree = "<group>"; };
@@ -130,6 +138,8 @@
 				7E5FEDA828D877FA005E3018 /* QNHeightWeightScalePluginLibrary.xcframework in Frameworks */,
 				243198732907E3A5008B2974 /* QNScalePluginLibrary.xcframework in Frameworks */,
 				7EF65D8A28D9B2680034447F /* QNRulerPluginLibrary.xcframework in Frameworks */,
+				89B5B1E5DA9586CCF6A2AA5A /* Pods_QNSDKDemo.framework in Frameworks */,
+				24CE0FE52968232A0008DCD1 /* QNKitchenScalePluginLibrary.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,8 +163,10 @@
 				7EAE8F8C28DC49D40095C1C7 /* QNHeightWeightScalePlugin.podspec */,
 				7EAE8F8D28DC49D40095C1C7 /* QNPlugin.podspec */,
 				7EAE8F8E28DC49D40095C1C7 /* QNRulerPlugin.podspec */,
+				24CE0FE629682A120008DCD1 /* QNKitchenScalePlugin.podspec */,
 				24F693B52906314F00124FEE /* QNScalePlugin.podspec */,
 				7EE65B90295000FD00B84C55 /* QNBPMachinePlugin.podspec */,
+				24CE0FE42968232A0008DCD1 /* QNKitchenScalePluginLibrary.xcframework */,
 				7EF65D8928D9B2680034447F /* QNRulerPluginLibrary.xcframework */,
 				7EE0D4C228D8A6E000691846 /* QNAlgorithmPluginLibrary.xcframework */,
 				7E33B5DF28B6453300A458B9 /* QNHeightWeightScalePluginLibrary.xcframework */,
@@ -192,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				2457616B28A5FF87004A45AE /* Main.storyboard */,
+				24CE0FE02968154B0008DCD1 /* Kitchen */,
 				7E97E8F829487039008CB237 /* BPMachine */,
 				7EE0D4D028D96A6800691846 /* HeightWeightScale */,
 				24F693AC29029F5600124FEE /* HouseHoldScale */,
@@ -248,6 +261,15 @@
 				24C2FF18290A5E0000371129 /* BindDeviceModel+WCTTableCoding.h */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		24CE0FE02968154B0008DCD1 /* Kitchen */ = {
+			isa = PBXGroup;
+			children = (
+				24CE0FE12968154B0008DCD1 /* KitchenVC.h */,
+				24CE0FE22968154B0008DCD1 /* KitchenVC.m */,
+			);
+			path = Kitchen;
 			sourceTree = "<group>";
 		};
 		24F693AC29029F5600124FEE /* HouseHoldScale */ = {
@@ -439,6 +461,7 @@
 				7EAE8F9328DC49D40095C1C7 /* QNRulerPlugin.podspec in Resources */,
 				7EAE8F9428DC49D40095C1C7 /* QNAlgorithmPlugin.podspec in Resources */,
 				2457616328A5FF81004A45AE /* 123456789.qn in Resources */,
+				24CE0FE729682A120008DCD1 /* QNKitchenScalePlugin.podspec in Resources */,
 				7EAE8F9228DC49D40095C1C7 /* QNPlugin.podspec in Resources */,
 				7EAE8F9128DC49D40095C1C7 /* QNHeightWeightScalePlugin.podspec in Resources */,
 				24F693B62906314F00124FEE /* QNScalePlugin.podspec in Resources */,
@@ -507,6 +530,7 @@
 				2457615C28A5FF72004A45AE /* main.m in Sources */,
 				7E138C462949B69F0075431E /* BPMachineFunctionVC.m in Sources */,
 				24C2FF1D290A637800371129 /* BindDeviceVC.m in Sources */,
+				24CE0FE32968154B0008DCD1 /* KitchenVC.m in Sources */,
 				24C2FF17290A5D0900371129 /* BindDeviceModel.mm in Sources */,
 				2457614E28A5FF71004A45AE /* SceneDelegate.m in Sources */,
 				7EE0D4EA28D96BBD00691846 /* QNDBManager.mm in Sources */,

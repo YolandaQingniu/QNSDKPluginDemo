@@ -1,6 +1,0 @@
-framework module QNPluginLibrary {
-  umbrella header "QNPluginLibrary.h"
-
-  export *
-  module * { export * }
-}
