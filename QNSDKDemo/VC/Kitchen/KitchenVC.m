@@ -70,7 +70,7 @@
 - (IBAction)clickSwitchUnit:(UISegmentedControl *)sender {
     if (_connectedDevice == nil) return;
     
-    QNUnit unit = [self getKitchenUnitFromSelect:sender.selectedSegmentIndex];
+    QNKitchenUnit unit = [self getKitchenUnitFromSelect:sender.selectedSegmentIndex];
     [QNKitchenScalePlugin setDeviceUnit:unit device:_connectedDevice];
 }
 
@@ -87,13 +87,13 @@
     }
 }
 
-- (QNUnit)getKitchenUnitFromSelect:(NSInteger)index {
-    if (index == 0) return QNUnitG;
-    if (index == 1) return QNUnitML;
-    if (index == 2) return QNUnitMilkML;
-    if (index == 3) return QNUnitLBOZ;
-    if (index == 4) return QNUnitOZ;
-    return QNUnitG;
+- (QNKitchenUnit)getKitchenUnitFromSelect:(NSInteger)index {
+    if (index == 0) return QNKitchenUnitG;
+    if (index == 1) return QNKitchenUnitML;
+    if (index == 2) return QNKitchenUnitMilkML;
+    if (index == 3) return QNKitchenUnitLBOZ;
+    if (index == 4) return QNKitchenUnitOZ;
+    return QNKitchenUnitG;
 }
 
 
@@ -134,7 +134,7 @@
     self.statusLbl.text = QNBLEStatusStr_Connecting;
     
     QNKitchenScaleOperate *operate = [[QNKitchenScaleOperate alloc] init];
-    operate.unit = QNUnitG;
+    operate.unit = QNKitchenUnitG;
     [QNKitchenScalePlugin connectKitchenScaleDevice:device operate:operate];
 }
 
@@ -151,7 +151,7 @@
 - (void)onKitchenScaleReadyInteract:(int)code device:(QNKitchenScaleDevice *)device {
     if (code != 0) return;
     
-    QNUnit unit = [self getKitchenUnitFromSelect:self.unitSwitch.selectedSegmentIndex];
+    QNKitchenUnit unit = [self getKitchenUnitFromSelect:self.unitSwitch.selectedSegmentIndex];
     [QNKitchenScalePlugin setDeviceUnit:unit device:_connectedDevice];
 }
 
@@ -175,11 +175,18 @@
 #pragma mark - QNKitchenScaleDataListener
 - (void)onKitchenScaleRealTimeData:(QNKitchenScaleData *)scaleData device:(QNKitchenScaleDevice *)device {
     self.statusLbl.text = QNBLEStatusStr_Measuring;
-    self.valueLbl.text = [QNKitchenScalePlugin getWeightWithUnit:scaleData.unit weight:scaleData.weight numberType:QNKitchenScaleNumberTypeInteger];
+        
+    NSString *result = [QNKitchenScalePlugin getWeightWithUnit:scaleData.unit weight:scaleData.weight numberType:[device getDeviceNumberType]];
+    if (scaleData.isReverseWeightFlag) {
+        result = [NSString stringWithFormat:@"-%@", result];
+    }
+    
+    self.valueLbl.text = result;
     
     self.overLoadedLbl.hidden = !scaleData.isOverWeightFlag;
     self.shellingLbl.hidden = !scaleData.isShellingFlag;
     self.stableLbl.hidden = !scaleData.isStableFlag;
+    self.shellingBtn.hidden = ![device getDeviceSupportShelling];
 }
 
 @end

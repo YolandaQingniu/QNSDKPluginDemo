@@ -37,7 +37,7 @@
 /// Set device unit
 /// @param unit unit
 /// @param device device
-+ (int)setDeviceUnit:(QNUnit)unit device:(QNKitchenScaleDevice *)device;
++ (int)setDeviceUnit:(QNKitchenUnit)unit device:(QNKitchenScaleDevice *)device;
 
 /// Set device Shelling
 /// @param device device
@@ -56,6 +56,6 @@
 /// @param unit unit
 /// @param weight origin weight
 /// @param numberType numberType
-+ (NSString *)getWeightWithUnit:(QNUnit)unit weight:(NSString *)weight numberType:(QNKitchenScaleNumberType)numberType;
++ (NSString *)getWeightWithUnit:(QNKitchenUnit)unit weight:(NSString *)weight numberType:(QNKitchenScaleNumberType)numberType;
 
 @end

@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface QNKitchenScaleOperate : NSObject
 /// Unit
-@property(nonatomic, assign) QNUnit unit;
+@property(nonatomic, assign) QNKitchenUnit unit;
 
 @end
 

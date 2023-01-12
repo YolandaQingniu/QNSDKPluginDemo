@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/QNKitchenScaleData.h</key>
 		<data>
-		A2JlI0GbTdC4Q6zRAMpL1g+YcRY=
+		kzOsdJ8c7xukKG/Wb54D1iZLETQ=
 		</data>
 		<key>Headers/QNKitchenScaleDataListener.h</key>
 		<data>
@@ -22,11 +22,11 @@
 		</data>
 		<key>Headers/QNKitchenScaleOperate.h</key>
 		<data>
-		xMAjlQoYRzrLb/EGbIe7VDoMZz4=
+		68WhcaCro0kjz9eM4hcXDYJOVIc=
 		</data>
 		<key>Headers/QNKitchenScalePlugin.h</key>
 		<data>
-		+SdNEsqvLyttP9eTiObShmJnySo=
+		kSHRC4zrTOA0pSH5KqeSxNrdUC0=
 		</data>
 		<key>Headers/QNKitchenScalePluginLibrary.h</key>
 		<data>
@@ -47,11 +47,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			A2JlI0GbTdC4Q6zRAMpL1g+YcRY=
+			kzOsdJ8c7xukKG/Wb54D1iZLETQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			j1sSv9iuXM+PBSGoeANT1PX2PgCD6/NrS4N3Kl2hPoQ=
+			S59xqCM/y/3FE1alxvSt+SNpj3pMw/8+jr3CDNxOd08=
 			</data>
 		</dict>
 		<key>Headers/QNKitchenScaleDataListener.h</key>
@@ -91,22 +91,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			xMAjlQoYRzrLb/EGbIe7VDoMZz4=
+			68WhcaCro0kjz9eM4hcXDYJOVIc=
 			</data>
 			<key>hash2</key>
 			<data>
-			OmrHtHmdoUbevglI0kdIDyy/wL4QNqUxpY36pCQ4TDI=
+			uFY0BVM/3424nu2901+jeeh1tZkPlONZJa6R9H8BQlo=
 			</data>
 		</dict>
 		<key>Headers/QNKitchenScalePlugin.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			+SdNEsqvLyttP9eTiObShmJnySo=
+			kSHRC4zrTOA0pSH5KqeSxNrdUC0=
 			</data>
 			<key>hash2</key>
 			<data>
-			uMO5tceN4mIO2nD9EIrFrsGrAIpsTECPewKSD9eVpBo=
+			y1GgS43KGhI77no2rKTxnwNdJ0Qe2MhE0zB/c1qdfy8=
 			</data>
 		</dict>
 		<key>Headers/QNKitchenScalePluginLibrary.h</key>

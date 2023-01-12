@@ -1,6 +1,0 @@
-framework module QNScalePluginLibrary {
-  umbrella header "QNScalePluginLibrary.h"
-
-  export *
-  module * { export * }
-}

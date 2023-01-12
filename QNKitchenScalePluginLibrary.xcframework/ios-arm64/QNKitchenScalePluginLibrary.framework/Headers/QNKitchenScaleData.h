@@ -26,19 +26,19 @@ typedef NS_ENUM(int, QNKitchenScaleRangeType) {
     QNKitchenScaleRangeType5KG,     //0~5kg
 };
 
-typedef NS_ENUM(int, QNUnit) {
-    QNUnitG,
-    QNUnitML,
-    QNUnitOZ,
-    QNUnitLBOZ,
-    QNUnitMilkML
+typedef NS_ENUM(int, QNKitchenUnit) {
+    QNKitchenUnitG,
+    QNKitchenUnitML,
+    QNKitchenUnitOZ,
+    QNKitchenUnitLBOZ,
+    QNKitchenUnitMilkML
 };
 
 @interface QNKitchenScaleData : NSObject
 /** weight */
 @property (nonatomic, strong) NSString *weight;
 /** unit */
-@property (nonatomic, assign) QNUnit unit;
+@property (nonatomic, assign) QNKitchenUnit unit;
 /** timeStamp */
 @property (nonatomic, strong) NSString *timeStamp;
 /** is Shell */

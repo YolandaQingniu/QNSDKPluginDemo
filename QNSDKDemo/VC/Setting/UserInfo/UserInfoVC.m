@@ -44,6 +44,13 @@
     [self refreshData];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    QNUserInfo *curUser = [QNUserInfo currentUser];
+    NSLog(@"curUser.gender=%@", curUser.gender);
+}
+
 #pragma mark -
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     [self.view endEditing:YES];
