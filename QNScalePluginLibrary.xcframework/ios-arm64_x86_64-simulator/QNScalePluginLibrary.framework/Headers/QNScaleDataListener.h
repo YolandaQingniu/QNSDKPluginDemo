@@ -6,8 +6,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "QNScaleData.h"
-#import "QNScaleUser.h"
+#import <QNScalePluginLibrary/QNScaleData.h>
+#import <QNScalePluginLibrary/QNScaleUser.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

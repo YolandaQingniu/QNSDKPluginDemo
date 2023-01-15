@@ -6,7 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "QNUser.h"
+#import <QNScalePluginLibrary/QNUser.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -111,12 +111,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// Make scale data complete
 /// @param user data owner
-- (QNScaleData *)makeScaleDataComplete:(QNUser *)user;
+- (QNScaleData *)makeDataComplete:(QNUser *)user;
 
-/// Control scale data fat
-/// @param threshold variation range
-/// @param hmac latest scale data hmac
-- (QNScaleData *)controlFatThreshold:(double)threshold hmac:(NSString *)hmac;
 @end
 
 NS_ASSUME_NONNULL_END

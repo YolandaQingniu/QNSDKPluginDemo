@@ -19,12 +19,12 @@
 		245D12462906B497000021FA /* WiFiPairVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 245D12452906B497000021FA /* WiFiPairVC.m */; };
 		245EA8E4290A916B00DB9D27 /* DeleteScaleUserVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 245EA8E3290A916B00DB9D27 /* DeleteScaleUserVC.m */; };
 		245EA8E7290AAFB300DB9D27 /* AlertTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 245EA8E6290AAFB300DB9D27 /* AlertTool.m */; };
+		248116C0297396EB001F5008 /* QNScalePluginLibrary.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 248116BF297396EB001F5008 /* QNScalePluginLibrary.xcframework */; };
+		248116C229739701001F5008 /* QNPluginLibrary.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 248116C129739701001F5008 /* QNPluginLibrary.xcframework */; };
 		24C2FF17290A5D0900371129 /* BindDeviceModel.mm in Sources */ = {isa = PBXBuildFile; fileRef = 24C2FF16290A5D0900371129 /* BindDeviceModel.mm */; };
 		24C2FF1D290A637800371129 /* BindDeviceVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C2FF1C290A637800371129 /* BindDeviceVC.m */; };
 		24CE0FE32968154B0008DCD1 /* KitchenVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 24CE0FE22968154B0008DCD1 /* KitchenVC.m */; };
 		24CE0FE729682A120008DCD1 /* QNKitchenScalePlugin.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 24CE0FE629682A120008DCD1 /* QNKitchenScalePlugin.podspec */; };
-		24CE0FEB296C19370008DCD1 /* QNPluginLibrary.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24CE0FEA296C19360008DCD1 /* QNPluginLibrary.xcframework */; };
-		24CE0FED296D94940008DCD1 /* QNScalePluginLibrary.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24CE0FEC296D94940008DCD1 /* QNScalePluginLibrary.xcframework */; };
 		24CE0FEF296D949D0008DCD1 /* QNKitchenScalePluginLibrary.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24CE0FEE296D949D0008DCD1 /* QNKitchenScalePluginLibrary.xcframework */; };
 		24F693AF29029F7600124FEE /* HouseholdScaleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 24F693AE29029F7600124FEE /* HouseholdScaleVC.m */; };
 		24F693B62906314F00124FEE /* QNScalePlugin.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 24F693B52906314F00124FEE /* QNScalePlugin.podspec */; };
@@ -76,6 +76,8 @@
 		245EA8E3290A916B00DB9D27 /* DeleteScaleUserVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeleteScaleUserVC.m; sourceTree = "<group>"; };
 		245EA8E5290AAFB300DB9D27 /* AlertTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlertTool.h; sourceTree = "<group>"; };
 		245EA8E6290AAFB300DB9D27 /* AlertTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlertTool.m; sourceTree = "<group>"; };
+		248116BF297396EB001F5008 /* QNScalePluginLibrary.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = QNScalePluginLibrary.xcframework; sourceTree = "<group>"; };
+		248116C129739701001F5008 /* QNPluginLibrary.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = QNPluginLibrary.xcframework; sourceTree = "<group>"; };
 		24C2FF15290A5D0900371129 /* BindDeviceModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BindDeviceModel.h; sourceTree = "<group>"; };
 		24C2FF16290A5D0900371129 /* BindDeviceModel.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = BindDeviceModel.mm; sourceTree = "<group>"; };
 		24C2FF18290A5E0000371129 /* BindDeviceModel+WCTTableCoding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BindDeviceModel+WCTTableCoding.h"; sourceTree = "<group>"; };
@@ -84,8 +86,6 @@
 		24CE0FE12968154B0008DCD1 /* KitchenVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KitchenVC.h; sourceTree = "<group>"; };
 		24CE0FE22968154B0008DCD1 /* KitchenVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KitchenVC.m; sourceTree = "<group>"; };
 		24CE0FE629682A120008DCD1 /* QNKitchenScalePlugin.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = QNKitchenScalePlugin.podspec; sourceTree = "<group>"; };
-		24CE0FEA296C19360008DCD1 /* QNPluginLibrary.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = QNPluginLibrary.xcframework; sourceTree = "<group>"; };
-		24CE0FEC296D94940008DCD1 /* QNScalePluginLibrary.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = QNScalePluginLibrary.xcframework; sourceTree = "<group>"; };
 		24CE0FEE296D949D0008DCD1 /* QNKitchenScalePluginLibrary.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = QNKitchenScalePluginLibrary.xcframework; sourceTree = "<group>"; };
 		24F693AD29029F7600124FEE /* HouseholdScaleVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HouseholdScaleVC.h; sourceTree = "<group>"; };
 		24F693AE29029F7600124FEE /* HouseholdScaleVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HouseholdScaleVC.m; sourceTree = "<group>"; };
@@ -133,11 +133,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7EE0D4C328D8A6E000691846 /* QNAlgorithmPluginLibrary.xcframework in Frameworks */,
-				24CE0FED296D94940008DCD1 /* QNScalePluginLibrary.xcframework in Frameworks */,
 				7E97E8FA294871CF008CB237 /* QNBPMachinePluginLibrary.xcframework in Frameworks */,
 				7E5FEDA828D877FA005E3018 /* QNHeightWeightScalePluginLibrary.xcframework in Frameworks */,
 				7EF65D8A28D9B2680034447F /* QNRulerPluginLibrary.xcframework in Frameworks */,
-				24CE0FEB296C19370008DCD1 /* QNPluginLibrary.xcframework in Frameworks */,
+				248116C0297396EB001F5008 /* QNScalePluginLibrary.xcframework in Frameworks */,
+				248116C229739701001F5008 /* QNPluginLibrary.xcframework in Frameworks */,
 				89B5B1E5DA9586CCF6A2AA5A /* Pods_QNSDKDemo.framework in Frameworks */,
 				24CE0FEF296D949D0008DCD1 /* QNKitchenScalePluginLibrary.xcframework in Frameworks */,
 			);
@@ -170,8 +170,8 @@
 				7EE0D4C228D8A6E000691846 /* QNAlgorithmPluginLibrary.xcframework */,
 				7E33B5DF28B6453300A458B9 /* QNHeightWeightScalePluginLibrary.xcframework */,
 				7E97E8F9294871CF008CB237 /* QNBPMachinePluginLibrary.xcframework */,
-				24CE0FEA296C19360008DCD1 /* QNPluginLibrary.xcframework */,
-				24CE0FEC296D94940008DCD1 /* QNScalePluginLibrary.xcframework */,
+				248116BF297396EB001F5008 /* QNScalePluginLibrary.xcframework */,
+				248116C129739701001F5008 /* QNPluginLibrary.xcframework */,
 				24CE0FEE296D949D0008DCD1 /* QNKitchenScalePluginLibrary.xcframework */,
 				2457614828A5FF71004A45AE /* QNSDKDemo */,
 				2457614728A5FF71004A45AE /* Products */,
@@ -704,7 +704,7 @@
 					"@executable_path/Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				MARKETING_VERSION = 1.4.0.4;
+				MARKETING_VERSION = 1.4.0.6;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -747,7 +747,7 @@
 					"@executable_path/Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				MARKETING_VERSION = 1.4.0.4;
+				MARKETING_VERSION = 1.4.0.6;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",

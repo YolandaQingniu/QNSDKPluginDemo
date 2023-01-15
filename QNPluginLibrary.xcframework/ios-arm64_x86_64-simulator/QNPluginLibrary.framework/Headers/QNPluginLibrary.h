@@ -20,7 +20,5 @@ FOUNDATION_EXPORT const unsigned char QNPluginLibraryVersionString[];
 #import "QNScanListener.h"
 #import "QNLogListener.h"
 #import "QNSysBleStatusListener.h"
-#import "QNAESCrypt.h"
-#import "NSData+QNBase64.h"
 
 // In this header, you should import all the public headers of your framework using statements like #import <QNPluginLibrary/PublicHeader.h>

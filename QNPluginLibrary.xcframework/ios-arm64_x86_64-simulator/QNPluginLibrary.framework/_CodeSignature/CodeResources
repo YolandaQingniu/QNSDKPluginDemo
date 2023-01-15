@@ -4,14 +4,6 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>Headers/NSData+QNBase64.h</key>
-		<data>
-		JowSajO/OeAsN+7kmF2pmZ6CYdk=
-		</data>
-		<key>Headers/QNAESCrypt.h</key>
-		<data>
-		tZp/SxRai2NvZardZMkMvkAi4K8=
-		</data>
 		<key>Headers/QNAction.h</key>
 		<data>
 		CSPoLqUr1ALAsOtntz8eKU4QEgM=
@@ -34,7 +26,7 @@
 		</data>
 		<key>Headers/QNPluginLibrary.h</key>
 		<data>
-		m3sf7UhHy19n+zdiUFbx3AluBsg=
+		OAilzAdj1S/vLAD0XJdnDKXKpLQ=
 		</data>
 		<key>Headers/QNScanListener.h</key>
 		<data>
@@ -46,7 +38,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		HHlejMS4qHRZz7Cgg8z3iu7IVaE=
+		FUheDwczyuGz6szKV5V4H6g+UvE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -55,28 +47,6 @@
 	</dict>
 	<key>files2</key>
 	<dict>
-		<key>Headers/NSData+QNBase64.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			JowSajO/OeAsN+7kmF2pmZ6CYdk=
-			</data>
-			<key>hash2</key>
-			<data>
-			h0C6mN3Sx/RuYqKqfBzTbWlsR0KmPFrw+Xj2n79fh2s=
-			</data>
-		</dict>
-		<key>Headers/QNAESCrypt.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			tZp/SxRai2NvZardZMkMvkAi4K8=
-			</data>
-			<key>hash2</key>
-			<data>
-			tv1NG8F/dj9IiyVWk8PpZFnqHVkSNqJiJ8E6GfIdEmM=
-			</data>
-		</dict>
 		<key>Headers/QNAction.h</key>
 		<dict>
 			<key>hash</key>
@@ -136,11 +106,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			m3sf7UhHy19n+zdiUFbx3AluBsg=
+			OAilzAdj1S/vLAD0XJdnDKXKpLQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			rMc1IPpmE24epDUI22nGZMaIbezovYIBh3FMY7izCs0=
+			NnBc6RRNViYyjcC8GL2cm7Wha0sOUrlzxRiUjg+cW6g=
 			</data>
 		</dict>
 		<key>Headers/QNScanListener.h</key>

@@ -6,11 +6,11 @@
 	<dict>
 		<key>Headers/QNScaleData.h</key>
 		<data>
-		+bt+oSAiacN6rUrupu4QejMiH2M=
+		P3BsgNo5pKK/v/ut9Ns4yjrMZ5I=
 		</data>
 		<key>Headers/QNScaleDataListener.h</key>
 		<data>
-		+WqcEHWvXvNctnIshHyhffadapU=
+		bwdSkyYZVWs4dNDRLWyWK9y8j2Y=
 		</data>
 		<key>Headers/QNScaleDevice.h</key>
 		<data>
@@ -30,15 +30,11 @@
 		</data>
 		<key>Headers/QNScalePluginLibrary.h</key>
 		<data>
-		dJo7DIA/V/wvucygr+EvUiyhjv0=
+		/jj28KrTvduW8QiE9HL0olhaL2Q=
 		</data>
 		<key>Headers/QNScaleStatusListener.h</key>
 		<data>
 		IMXjN7jcp1koKan4CMGtBKC0IWs=
-		</data>
-		<key>Headers/QNScaleStoredData.h</key>
-		<data>
-		+EmCef8ymOaO6ZxPLJBUR4vEgVg=
 		</data>
 		<key>Headers/QNScaleUser.h</key>
 		<data>
@@ -50,7 +46,7 @@
 		</data>
 		<key>Headers/QNScaleWiFiListener.h</key>
 		<data>
-		BofuSQSyTSX4JNKQHXgHFghiSX8=
+		lFNmffCME31nRYM3q8oHONHl/34=
 		</data>
 		<key>Headers/QNScaleWiFiMp.h</key>
 		<data>
@@ -70,7 +66,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		WeOcGrAnV7G8zsy/ubT0zBHzD24=
+		OL20QJbEORgM90HR6X3YcDS6bKU=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -83,22 +79,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			+bt+oSAiacN6rUrupu4QejMiH2M=
+			P3BsgNo5pKK/v/ut9Ns4yjrMZ5I=
 			</data>
 			<key>hash2</key>
 			<data>
-			BppPkvDB1pZpSJYP03mVJwf8yK9bAUF4/HjlN0rs544=
+			uABLc1DhxqgR7aXswsjEpIUivAiaINId2AzJJrarqDM=
 			</data>
 		</dict>
 		<key>Headers/QNScaleDataListener.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			+WqcEHWvXvNctnIshHyhffadapU=
+			bwdSkyYZVWs4dNDRLWyWK9y8j2Y=
 			</data>
 			<key>hash2</key>
 			<data>
-			3rRU28JfRr4ejbwjmjI45V2D0RQERgNa7fKZQOjqk00=
+			aq5+p/T6eK2tkTXV95qPhMB0UVgIAP+NGBOAFV4i0CE=
 			</data>
 		</dict>
 		<key>Headers/QNScaleDevice.h</key>
@@ -149,11 +145,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			dJo7DIA/V/wvucygr+EvUiyhjv0=
+			/jj28KrTvduW8QiE9HL0olhaL2Q=
 			</data>
 			<key>hash2</key>
 			<data>
-			/7R92nRM55PbB5VX+blZr84aSVgn8bDICY5bbfaHhT4=
+			JjozMexfOGCYMbu5ZK5qBpZr8+9O7ADxZtmN3GvSZRw=
 			</data>
 		</dict>
 		<key>Headers/QNScaleStatusListener.h</key>
@@ -165,17 +161,6 @@
 			<key>hash2</key>
 			<data>
 			INR5oB6HBJsHvLOSwyp97bubPeS69lh/FLtLxRBDjHo=
-			</data>
-		</dict>
-		<key>Headers/QNScaleStoredData.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			+EmCef8ymOaO6ZxPLJBUR4vEgVg=
-			</data>
-			<key>hash2</key>
-			<data>
-			x8kG9jU/WPupZ4d2IrJEJRaZ6/SMYIo7U28kLFD+VE8=
 			</data>
 		</dict>
 		<key>Headers/QNScaleUser.h</key>
@@ -204,11 +189,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			BofuSQSyTSX4JNKQHXgHFghiSX8=
+			lFNmffCME31nRYM3q8oHONHl/34=
 			</data>
 			<key>hash2</key>
 			<data>
-			L3cGsJRT05A4Jk6hEtIWOZW6QsuqJeOKxBWPmy7lHdo=
+			9Iu7cZXqWEvxJsyiaqjaLKMSdValPRQZukoBXqOEDnk=
 			</data>
 		</dict>
 		<key>Headers/QNScaleWiFiMp.h</key>
