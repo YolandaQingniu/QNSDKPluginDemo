@@ -1,6 +1,0 @@
-framework module QNKitchenScalePluginLibrary {
-  umbrella header "QNKitchenScalePluginLibrary.h"
-
-  export *
-  module * { export * }
-}
