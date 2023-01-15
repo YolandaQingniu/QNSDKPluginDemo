@@ -182,7 +182,7 @@
     _connectedDevice = device;
     
     if (self.switchBtn.on) {
-        [QNUserScaleMp deleteUserList:@[@1, @2, @3, @4, @5, @6, @7, @8] device:device];
+        [QNUserScaleMp deleteUserList:[self getNeedDeleteAllScaleUserList] device:device];
     } else {
         [QNUserScaleMp deleteUserList:[self getNeedDeleteScaleUserList] device:device];
     }
@@ -195,6 +195,15 @@
         if (item.isSelected) {
             [result addObject:[NSNumber numberWithInteger:item.text.integerValue]];
         }
+    }
+    return result.copy;
+}
+
+- (NSArray <NSNumber *> *)getNeedDeleteAllScaleUserList {
+    NSMutableArray *result = [NSMutableArray array];
+    
+    for (int i = 1; i <= 8; i++) {
+        [result addObject:@(i)];
     }
     return result.copy;
 }

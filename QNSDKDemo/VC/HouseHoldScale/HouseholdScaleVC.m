@@ -44,11 +44,8 @@
 - (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
     
+    [QNScalePlugin cancelConnectDevice:_connectedDevice];
     [self.plugin stopScan];
-    
-    if (_connectedDevice) {
-        [QNScalePlugin cancelConnectDevice:_connectedDevice];
-    }
 }
 
 - (void)initBlePlugin {
@@ -216,7 +213,6 @@
 }
 
 - (void)onDisconnected:(QNScaleDevice *)device {
-    _connectedDevice = nil;
     self.statusLbl.text = QNBLEStatusStr_Disconnected;
 }
 
@@ -229,46 +225,6 @@
 - (void)onReceiveMeasureResult:(QNScaleData *)scaleData device:(QNScaleDevice *)device {
     self.statusLbl.text = QNBLEStatusStr_MeasureDone;
     [self loadMeasureReportData:scaleData];
-    
-    
-    NSString *aesData = [QNAESCrypt AES128Decrypt:scaleData.hmac];
-    NSDictionary *dic = [self jsonTodictionary:aesData];
-        
-    NSString *resistance_50 = dic[@"resistance_50"];
-    NSString *resistance_500 = dic[@"resistance_500"];
-    NSString *origin_resistances = dic[@"origin_resistances"];
-    
-    
-    NSString *res20_left_arm = dic[@"res20_left_arm"];
-    NSString *res20_right_arm = dic[@"res20_right_arm"];
-    NSString *res20_left_leg = dic[@"res20_left_leg"];
-    NSString *res20_right_leg = dic[@"res20_right_leg"];
-    NSString *res20_trunk = dic[@"res20_trunk"];
-    
-    NSString *res100_left_arm = dic[@"res100_left_arm"];
-    NSString *res100_right_arm = dic[@"res100_right_arm"];
-    NSString *res100_left_leg = dic[@"res100_left_leg"];
-    NSString *res100_right_leg = dic[@"res100_right_leg"];
-    NSString *res100_trunk = dic[@"res100_trunk"];
-    
-    NSString *info = @"";
-    if (resistance_50.length > 0) info = [NSString stringWithFormat:@"%@\n 50K: %@", info, resistance_50];
-    if (resistance_500.length > 0) info = [NSString stringWithFormat:@"%@\n 500K: %@", info, resistance_500];
-    if (origin_resistances.length > 0) info = [NSString stringWithFormat:@"%@\n 原始: %@", info, origin_resistances];
-
-    if (res20_left_arm.length > 0) info = [NSString stringWithFormat:@"%@\n res20_left_arm: %@", info, res20_left_arm];
-    if (res20_right_arm.length > 0) info = [NSString stringWithFormat:@"%@\n res20_right_arm: %@", info, res20_right_arm];
-    if (res20_left_leg.length > 0) info = [NSString stringWithFormat:@"%@\n res20_left_leg: %@", info, res20_left_leg];
-    if (res20_right_leg.length > 0) info = [NSString stringWithFormat:@"%@\n res20_right_leg: %@", info, res20_right_leg];
-    if (res20_trunk.length > 0) info = [NSString stringWithFormat:@"%@\n res20_trunk: %@", info, res20_trunk];
-    
-    if (res100_left_arm.length > 0) info = [NSString stringWithFormat:@"%@\n res100_left_arm: %@", info, res100_left_arm];
-    if (res100_right_arm.length > 0) info = [NSString stringWithFormat:@"%@\n res100_right_arm: %@", info, res100_right_arm];
-    if (res100_left_leg.length > 0) info = [NSString stringWithFormat:@"%@\n res100_left_leg: %@", info, res100_left_leg];
-    if (res100_right_leg.length > 0) info = [NSString stringWithFormat:@"%@\n res100_right_leg: %@", info, res100_right_leg];
-    if (res100_trunk.length > 0) info = [NSString stringWithFormat:@"%@\n res100_trunk: %@", info, res100_trunk];
-    
-    [AlertTool showAlertMsg:info];
 }
 
 - (void)onReceiveStoredData:(NSArray<QNScaleData *> *)scaleData device:(QNScaleDevice *)device {
@@ -309,20 +265,6 @@
 }
 
 #pragma mark -
-
-- (NSDictionary *)jsonTodictionary:(NSString *)jsonString {
-    if (jsonString == nil) {
-        return nil;
-    }
-    NSData *jsonData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
-    NSError *error;
-    NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:&error];
-    if(error) {
-        return nil;
-    }
-    return dic;
-}
-
 - (NSString *)curWeightUnit {
     NSInteger unit = [[NSUserDefaults standardUserDefaults] integerForKey:@"WeightUnit"];
     
