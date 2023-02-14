@@ -35,9 +35,10 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)cancelConnectDevice:(QNBPMachineDevice *)device;
 
 /// Set device function
-/// it needs to be called after the device allows interaction
+/// Must be set, it needs to be called after the device allows interaction
+/// When deploy is nill, the blood pressure monitor settings will not be modified
 /// @param device QNBPMachineDevice
-+ (int)setDeviceFunction:(QNBPMachineDevice *)device deploy:(QNBPMachineDeploy *)deploy;
++ (int)setDeviceFunction:(QNBPMachineDevice *)device deploy:(nullable QNBPMachineDeploy *)deploy;
 
 /// Read stored data
 /// it needs to be called after setDeviceFunction

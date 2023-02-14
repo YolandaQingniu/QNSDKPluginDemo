@@ -14,7 +14,7 @@
 		</data>
 		<key>Headers/QNBPMachineDeploy.h</key>
 		<data>
-		nfGbSGjdhHxZZPho9rF4L6P3I8U=
+		ftEeomSmyLr11t3TnmtRr3DUU7o=
 		</data>
 		<key>Headers/QNBPMachineDevice.h</key>
 		<data>
@@ -26,7 +26,7 @@
 		</data>
 		<key>Headers/QNBPMachinePlugin.h</key>
 		<data>
-		AkJwNSuDhiDHH6Jmkz05xzP3uJ0=
+		0KifgTMSqRtp/NAlG4AcHsI2+Cs=
 		</data>
 		<key>Headers/QNBPMachinePluginLibrary.h</key>
 		<data>
@@ -81,11 +81,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			nfGbSGjdhHxZZPho9rF4L6P3I8U=
+			ftEeomSmyLr11t3TnmtRr3DUU7o=
 			</data>
 			<key>hash2</key>
 			<data>
-			TXmCtedvm+a4j2fliCJzqqDiHjDxlNzUFjC/4wjkDT4=
+			v+0q0M7a1AYZa8SfURYKQOJr3hOKwJ4IXB1onw94jcI=
 			</data>
 		</dict>
 		<key>Headers/QNBPMachineDevice.h</key>
@@ -114,11 +114,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			AkJwNSuDhiDHH6Jmkz05xzP3uJ0=
+			0KifgTMSqRtp/NAlG4AcHsI2+Cs=
 			</data>
 			<key>hash2</key>
 			<data>
-			gRmuGDAmzy5V97Be7ILmAoccmmGEyP+vu1CyRu3q3Jg=
+			vZOhPiTZ1okLo9buAOXzqkJR1kIqYj8jUPp88I2Hl5s=
 			</data>
 		</dict>
 		<key>Headers/QNBPMachinePluginLibrary.h</key>

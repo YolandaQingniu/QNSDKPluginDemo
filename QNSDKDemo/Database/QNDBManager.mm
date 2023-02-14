@@ -186,14 +186,6 @@ singleton_implementation(QNDBManager)
 
 - (nullable FunctionModel *)functionModelWithDataId:(NSString *)dataId {
     FunctionModel *tempModel = [_database getOneObjectOfClass:FunctionModel.class fromTable:YLFunctionModelTableName where: FunctionModel.dataId == dataId];
-    if (tempModel == nil) {
-        tempModel = [[FunctionModel alloc] init];
-        tempModel.unitType = QNBPMachineUnitMMHG;
-        tempModel.volumeType = QNBPMachineVolumeFirstLevel;
-        tempModel.standardType = QNBPMachineStandardChina;
-        tempModel.languageType = QNBPMachineLanguageChinese;
-        tempModel.dataId = dataId;
-    }
     return tempModel;
 }
 

@@ -94,7 +94,7 @@
 }
 @end
 
-@interface BPMachineVC ()<UITableViewDelegate, UITableViewDataSource, QNSysBleStatusListener, QNBPMachineDeviceListener, QNBPMachineDataListener>
+@interface BPMachineVC ()<UITableViewDelegate, UITableViewDataSource, QNSysBleStatusListener,QNLogListener, QNBPMachineDeviceListener, QNBPMachineDataListener>
 @property (nonatomic, strong) QNPlugin *plugin;
 
 @property (nonatomic, assign) BOOL isConnect;
@@ -145,6 +145,7 @@
         
     }];
     self.plugin.sysBleStatusListener = self;
+    self.plugin.logListener = self;
     
     // init specified device plugin
     int code = [QNBPMachinePlugin setBPMachinePlugin:self.plugin];
@@ -173,6 +174,11 @@
     }
     self.statusLbl.text = bleStatusStr;
 }
+
+- (void)onLog:(NSString *)log {
+    NSLog(@"%@", log);
+}
+
 #pragma mark -
 #pragma mark - QNBPMachineDeviceListener
 - (void)onDiscoverBPMachineDevice:(QNBPMachineDevice *)device {
@@ -209,12 +215,15 @@
     [AlertTool showAlertMsg:[NSString stringWithFormat:@"Storage count: %d",[device getCurrentStorageCount]]];
     _connectedDevice = device;
     FunctionModel *model = [[QNDBManager sharedQNDBManager] functionModelWithDataId:@"123456"];
-    QNBPMachineDeploy *deploy = [[QNBPMachineDeploy alloc] init];
-    deploy.unit = model.unitType;
-    deploy.volume =  model.volumeType;
-    deploy.standard =  model.standardType;
-    deploy.language =  model.languageType;
-    deploy.timeZone =  QNBPMachineTimeZoneE8;
+    QNBPMachineDeploy *deploy = nil;
+    if (model) {
+        deploy = [[QNBPMachineDeploy alloc] init];
+        deploy.unit = model.unitType;
+        deploy.volume =  model.volumeType;
+        deploy.standard =  model.standardType;
+        deploy.language =  model.languageType;
+    }
+   
     [QNBPMachinePlugin setDeviceFunction:device deploy:deploy];
     [QNBPMachinePlugin readStoredData:device];
 }
