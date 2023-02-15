@@ -181,7 +181,7 @@
 
 #pragma mark -
 #pragma mark - QNBPMachineDeviceListener
-- (void)onDiscoverBPMachineDevice:(QNBPMachineDevice *)device {
+- (void)onDiscoverDevice:(QNBPMachineDevice *)device {
     if (_connectedDevice) return;
     _connectedDevice = device;
     self.statusLbl.text = QNBLEStatusStr_Scaning;
@@ -194,23 +194,23 @@
     }
     [self.tableView reloadData];
 }
-- (void)onBPMachineConnectedSuccess:(QNBPMachineDevice *)device {
+- (void)onConnectedSuccess:(QNBPMachineDevice *)device {
     self.isConnect = YES;
     self.connectedDevice = device;
     self.statusLbl.text = QNBLEStatusStr_Connected;
     self.macLbl.text = [NSString stringWithFormat:@"MAC: %@", device.mac];
 }
-- (void)onBPMachineConnectFail:(int)code device:(QNBPMachineDevice *)device {
+- (void)onConnectFail:(int)code device:(QNBPMachineDevice *)device {
     self.connectedDevice = nil;
     self.isConnect = NO;
     self.statusLbl.text = QNBLEStatusStr_ConnectedFailed;
 }
-- (void)onBPMachineDisconnected:(QNBPMachineDevice *)device {
+- (void)onDisconnected:(QNBPMachineDevice *)device {
     self.connectedDevice = nil;
     self.isConnect = NO;
     self.statusLbl.text = QNBLEStatusStr_Disconnected;
 }
-- (void)onBPMachineReadyInteractResult:(int)code device:(QNBPMachineDevice *)device {
+- (void)onReadyInteractResult:(int)code device:(QNBPMachineDevice *)device {
     if (code != 0) return;
     [AlertTool showAlertMsg:[NSString stringWithFormat:@"Storage count: %d",[device getCurrentStorageCount]]];
     _connectedDevice = device;
@@ -231,9 +231,14 @@
     
 }
 
-- (void)onSetBPMachineReadStoredDataResult:(int)code device:(QNBPMachineDevice *)device {
+- (void)onSetReadStoredDataResult:(int)code device:(QNBPMachineDevice *)device {
     
 }
+
+- (void)onSetFunctionResult:(int)code device:(nonnull QNBPMachineDevice *)device {
+    
+}
+
 
 #pragma mark -
 #pragma mark - QNBPMachineDeviceListener
@@ -293,4 +298,5 @@
     }
     return _dataSource;
 }
+
 @end

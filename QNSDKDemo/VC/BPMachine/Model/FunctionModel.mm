@@ -20,4 +20,13 @@ WCDB_SYNTHESIZE(FunctionModel, languageType)
 
 WCDB_PRIMARY(FunctionModel, dataId)
 
++ (FunctionModel *)defaultFunctionModel {
+    FunctionModel *model = [[FunctionModel alloc] init];
+    model.dataId = @"123456";
+    model.unitType = QNBPMachineUnitMMHG;
+    model.volumeType = QNBPMachineVolumeMute;
+    model.standardType = QNBPMachineStandardChina;
+    model.languageType = QNBPMachineLanguageChinese;
+    return model;
+}
 @end

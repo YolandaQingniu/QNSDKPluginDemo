@@ -14,35 +14,35 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// Discover device
 /// @param device QNBPMachineDevice
-- (void)onDiscoverBPMachineDevice:(QNBPMachineDevice *)device;
+- (void)onDiscoverDevice:(QNBPMachineDevice *)device;
 
 /// Connected success
 /// @param device QNBPMachineDevice
-- (void)onBPMachineConnectedSuccess:(QNBPMachineDevice *)device;
+- (void)onConnectedSuccess:(QNBPMachineDevice *)device;
 
 /// Connect fail
 /// @param code code
 /// @param device QNBPMachineDevice
-- (void)onBPMachineConnectFail:(int)code device:(QNBPMachineDevice *)device;
+- (void)onConnectFail:(int)code device:(QNBPMachineDevice *)device;
 
 /// Device ready interact
 /// @param code code
 /// @param device QNBPMachineDevice
-- (void)onBPMachineReadyInteractResult:(int)code device:(QNBPMachineDevice *)device;
+- (void)onReadyInteractResult:(int)code device:(QNBPMachineDevice *)device;
 
 /// Set function result
 /// @param code code
 /// @param device QNBPMachineDevice
-- (void)onSetBPMachineFunctionResult:(int)code device:(QNBPMachineDevice *)device;
+- (void)onSetFunctionResult:(int)code device:(QNBPMachineDevice *)device;
 
 /// Set read stored data result
 /// @param code code
 /// @param device QNBPMachineDevice
-- (void)onSetBPMachineReadStoredDataResult:(int)code device:(QNBPMachineDevice *)device;
+- (void)onSetReadStoredDataResult:(int)code device:(QNBPMachineDevice *)device;
 
 /// Disconnected
 /// @param device QNBPMachineDevice
-- (void)onBPMachineDisconnected:(QNBPMachineDevice *)device;
+- (void)onDisconnected:(QNBPMachineDevice *)device;
 @end
 
 NS_ASSUME_NONNULL_END

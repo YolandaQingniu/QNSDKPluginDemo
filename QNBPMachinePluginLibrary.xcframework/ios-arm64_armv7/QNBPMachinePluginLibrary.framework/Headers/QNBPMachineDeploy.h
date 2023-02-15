@@ -32,7 +32,6 @@ typedef NS_ENUM(int, QNBPMachineStandard) {
     QNBPMachineStandardChina = 1,
     QNBPMachineStandardUSA,
     QNBPMachineStandardEurope,
-    QNBPMachineStandardJapan,
 };
 
 @interface QNBPMachineDeploy : NSObject

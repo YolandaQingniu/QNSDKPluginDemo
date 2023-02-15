@@ -21,6 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, assign) QNBPMachineLanguage languageType;
 
++ (FunctionModel *)defaultFunctionModel;
 @end
 
 NS_ASSUME_NONNULL_END

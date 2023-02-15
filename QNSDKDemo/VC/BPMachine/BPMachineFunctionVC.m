@@ -20,7 +20,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     _model = [[QNDBManager sharedQNDBManager] functionModelWithDataId:@"123456"];
-    self.dataSource = @[@[@"mmHg", @"kPa"],@[@"Mute", @"Lv1", @"Lv2", @"Lv3", @"Lv4", @"Lv5"],@[@"China", @"USA", @"Europe", @"Japan"],@[@"Chinese", @"English"]];
+    if (_model == nil) _model = [FunctionModel defaultFunctionModel];
+    self.dataSource = @[@[@"mmHg", @"kPa"],@[@"Mute", @"Lv1", @"Lv2", @"Lv3", @"Lv4", @"Lv5"],@[@"China", @"USA", @"Europe"],@[@"Chinese", @"English"]];
 }
 
 - (IBAction)clickSaveUnit:(id)sender {
@@ -44,25 +45,25 @@
     cell.textLabel.font = [UIFont systemFontOfSize:16];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     if (indexPath.section == 0) {
-        if (_model.unitType == indexPath.row) {
+        if (_model.unitType - 1 == indexPath.row) {
             cell.accessoryType = UITableViewCellAccessoryCheckmark;
         } else {
             cell.accessoryType = UITableViewCellAccessoryNone;
         }
     }else if (indexPath.section == 1) {
-        if (_model.volumeType == indexPath.row) {
+        if (_model.volumeType - 1 == indexPath.row) {
             cell.accessoryType = UITableViewCellAccessoryCheckmark;
         } else {
             cell.accessoryType = UITableViewCellAccessoryNone;
         }
     }else if (indexPath.section == 2) {
-        if (_model.standardType == indexPath.row) {
+        if (_model.standardType - 1 == indexPath.row) {
             cell.accessoryType = UITableViewCellAccessoryCheckmark;
         } else {
             cell.accessoryType = UITableViewCellAccessoryNone;
         }
     } else {
-        if (_model.languageType == indexPath.row) {
+        if (_model.languageType - 1 == indexPath.row) {
             cell.accessoryType = UITableViewCellAccessoryCheckmark;
         } else {
             cell.accessoryType = UITableViewCellAccessoryNone;
@@ -93,13 +94,13 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
-        _model.unitType = (QNBPMachineUnit)indexPath.row;
+        _model.unitType = (QNBPMachineUnit)indexPath.row + 1;
     }else if (indexPath.section == 1) {
-        _model.volumeType = (QNBPMachineVolume)indexPath.row;
+        _model.volumeType = (QNBPMachineVolume)indexPath.row + 1;
     }else if (indexPath.section == 2) {
-        _model.standardType = (QNBPMachineStandard)indexPath.row;
+        _model.standardType = (QNBPMachineStandard)indexPath.row + 1;
     }else {
-        _model.languageType = (QNBPMachineLanguage)indexPath.row;
+        _model.languageType = (QNBPMachineLanguage)indexPath.row + 1;
     }
     [self.tableView reloadData];
 }
