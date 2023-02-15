@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
 s.name             = 'QNScalePlugin'
-s.version          = '1.4.0'
+s.version          = '1.4.1'
 s.summary          = '轻牛旗下家用秤设备通讯类'
 
 s.description      = '支持轻牛旗下家用秤设备'
