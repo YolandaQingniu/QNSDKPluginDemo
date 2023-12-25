@@ -12,7 +12,6 @@
 #import "QNScaleDataListener.h"
 #import "QNScaleOperate.h"
 #import "QNScaleDevice.h"
-#import "QNUser.h"
 
 @interface QNScalePlugin : NSObject
 
@@ -45,11 +44,6 @@
 /// @param device QNScaleDevice
 /// @param unit QNScaleUnit
 + (int)setScaleDeviceUnit:(QNScaleDevice *)device unit:(QNUnit)unit;
-
-/// Set measure user
-/// @param device QNScaleDevice
-/// @param user QNScaleUser
-+ (int)setMeasureUser:(QNScaleDevice *)device user:(QNUser *)user;
 
 /// Weight kg to Lb
 /// @param weight NSString

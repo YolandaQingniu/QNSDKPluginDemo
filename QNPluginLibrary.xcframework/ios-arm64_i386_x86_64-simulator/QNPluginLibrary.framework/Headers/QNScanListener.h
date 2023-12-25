@@ -11,9 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol QNScanListener <NSObject>
 
-/// Launch scan results
-/// @param code <#code description#>
-- (void)onScanResult:(int)code;
+///Start scanning
+- (void)onStartScan;
 
 /// Stop scanning
 - (void)onStopScan;

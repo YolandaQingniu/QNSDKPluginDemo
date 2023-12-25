@@ -6,7 +6,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#define QNAppId @"123456789"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

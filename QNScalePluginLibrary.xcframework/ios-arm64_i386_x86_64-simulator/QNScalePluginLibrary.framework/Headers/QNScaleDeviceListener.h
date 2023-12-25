@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)onDiscoverScaleDevice:(QNScaleDevice *)device;
 
 /// Set unit
-/// @param code Status code (success: 0, failure: 1)
+/// @param code Status code (success: 0, failure: 5004)
 /// @param device QNScaleDevice
 - (void)onSetUnitResult:(int)code device:(QNScaleDevice *)device;
 

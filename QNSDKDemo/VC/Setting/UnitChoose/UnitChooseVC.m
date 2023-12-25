@@ -11,7 +11,6 @@
 
 @property (nonatomic, strong) NSArray *unitDatas;
 @property (nonatomic, assign) NSInteger curWeightUnitIdx;
-@property (nonatomic, assign) NSInteger curHeightUnitIdx;
 
 @end
 
@@ -20,42 +19,32 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.curWeightUnitIdx = [[NSUserDefaults standardUserDefaults] integerForKey:@"WeightUnit"];
-    self.curHeightUnitIdx = [[NSUserDefaults standardUserDefaults] integerForKey:@"HeightUnit"];
-    self.unitDatas = @[@[@"KG", @"LB", @"Jin", @"ST-LB", @"ST"],@[@"Cm", @"Ft"]];
+    self.unitDatas = @[@"KG", @"LB", @"Jin", @"ST-LB", @"ST"];
 }
 
 - (IBAction)clickSaveUnit:(id)sender {
     [[NSUserDefaults standardUserDefaults] setInteger:self.curWeightUnitIdx forKey:@"WeightUnit"];
-    [[NSUserDefaults standardUserDefaults] setInteger:self.curHeightUnitIdx forKey:@"HeightUnit"];
     [[NSUserDefaults standardUserDefaults] synchronize];
     [self.navigationController popViewControllerAnimated:YES];
 }
 
 #pragma mark - TableView
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return self.unitDatas.count;
+    return 1;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.unitDatas[section] count];
+    return self.unitDatas.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UnitChooseCell"];
-    cell.textLabel.text = self.unitDatas[indexPath.section][indexPath.row];
+    cell.textLabel.text = self.unitDatas[indexPath.row];
     cell.textLabel.font = [UIFont systemFontOfSize:16];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    if (indexPath.section == 0) {
-        if (self.curWeightUnitIdx == indexPath.row) {
-            cell.accessoryType = UITableViewCellAccessoryCheckmark;
-        } else {
-            cell.accessoryType = UITableViewCellAccessoryNone;
-        }
-    }else {
-        if (self.curHeightUnitIdx == indexPath.row) {
-            cell.accessoryType = UITableViewCellAccessoryCheckmark;
-        } else {
-            cell.accessoryType = UITableViewCellAccessoryNone;
-        }
+    if (self.curWeightUnitIdx == indexPath.row) {
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    } else {
+        cell.accessoryType = UITableViewCellAccessoryNone;
     }
     return cell;
 }
@@ -69,19 +58,11 @@
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    if (section == 0) {
-        return @"Weight Unit";
-    }else {
-        return @"Height Unit";
-    }
+    return @"Weight Unit";
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.section == 0) {
-        self.curWeightUnitIdx = indexPath.row;
-    }else {
-        self.curHeightUnitIdx= indexPath.row;
-    }
+    self.curWeightUnitIdx = indexPath.row;
     [self.tableView reloadData];
 }
 @end

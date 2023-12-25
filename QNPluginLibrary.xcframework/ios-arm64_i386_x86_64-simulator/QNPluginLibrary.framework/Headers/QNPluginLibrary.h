@@ -14,8 +14,6 @@ FOUNDATION_EXPORT double QNPluginLibraryVersionNumber;
 FOUNDATION_EXPORT const unsigned char QNPluginLibraryVersionString[];
 
 #import "QNPlugin.h"
-#import "QNAction.h"
-#import "QNAuthDevice.h"
 #import "QNBasePlugin.h"
 #import "QNScanListener.h"
 #import "QNLogListener.h"

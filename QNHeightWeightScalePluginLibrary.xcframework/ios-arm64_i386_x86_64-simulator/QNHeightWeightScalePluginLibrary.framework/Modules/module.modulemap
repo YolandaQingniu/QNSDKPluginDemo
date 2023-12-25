@@ -1,6 +1,0 @@
-framework module QNHeightWeightScalePluginLibrary {
-  umbrella header "QNHeightWeightScalePluginLibrary.h"
-
-  export *
-  module * { export * }
-}

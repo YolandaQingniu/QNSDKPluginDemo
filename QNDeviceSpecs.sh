@@ -33,4 +33,4 @@ echo ""
 fi
 }
 
-update_podspecs QNPlugin QNHeightWeightScalePlugin QNAlgorithmPlugin QNRulerPlugin QNScalePlugin QNBPMachinePlugin
+update_podspecs QNPlugin QNScalePlugin

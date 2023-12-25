@@ -8,14 +8,13 @@
 #import "HouseholdScaleVC.h"
 #import <QNPluginLibrary/QNPluginLibrary.h>
 #import "QNScalePluginLibrary/QNScalePluginLibrary.h"
-#import "QNUserInfo.h"
-#import "QNDBManager.h"
+#import "QNMeasureReport.h"
 
-@interface HouseholdScaleVC ()<UITableViewDelegate, UITableViewDataSource, QNScaleDataListener, QNScaleDeviceListener, QNScaleStatusListener, QNScaleUserEventListener, QNLogListener, QNSysBleStatusListener, QNScanListener>
+
+@interface HouseholdScaleVC ()<UITableViewDelegate, UITableViewDataSource, QNScaleDataListener, QNScaleDeviceListener, QNScaleStatusListener, QNLogListener, QNSysBleStatusListener, QNScanListener>
 @property (weak, nonatomic) IBOutlet UILabel *statusLbl;
 @property (weak, nonatomic) IBOutlet UILabel *valueLbl;
 @property (weak, nonatomic) IBOutlet UILabel *macLbl;
-@property (weak, nonatomic) IBOutlet UILabel *appidLbl;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property (nonatomic, strong) QNPlugin *plugin;
@@ -30,9 +29,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    self.appidLbl.text = [NSString stringWithFormat:@"AppId: %@",QNAppId];
-    
+        
     [self showMeasureResult:@"--" unit:@""];
 }
 
@@ -51,8 +48,7 @@
 - (void)initBlePlugin {
     // init centeral plugin
     self.plugin = [QNPlugin sharedPlugin];
-    NSString *file = [[NSBundle mainBundle] pathForResource:QNAppId ofType:@"qn"];
-    [self.plugin initSdk:QNAppId filePath:file callback:^(int code) {
+    [self.plugin initSdkWithCallback:^(int code) {
         
     }];
     self.plugin.scanListener = self;
@@ -66,7 +62,6 @@
     [QNScalePlugin setDataListener:self];
     [QNScalePlugin setStatusListener:self];
     [QNScalePlugin setDeviceListener:self];
-    [QNUserScaleMp setUserScaleEventListener:self];
     
     [self.plugin startScan];
 }
@@ -146,13 +141,7 @@
     QNScaleOperate *operate = [[QNScaleOperate alloc] init];
     operate.unit = [self unitFromSetting];
     int flag = [QNScalePlugin connectDevice:device operate:operate];
-    
-    if (flag == 0) {
-        // save a new device
-        BindDeviceModel *bindDevice = [BindDeviceModel bindDeviceWithQNScale:device];
-        [[QNDBManager sharedQNDBManager] insertOrReplaceBindDevice:bindDevice];
-    }
-    
+        
     [self showMeasureResult:@"--" unit:@""];
     [self.reportDatas removeAllObjects];
     [self.tableView reloadData];
@@ -181,35 +170,6 @@
     _connectedDevice = device;
     
     [QNScalePlugin setScaleDeviceUnit:device unit:[self unitFromSetting]];
-    
-    QNUserInfo *curUser = [QNUserInfo currentUser];
-    
-    if (device.getSupportScaleUser) {
-        
-        ScaleUser *scaleUser = [[QNDBManager sharedQNDBManager] scaleUserWithUserId:curUser.userId mac:device.mac];
-        
-        QNScaleUser *user = [[QNScaleUser alloc] init];
-        user.key = 1000;
-        user.visitorMode = NO;
-        user.height = curUser.height;
-        user.age = curUser.age;
-        user.userId = curUser.userId;
-        user.gender = curUser.gender;
-        
-        if (scaleUser && scaleUser.secretIndex > 0) {
-            user.index = scaleUser.secretIndex;
-            user.key = scaleUser.secretKey;
-        }
-        
-        [QNUserScaleMp setMeasureUserToUserDevice:user device:device];
-    } else {
-        QNUser *user = [[QNUser alloc] init];
-        user.userId = curUser.userId;
-        user.gender = curUser.gender;
-        user.age = curUser.age;
-        user.height = curUser.height;
-        [QNScalePlugin setMeasureUser:device user:user];
-    }
 }
 
 - (void)onDisconnected:(QNScaleDevice *)device {
@@ -228,39 +188,6 @@
 }
 
 - (void)onReceiveStoredData:(NSArray<QNScaleData *> *)scaleData device:(QNScaleDevice *)device {
-    
-}
-
-- (NSString *)onGetLastDataHmac:(QNScaleUser *)user device:(QNScaleDevice *)device {
-    return @"";
-}
-
-#pragma mark - QNScaleUserEventListener
-- (void)onRegisterUserResult:(int)code user:(QNScaleUser *)user device:(QNScaleDevice *)device {
-    
-    ScaleUser *scaleUser = [[QNDBManager sharedQNDBManager] scaleUserWithUserId:user.userId mac:device.mac];
-    
-    if (scaleUser == nil) {
-        // save a new scaleUser
-        ScaleUser *newScaleUser = [[ScaleUser alloc] init];
-        newScaleUser.scaleUserId = user.userId;
-        newScaleUser.secretIndex = user.index;
-        newScaleUser.secretKey = user.key;
-        newScaleUser.mac = device.mac;
-        [[QNDBManager sharedQNDBManager] insertOrReplaceScaleUser:newScaleUser] ;
-    } else {
-        // update a scaleUser's index and key
-        scaleUser.secretIndex = user.index;
-        scaleUser.secretKey = user.key;
-        [[QNDBManager sharedQNDBManager] updateScaleUserInfo:scaleUser mac:device.mac];
-    }
-}
-
-- (void)onSyncUserInfoResult:(int)code user:(QNScaleUser *)user device:(QNScaleDevice *)device {
-    
-}
-
-- (void)onDeleteUsersResult:(int)code device:(QNScaleDevice *)device {
     
 }
 
@@ -315,59 +242,8 @@
     [self.reportDatas removeAllObjects];
     
     [self addWeightDataIndexDisplay:@"Weight" value:scaleData.weight];
-    [self addDataIndexDisplay:@"BMI" value:scaleData.BMI];
-    [self addDataIndexDisplay:@"Body fat rate" value:scaleData.bodyFatRate];
-    [self addDataIndexDisplay:@"Subcutaneous fat rate" value:scaleData.subcutaneousFatRate];
-    [self addDataIndexDisplay:@"Visceral fat level" value:scaleData.visceralFatLevel];
-    [self addDataIndexDisplay:@"Body water rate" value:scaleData.bodyWaterRate];
-    [self addDataIndexDisplay:@"Skeletal muscle rate" value:scaleData.skeletalMuscleRate];
-    [self addWeightDataIndexDisplay:@"Bone mass" value:scaleData.boneMass];
-    [self addDataIndexDisplay:@"BMR" value:scaleData.BMR];
-    [self addDataIndexDisplay:@"Body type" value:scaleData.bodyType];
-    [self addDataIndexDisplay:@"Protein rate" value:scaleData.proteinRate];
-    [self addWeightDataIndexDisplay:@"Lean body mass" value:scaleData.leanBodyMass];
-    [self addWeightDataIndexDisplay:@"Muscle mass" value:scaleData.muscleMass];
-    [self addDataIndexDisplay:@"Body age" value:scaleData.bodyAge];
-    [self addDataIndexDisplay:@"Health score" value:scaleData.healthScore];
-    [self addDataIndexDisplay:@"Heart Rate" value:scaleData.heartRate];
-    [self addDataIndexDisplay:@"Heart Index" value:scaleData.heartIndex];
-    [self addDataIndexDisplay:@"Fatty liver risk level" value:scaleData.fattyLiverRiskLevel];
-    [self addDataIndexDisplay:@"Resistance 50KHZ" value:scaleData.res50KHZ];
-    [self addDataIndexDisplay:@"Resistance 500KHZ" value:scaleData.res500KHZ];
-    [self addWeightDataIndexDisplay:@"Body fat mass" value:scaleData.bodyFatMass];
-    [self addDataIndexDisplay:@"Obesity" value:scaleData.obesity];
-    [self addWeightDataIndexDisplay:@"Body Water mass" value:scaleData.bodyWaterMass];
-    [self addWeightDataIndexDisplay:@"Protein mass" value:scaleData.proteinMass];
-    [self addDataIndexDisplay:@"Mineral level" value:scaleData.mineralLevel];
-    [self addWeightDataIndexDisplay:@"Dream weight str" value:scaleData.dreamWeight];
-    [self addWeightDataIndexDisplay:@"Stand weight" value:scaleData.standWeight];
-    [self addWeightDataIndexDisplay:@"Weight control" value:scaleData.weightControl];
-    [self addWeightDataIndexDisplay:@"Body fat control" value:scaleData.bodyFatControl];
-    [self addWeightDataIndexDisplay:@"Muscle mass control" value:scaleData.muscleMassControl];
-    [self addDataIndexDisplay:@"Muscle rate" value:scaleData.muscleRate];
-    
-    // Eight-electrode data
-    [self addDataIndexDisplay:@"leftArmBodyfatRate" value:scaleData.leftArmBodyfatRate];
-    [self addDataIndexDisplay:@"leftLegBodyfatRate" value:scaleData.leftLegBodyfatRate];
-    [self addDataIndexDisplay:@"rightArmBodyfatRate" value:scaleData.rightArmBodyfatRate];
-    [self addDataIndexDisplay:@"rightLegBodyfatRate" value:scaleData.rightLegBodyfatRate];
-    [self addDataIndexDisplay:@"trunkBodyfatRate" value:scaleData.trunkBodyfatRate];
-    
-    [self addDataIndexDisplay:@"leftArmFatMass" value:scaleData.leftArmFatMass];
-    [self addDataIndexDisplay:@"leftLegFatMass" value:scaleData.leftLegFatMass];
-    [self addDataIndexDisplay:@"rightArmFatMass" value:scaleData.rightArmFatMass];
-    [self addDataIndexDisplay:@"rightLegFatMass" value:scaleData.rightLegFatMass];
-    [self addDataIndexDisplay:@"trunkFatMass" value:scaleData.trunkFatMass];
-    
-    [self addDataIndexDisplay:@"leftArmMuscleMass" value:scaleData.leftArmMuscleMass];
-    [self addDataIndexDisplay:@"leftLegMuscleMass" value:scaleData.leftLegMuscleMass];
-    [self addDataIndexDisplay:@"rightArmMuscleMass" value:scaleData.rightArmMuscleMass];
-    [self addDataIndexDisplay:@"rightLegMuscleMass" value:scaleData.rightLegMuscleMass];
-    [self addDataIndexDisplay:@"trunkMuscleMass" value:scaleData.trunkMuscleMass];
-    
-    [self addDataIndexDisplay:@"skeletalMuscleMass" value:scaleData.skeletalMuscleMass];
-    [self addDataIndexDisplay:@"mineralSaltRate" value:scaleData.mineralSaltRate];
-    
+    [self addDataIndexDisplay:@"Resistance 50KHZ" value:scaleData.resistance50];
+    [self addDataIndexDisplay:@"Resistance 500KHZ" value:scaleData.resistance500];
     [self.tableView reloadData];
 }
 

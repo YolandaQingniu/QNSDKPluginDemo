@@ -6,19 +6,19 @@
 	<dict>
 		<key>Headers/QNScaleData.h</key>
 		<data>
-		P3BsgNo5pKK/v/ut9Ns4yjrMZ5I=
+		hhlOn/kUnABcj2B97xI0fvR8QVA=
 		</data>
 		<key>Headers/QNScaleDataListener.h</key>
 		<data>
-		bwdSkyYZVWs4dNDRLWyWK9y8j2Y=
+		n6yKIo84O54wNbPptUPFvMal1VE=
 		</data>
 		<key>Headers/QNScaleDevice.h</key>
 		<data>
-		IRYrqI87a36rdWwgBiAo55feOos=
+		hN5+BGaaZUjZa6TbYC+1YEhgLUE=
 		</data>
 		<key>Headers/QNScaleDeviceListener.h</key>
 		<data>
-		rfafWZDYAb4ZDk5XRDE0cQsWBhc=
+		c/y9MVeG0anrRDGSBQ+XUmdZXrY=
 		</data>
 		<key>Headers/QNScaleOperate.h</key>
 		<data>
@@ -26,51 +26,19 @@
 		</data>
 		<key>Headers/QNScalePlugin.h</key>
 		<data>
-		oL082jI/MYctMxRjyJRwRCyChOo=
+		uKHPrDCrPCRFXx63U0pPR+f4dRs=
 		</data>
 		<key>Headers/QNScalePluginLibrary.h</key>
 		<data>
-		/jj28KrTvduW8QiE9HL0olhaL2Q=
+		vj6XbZic2OR8oVU3DYdTuICajRw=
 		</data>
 		<key>Headers/QNScaleStatusListener.h</key>
 		<data>
 		IMXjN7jcp1koKan4CMGtBKC0IWs=
 		</data>
-		<key>Headers/QNScaleUser.h</key>
-		<data>
-		ntsdNc0Ru2eWCTVBZ38iyiS5e0E=
-		</data>
-		<key>Headers/QNScaleUserEventListener.h</key>
-		<data>
-		1q7al/JJlHFpxe8f0XomuYJww6A=
-		</data>
-		<key>Headers/QNScaleWiFiListener.h</key>
-		<data>
-		lFNmffCME31nRYM3q8oHONHl/34=
-		</data>
-		<key>Headers/QNScaleWiFiMp.h</key>
-		<data>
-		BADZTB9NGLlycRRmRS5xE2K0AYE=
-		</data>
-		<key>Headers/QNUser.h</key>
-		<data>
-		m89vJH/8eHKo0G87AQuuCL1D4w0=
-		</data>
-		<key>Headers/QNUserScaleMp.h</key>
-		<data>
-		ftF8XrEIIUPCqNn0YM81WaU0plc=
-		</data>
-		<key>Headers/QNWiFiInfo.h</key>
-		<data>
-		wwdOvgPuY1O2o8k4mYuapdK3G70=
-		</data>
 		<key>Info.plist</key>
 		<data>
-<<<<<<< HEAD:QNScalePluginLibrary.xcframework/ios-arm64_x86_64-simulator/QNScalePluginLibrary.framework/_CodeSignature/CodeResources
-		OL20QJbEORgM90HR6X3YcDS6bKU=
-=======
 		CY6ikbjIqARxnCAQx3Z9f+wYEiw=
->>>>>>> 1.4.0:QNScalePluginLibrary.xcframework/ios-arm64_i386_x86_64-simulator/QNScalePluginLibrary.framework/_CodeSignature/CodeResources
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -83,44 +51,44 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			P3BsgNo5pKK/v/ut9Ns4yjrMZ5I=
+			hhlOn/kUnABcj2B97xI0fvR8QVA=
 			</data>
 			<key>hash2</key>
 			<data>
-			uABLc1DhxqgR7aXswsjEpIUivAiaINId2AzJJrarqDM=
+			ry7RCcqXf1XV6D8VlqbWsxfFXYSqXX1JeuF7Z21t9qU=
 			</data>
 		</dict>
 		<key>Headers/QNScaleDataListener.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			bwdSkyYZVWs4dNDRLWyWK9y8j2Y=
+			n6yKIo84O54wNbPptUPFvMal1VE=
 			</data>
 			<key>hash2</key>
 			<data>
-			aq5+p/T6eK2tkTXV95qPhMB0UVgIAP+NGBOAFV4i0CE=
+			SUc5NBiGCa8gdmSZnhtI+LcmI56CON5hasktxYKvklg=
 			</data>
 		</dict>
 		<key>Headers/QNScaleDevice.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			IRYrqI87a36rdWwgBiAo55feOos=
+			hN5+BGaaZUjZa6TbYC+1YEhgLUE=
 			</data>
 			<key>hash2</key>
 			<data>
-			G4TY5464cCerdI+sGeSv6+FmbzCQScRTnmoVaIbcv0s=
+			Stogp8d587+wuFVYY6qmt6w+IEFTU516GIn2OPNSl0k=
 			</data>
 		</dict>
 		<key>Headers/QNScaleDeviceListener.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			rfafWZDYAb4ZDk5XRDE0cQsWBhc=
+			c/y9MVeG0anrRDGSBQ+XUmdZXrY=
 			</data>
 			<key>hash2</key>
 			<data>
-			RTcktWj9PUuBU8eg+kGdGSuwjq4/3NNacSjz6Hq6tPo=
+			78irSINIzvhhffcs0JuG1qDrufj0eP1cJpWoEA1UMUA=
 			</data>
 		</dict>
 		<key>Headers/QNScaleOperate.h</key>
@@ -138,22 +106,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			oL082jI/MYctMxRjyJRwRCyChOo=
+			uKHPrDCrPCRFXx63U0pPR+f4dRs=
 			</data>
 			<key>hash2</key>
 			<data>
-			0p54GeUIZP9EDtRd3mlotZTJYXvSCglB7r3RPxmi8xE=
+			gHmHjl1vHdes4Vo2yZfwHvv1azHgAsmCM1vubrU4QX0=
 			</data>
 		</dict>
 		<key>Headers/QNScalePluginLibrary.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			/jj28KrTvduW8QiE9HL0olhaL2Q=
+			vj6XbZic2OR8oVU3DYdTuICajRw=
 			</data>
 			<key>hash2</key>
 			<data>
-			JjozMexfOGCYMbu5ZK5qBpZr8+9O7ADxZtmN3GvSZRw=
+			GhHTAi2kJID/L8PsIE8cnzkyzwevbt+EV15uRJqBhL4=
 			</data>
 		</dict>
 		<key>Headers/QNScaleStatusListener.h</key>
@@ -165,83 +133,6 @@
 			<key>hash2</key>
 			<data>
 			INR5oB6HBJsHvLOSwyp97bubPeS69lh/FLtLxRBDjHo=
-			</data>
-		</dict>
-		<key>Headers/QNScaleUser.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			ntsdNc0Ru2eWCTVBZ38iyiS5e0E=
-			</data>
-			<key>hash2</key>
-			<data>
-			LK7bnM0YPPB7bXbHaUBB8Pmo13QFlW5MLTPO+264kmg=
-			</data>
-		</dict>
-		<key>Headers/QNScaleUserEventListener.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			1q7al/JJlHFpxe8f0XomuYJww6A=
-			</data>
-			<key>hash2</key>
-			<data>
-			Qi2RSKewH3hCdIhnIEfoLMn1y/xb6PDocO4gYpHPf9M=
-			</data>
-		</dict>
-		<key>Headers/QNScaleWiFiListener.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			lFNmffCME31nRYM3q8oHONHl/34=
-			</data>
-			<key>hash2</key>
-			<data>
-			9Iu7cZXqWEvxJsyiaqjaLKMSdValPRQZukoBXqOEDnk=
-			</data>
-		</dict>
-		<key>Headers/QNScaleWiFiMp.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			BADZTB9NGLlycRRmRS5xE2K0AYE=
-			</data>
-			<key>hash2</key>
-			<data>
-			7RsqJ6gM43w7TFkJWeciQ1N6QVGTBMsbYLzaFT76UQs=
-			</data>
-		</dict>
-		<key>Headers/QNUser.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			m89vJH/8eHKo0G87AQuuCL1D4w0=
-			</data>
-			<key>hash2</key>
-			<data>
-			+8EbRNBEFbuTTeN+u+wfkyt2nJPQ8VqibxS5aFErYzE=
-			</data>
-		</dict>
-		<key>Headers/QNUserScaleMp.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			ftF8XrEIIUPCqNn0YM81WaU0plc=
-			</data>
-			<key>hash2</key>
-			<data>
-			2UpG55fMcvWhE94Pnouj22vzy16D2mNiQEvJx+Vi+1U=
-			</data>
-		</dict>
-		<key>Headers/QNWiFiInfo.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			wwdOvgPuY1O2o8k4mYuapdK3G70=
-			</data>
-			<key>hash2</key>
-			<data>
-			hznklE4hQ2DKZXqkZHTHP3xmLgPHNOWQCFnkJ+mtxW4=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

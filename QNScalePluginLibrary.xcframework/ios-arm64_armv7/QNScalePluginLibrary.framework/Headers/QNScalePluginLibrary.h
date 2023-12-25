@@ -14,17 +14,10 @@ FOUNDATION_EXPORT double QNScalePluginLibraryVersionNumber;
 FOUNDATION_EXPORT const unsigned char QNScalePluginLibraryVersionString[];
 
 #import "QNScalePlugin.h"
-#import "QNScaleWiFiMp.h"
-#import "QNUserScaleMp.h"
-#import "QNUser.h"
 #import "QNScaleData.h"
 #import "QNScaleDevice.h"
 #import "QNScaleOperate.h"
-#import "QNScaleUser.h"
-#import "QNWiFiInfo.h"
-#import "QNScaleUserEventListener.h"
 #import "QNScaleDataListener.h"
-#import "QNScaleWiFiListener.h"
 #import "QNScaleDeviceListener.h"
 #import "QNScaleStatusListener.h"
 

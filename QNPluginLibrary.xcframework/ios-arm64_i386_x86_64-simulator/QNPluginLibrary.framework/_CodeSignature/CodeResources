@@ -4,17 +4,9 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>Headers/QNAction.h</key>
-		<data>
-		CSPoLqUr1ALAsOtntz8eKU4QEgM=
-		</data>
-		<key>Headers/QNAuthDevice.h</key>
-		<data>
-		MFBXTOUSf/zfxqTxfE8Rtxw7xnE=
-		</data>
 		<key>Headers/QNBasePlugin.h</key>
 		<data>
-		polBq8aoDgu14Qd7GOMuICXTplE=
+		3vrYnafmwy6sv9VWHQogst9iINQ=
 		</data>
 		<key>Headers/QNLogListener.h</key>
 		<data>
@@ -22,27 +14,23 @@
 		</data>
 		<key>Headers/QNPlugin.h</key>
 		<data>
-		9435+D2eUvdDX/JhHefyEuOg5HY=
+		djyyg2ziUe3HuEbyxjz8jQgAMOE=
 		</data>
 		<key>Headers/QNPluginLibrary.h</key>
 		<data>
-		OAilzAdj1S/vLAD0XJdnDKXKpLQ=
+		EA8x5JXAgnSkeqaVWOxblau5nqc=
 		</data>
 		<key>Headers/QNScanListener.h</key>
 		<data>
-		BgzmpSJ26s5X0XAKhesuIIYQYeU=
+		Q37R7XzJ3kpLKZm6rGocfLHV0Ho=
 		</data>
 		<key>Headers/QNSysBleStatusListener.h</key>
 		<data>
-		UGXoU39M4p2qJlviTCfkQq9pxNQ=
+		1To2lbqX1HSLSWyxtKzM/6nxOEU=
 		</data>
 		<key>Info.plist</key>
 		<data>
-<<<<<<< HEAD:QNPluginLibrary.xcframework/ios-arm64_i386_x86_64-simulator/QNPluginLibrary.framework/_CodeSignature/CodeResources
 		sN9QChXo+fzDhlNVyf8RgrZEsls=
-=======
-		FUheDwczyuGz6szKV5V4H6g+UvE=
->>>>>>> 89fbc428e8193bef0bc4144a30df7b429bf24846:QNPluginLibrary.xcframework/ios-arm64_x86_64-simulator/QNPluginLibrary.framework/_CodeSignature/CodeResources
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -51,37 +39,15 @@
 	</dict>
 	<key>files2</key>
 	<dict>
-		<key>Headers/QNAction.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			CSPoLqUr1ALAsOtntz8eKU4QEgM=
-			</data>
-			<key>hash2</key>
-			<data>
-			JWohyoF/DdTLEYPWwrJ3t+mZo6uljUX6wHaOqJjo8aA=
-			</data>
-		</dict>
-		<key>Headers/QNAuthDevice.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			MFBXTOUSf/zfxqTxfE8Rtxw7xnE=
-			</data>
-			<key>hash2</key>
-			<data>
-			DVJq4DR5oBF0rQm+AS0BW4dnVhlOwyZ3FosYP9bIuJI=
-			</data>
-		</dict>
 		<key>Headers/QNBasePlugin.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			polBq8aoDgu14Qd7GOMuICXTplE=
+			3vrYnafmwy6sv9VWHQogst9iINQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			AOWUfdQMQY+AO92icy8FJ27mfHEC6JtQUdRavuqY/Hg=
+			GbT0RP1mKSbb9gJj1gA7pGXYx5GbsMAo+HrXVEgtKkY=
 			</data>
 		</dict>
 		<key>Headers/QNLogListener.h</key>
@@ -99,44 +65,44 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			9435+D2eUvdDX/JhHefyEuOg5HY=
+			djyyg2ziUe3HuEbyxjz8jQgAMOE=
 			</data>
 			<key>hash2</key>
 			<data>
-			9XDfKZYfqcTt5zesEWdidaYrqKw3Tr+rlA1I+dO0n+E=
+			blqNJeXWWuzTb2zpJqIo4Sr/w+m9pkPxxUihNtYwNrw=
 			</data>
 		</dict>
 		<key>Headers/QNPluginLibrary.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			OAilzAdj1S/vLAD0XJdnDKXKpLQ=
+			EA8x5JXAgnSkeqaVWOxblau5nqc=
 			</data>
 			<key>hash2</key>
 			<data>
-			NnBc6RRNViYyjcC8GL2cm7Wha0sOUrlzxRiUjg+cW6g=
+			w+txXnh1bLcUBkF56bdFarA2wBM5qRnTLgfRB+e3SLI=
 			</data>
 		</dict>
 		<key>Headers/QNScanListener.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			BgzmpSJ26s5X0XAKhesuIIYQYeU=
+			Q37R7XzJ3kpLKZm6rGocfLHV0Ho=
 			</data>
 			<key>hash2</key>
 			<data>
-			mlaEta5z0Ta/9ArpaaPmCFtZHLkEL4aO1Z9s4D6UA6w=
+			bbjZz8+63I2UgwxSSac75+prsgs8s8Ub2NdIdoggLlI=
 			</data>
 		</dict>
 		<key>Headers/QNSysBleStatusListener.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			UGXoU39M4p2qJlviTCfkQq9pxNQ=
+			1To2lbqX1HSLSWyxtKzM/6nxOEU=
 			</data>
 			<key>hash2</key>
 			<data>
-			y47AHhMFhQBkhVKf0LJ13+y0VFAP2tvRZdwzeFmQaAE=
+			uoO+TX8eXoUtnKkSXcVieTLzXYl6p1h6yjTxFTNDliw=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

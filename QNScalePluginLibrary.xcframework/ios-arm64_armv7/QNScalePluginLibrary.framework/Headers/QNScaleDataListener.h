@@ -7,7 +7,6 @@
 
 #import <Foundation/Foundation.h>
 #import <QNScalePluginLibrary/QNScaleData.h>
-#import <QNScalePluginLibrary/QNScaleUser.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -28,10 +27,6 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param device device
 - (void)onReceiveStoredData:(NSArray<QNScaleData *>*)scaleData device:(QNScaleDevice *)device;
 
-/// Get last data hmac
-/// @param user QNScaleUser
-/// @param device QNScaleDevice
-- (NSString *)onGetLastDataHmac:(QNScaleUser *)user device:(QNScaleDevice *)device;
 @end
 
 NS_ASSUME_NONNULL_END

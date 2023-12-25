@@ -6,7 +6,6 @@
 //
 
 #import "SceneDelegate.h"
-#import "QNDBManager.h"
 
 @interface SceneDelegate ()
 
@@ -16,8 +15,6 @@
 
 
 - (void)scene:(UIScene *)scene willConnectToSession:(UISceneSession *)session options:(UISceneConnectionOptions *)connectionOptions {
-    // 初始化数据库
-    [[QNDBManager sharedQNDBManager] initDataBase];
 }
 
 

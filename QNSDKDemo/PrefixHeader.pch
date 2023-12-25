@@ -11,11 +11,6 @@
 #import "AppDelegate.h"
 #import "AlertTool.h"
 #import <QNPluginLibrary/QNPluginLibrary.h>
-#import <QNRulerPluginLibrary/QNRulerPluginLibrary.h>
 #import <QNScalePluginLibrary/QNScalePluginLibrary.h>
-#import <QNAlgorithmPluginLibrary/QNAlgorithmPluginLibrary.h>
-#import <QNBPMachinePluginLibrary/QNBPMachinePluginLibrary.h>
-#import <QNHeightWeightScalePluginLibrary/QNHeightWeightScalePluginLibrary.h>
-#import <QNKitchenScalePluginLibrary/QNKitchenScalePluginLibrary.h>
 
 #endif /* PrefixHeader_pch */

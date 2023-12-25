@@ -1,6 +1,0 @@
-framework module QNRulerPluginLibrary {
-  umbrella header "QNRulerPluginLibrary.h"
-
-  export *
-  module * { export * }
-}

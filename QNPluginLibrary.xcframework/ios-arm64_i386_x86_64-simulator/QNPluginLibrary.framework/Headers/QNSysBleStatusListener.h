@@ -14,7 +14,7 @@ typedef NS_ENUM(int, QNSysBleStatus) {
     QNSysBleStatusResetting,        //Resetting
     QNSysBleStatusUnsupported,      //Unsupported
     QNSysBleStatusUnauthorized,     //Unauthorized
-    QNSysBleStatusPoweredOff,       //Unauthorized
+    QNSysBleStatusPoweredOff,       //PoweredOff
     QNSysBleStatusPoweredOn,        //PoweredOn
 };
 
