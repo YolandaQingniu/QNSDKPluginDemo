@@ -473,6 +473,7 @@
 				GCC_PREFIX_HEADER = QNSDKDemo/PrefixHeader.pch;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = QNSDKDemo/Other/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "瘦吧SDK Demo";
 				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "use bluetooth";
 				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "use bluetooth";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -486,14 +487,14 @@
 					"@executable_path/Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				MARKETING_VERSION = 1.4.0;
+				MARKETING_VERSION = 1.0.0;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 				);
 				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yolanda.QNSDKDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yolanda.QNSDKDemo.shouba;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -516,6 +517,7 @@
 				GCC_PREFIX_HEADER = QNSDKDemo/PrefixHeader.pch;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = QNSDKDemo/Other/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "瘦吧SDK Demo";
 				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "use bluetooth";
 				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "use bluetooth";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -529,13 +531,13 @@
 					"@executable_path/Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				MARKETING_VERSION = 1.4.0;
+				MARKETING_VERSION = 1.0.0;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 				);
 				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yolanda.QNSDKDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yolanda.QNSDKDemo.shouba;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
