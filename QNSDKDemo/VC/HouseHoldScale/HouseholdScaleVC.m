@@ -23,6 +23,9 @@
 
 @property (nonatomic, strong) NSMutableArray<QNMeasureReport *> *reportDatas;
 
+/// 存储数据
+@property (nonatomic, strong) NSMutableArray<QNScaleData *> *dataArr;
+
 @end
 
 @implementation HouseholdScaleVC
@@ -31,39 +34,46 @@
     [super viewDidLoad];
         
     [self showMeasureResult:@"--" unit:@""];
-}
-
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    [self initBlePlugin];
-}
-
-- (void)viewDidDisappear:(BOOL)animated {
-    [super viewDidDisappear:animated];
     
-    [QNScalePlugin cancelConnectDevice:_connectedDevice];
-    [self.plugin stopScan];
-}
-
-- (void)initBlePlugin {
     // init centeral plugin
     self.plugin = [QNPlugin sharedPlugin];
     [self.plugin initSdkWithCallback:^(int code) {
         
     }];
-    self.plugin.scanListener = self;
-    self.plugin.logListener = self;
-    self.plugin.sysBleStatusListener = self;
     
     // init specified device plugin
     [QNScalePlugin setScalePlugin:self.plugin];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    self.plugin.scanListener = self;
+    self.plugin.logListener = self;
+    self.plugin.sysBleStatusListener = self;
     
     // set device delegate
     [QNScalePlugin setDataListener:self];
     [QNScalePlugin setStatusListener:self];
     [QNScalePlugin setDeviceListener:self];
-    
+
     [self.plugin startScan];
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+        
+    [QNScalePlugin cancelConnectDevice:_connectedDevice];
+    [self.plugin stopScan];
+    
+    _connectedDevice = nil;
+    self.plugin.scanListener = nil;
+    self.plugin.logListener = nil;
+    self.plugin.sysBleStatusListener = nil;
+    
+    // set device delegate
+    [QNScalePlugin setDataListener:nil];
+    [QNScalePlugin setStatusListener:nil];
+    [QNScalePlugin setDeviceListener:nil];
 }
 
 - (void)showMeasureResult:(NSString *)value unit:(NSString *)unit {
@@ -103,17 +113,36 @@
     self.statusLbl.text = bleStatusStr;
 }
 
-- (void)onScanResult:(int)code {
-    
-}
-
+#pragma mark - QNScanListener
 - (void)onStopScan {
     
 }
 
+- (void)onStartScan {
+    
+}
+
 #pragma mark - tableView
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 30;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    UIView *headerView = [[UIView alloc] init];
+    headerView.backgroundColor = UIColor.lightGrayColor;
+    UILabel *titleLabel = [[UILabel alloc] init];
+    titleLabel.text = section == 0 ? @"当前测量数据：" : @"存储数据：";
+    titleLabel.frame = CGRectMake(0, 0, self.view.bounds.size.width, 30);
+    [headerView addSubview:titleLabel];
+    return headerView;
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 2;
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.reportDatas.count;
+    return section == 0 ? self.reportDatas.count : self.dataArr.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -123,10 +152,20 @@
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellID];
     }
     
-    QNMeasureReport *data = self.reportDatas[indexPath.row];
-    
-    cell.textLabel.text = data.title;
-    cell.detailTextLabel.text = data.value;
+    if (indexPath.section == 0) {
+        QNMeasureReport *data = self.reportDatas[indexPath.row];
+        cell.textLabel.text = data.title;
+        cell.detailTextLabel.text = data.value;
+    } else {
+        QNScaleData *data = self.dataArr[indexPath.row];
+        NSDateFormatter *df = [[NSDateFormatter alloc] init];
+        df.dateFormat = @"yyyy-MM-dd HH:mm:ss";
+        NSString *dateStr = [df stringFromDate:[NSDate dateWithTimeIntervalSince1970:[data.timeStamp longLongValue]]];
+        cell.textLabel.text = [NSString stringWithFormat:@"存储数据<%ld> %@", indexPath.row + 1, dateStr];
+        
+        NSString *weightStr = [NSString stringWithFormat:@"%@%@", [self adjustWeightValue:data.weight], [self curWeightUnit]];
+        cell.detailTextLabel.text = [NSString stringWithFormat:@"%@、%@/%@", weightStr, data.resistance50, data.resistance500];
+    }
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
@@ -140,10 +179,11 @@
     
     QNScaleOperate *operate = [[QNScaleOperate alloc] init];
     operate.unit = [self unitFromSetting];
-    int flag = [QNScalePlugin connectDevice:device operate:operate];
+    [QNScalePlugin connectDevice:device operate:operate];
         
     [self showMeasureResult:@"--" unit:@""];
     [self.reportDatas removeAllObjects];
+    [self.dataArr removeAllObjects];
     [self.tableView reloadData];
 }
 
@@ -156,6 +196,7 @@
     _connectedDevice = device;
     self.statusLbl.text = QNBLEStatusStr_Connected;
     self.macLbl.text = [NSString stringWithFormat:@"MAC: %@", device.mac];
+    [self.plugin stopScan];
 }
 
 - (void)onConnectFail:(int)code device:(QNScaleDevice *)device {
@@ -166,14 +207,13 @@
 
 - (void)onReadyInteractResult:(int)code device:(QNScaleDevice *)device {
     if (code != 0) return;
-    
-    _connectedDevice = device;
-    
+    self.statusLbl.text = QNBLEStatusStr_Interactive;
     [QNScalePlugin setScaleDeviceUnit:device unit:[self unitFromSetting]];
 }
 
 - (void)onDisconnected:(QNScaleDevice *)device {
     self.statusLbl.text = QNBLEStatusStr_Disconnected;
+    _connectedDevice = nil;
 }
 
 #pragma mark - QNScaleDataListener
@@ -188,7 +228,8 @@
 }
 
 - (void)onReceiveStoredData:(NSArray<QNScaleData *> *)scaleData device:(QNScaleDevice *)device {
-    
+    self.dataArr = [scaleData mutableCopy];
+    [self.tableView reloadData];
 }
 
 #pragma mark -

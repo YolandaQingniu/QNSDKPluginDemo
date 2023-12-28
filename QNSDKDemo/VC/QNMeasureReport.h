@@ -10,6 +10,7 @@
 #define QNBLEStatusStr_Scaning @"Scanning"
 #define QNBLEStatusStr_Connecting @"Connecting"
 #define QNBLEStatusStr_Connected @"Connected"
+#define QNBLEStatusStr_Interactive @"Interactive"
 #define QNBLEStatusStr_Measuring @"Measuring"
 #define QNBLEStatusStr_MeasureDone @"MeasureDone"
 #define QNBLEStatusStr_Disconnected @"Disconnected"
