@@ -22,8 +22,8 @@
 		7EE0D4DD28D96A6800691846 /* UnitChooseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE0D4D528D96A6800691846 /* UnitChooseVC.m */; };
 		89B5B1E5DA9586CCF6A2AA5A /* Pods_QNSDKDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66A9EAB63E2F1D8CC335B57E /* Pods_QNSDKDemo.framework */; };
 		F60525692B3975C9001C72E0 /* QNMeasureReport.m in Sources */ = {isa = PBXBuildFile; fileRef = F60525682B3975C9001C72E0 /* QNMeasureReport.m */; };
-		F60525C42B3DA159001C72E0 /* QNPluginLibrary.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = F60525C22B3DA159001C72E0 /* QNPluginLibrary.xcframework */; };
-		F60525C52B3DA159001C72E0 /* QNScalePluginLibrary.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = F60525C32B3DA159001C72E0 /* QNScalePluginLibrary.xcframework */; };
+		F6B972302B3DBCBD00B4B4C5 /* QNPluginLibrary.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B9722E2B3DBCBC00B4B4C5 /* QNPluginLibrary.xcframework */; };
+		F6B972312B3DBCBD00B4B4C5 /* QNScalePluginLibrary.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B9722F2B3DBCBC00B4B4C5 /* QNScalePluginLibrary.xcframework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,8 +58,8 @@
 		DC741D71DD26E42580E621C5 /* Pods-QNSDKDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QNSDKDemo.debug.xcconfig"; path = "Target Support Files/Pods-QNSDKDemo/Pods-QNSDKDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		F60525672B3975C9001C72E0 /* QNMeasureReport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QNMeasureReport.h; sourceTree = "<group>"; };
 		F60525682B3975C9001C72E0 /* QNMeasureReport.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QNMeasureReport.m; sourceTree = "<group>"; };
-		F60525C22B3DA159001C72E0 /* QNPluginLibrary.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = QNPluginLibrary.xcframework; sourceTree = "<group>"; };
-		F60525C32B3DA159001C72E0 /* QNScalePluginLibrary.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = QNScalePluginLibrary.xcframework; sourceTree = "<group>"; };
+		F6B9722E2B3DBCBC00B4B4C5 /* QNPluginLibrary.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = QNPluginLibrary.xcframework; sourceTree = "<group>"; };
+		F6B9722F2B3DBCBC00B4B4C5 /* QNScalePluginLibrary.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = QNScalePluginLibrary.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,8 +68,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				89B5B1E5DA9586CCF6A2AA5A /* Pods_QNSDKDemo.framework in Frameworks */,
-				F60525C52B3DA159001C72E0 /* QNScalePluginLibrary.xcframework in Frameworks */,
-				F60525C42B3DA159001C72E0 /* QNPluginLibrary.xcframework in Frameworks */,
+				F6B972312B3DBCBD00B4B4C5 /* QNScalePluginLibrary.xcframework in Frameworks */,
+				F6B972302B3DBCBD00B4B4C5 /* QNPluginLibrary.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,8 +91,8 @@
 				7EAE8F9028DC49D40095C1C7 /* QNDeviceSpecs.sh */,
 				7EAE8F8D28DC49D40095C1C7 /* QNPlugin.podspec */,
 				24F693B52906314F00124FEE /* QNScalePlugin.podspec */,
-				F60525C22B3DA159001C72E0 /* QNPluginLibrary.xcframework */,
-				F60525C32B3DA159001C72E0 /* QNScalePluginLibrary.xcframework */,
+				F6B9722E2B3DBCBC00B4B4C5 /* QNPluginLibrary.xcframework */,
+				F6B9722F2B3DBCBC00B4B4C5 /* QNScalePluginLibrary.xcframework */,
 				2457614828A5FF71004A45AE /* QNSDKDemo */,
 				2457614728A5FF71004A45AE /* Products */,
 				7E383D0D28A9F59E001961F6 /* Frameworks */,
